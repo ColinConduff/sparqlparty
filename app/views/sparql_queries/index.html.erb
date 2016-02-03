@@ -1,0 +1,32 @@
+<h1>Listing sparql_queries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Body</th>
+    <th>Endpoint id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+<% @sparql_queries.each do |sparql_query| %>
+  <tr>
+    <td><%= sparql_query.name %></td>
+    <td><%= sparql_query.body %></td>
+    
+    <%# the following line is causing an error  %>
+    <td><%#= sparql_query.endpoint_id %></td>
+
+    <td><%= link_to 'Show', sparql_query %></td>
+    <td><%= link_to 'Edit', edit_sparql_query_path(sparql_query) %></td>
+    <td><%= link_to 'Destroy', sparql_query, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sparql query', new_sparql_query_path %>
+

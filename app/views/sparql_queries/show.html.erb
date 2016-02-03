@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sparql_query.name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @sparql_query.body %>
+</p>
+
+<p>
+  <b>Endpoint_id:</b>
+  <%# the following line is causing an error  %>
+  <%#= @sparql_query.endpoint_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_sparql_query_path(@sparql_query) %> |
+<%= link_to 'Back', sparql_queries_path %>
