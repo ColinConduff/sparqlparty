@@ -5,3 +5,17 @@ This web application allows users to ...
 This app was originally developed by David Mattli.  
 
 
+== TODO
+
+In endpoints/show.html.haml
+  maps not displaying correctly 
+    update nationalmaps api code in endpoints.js file under assets 
+
+  commented out error caused by sql query 
+
+In sparql_queries/index.html.erb
+  endpoints.endpoint_id causes error 
+
+Basic input validation for forms 
+
+Get bootstrap and apply to views 

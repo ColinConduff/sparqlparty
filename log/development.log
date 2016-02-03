@@ -13634,3 +13634,1100 @@ Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms
 
 Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:41:00 -0600
 Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 200ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /endpoints.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /proj4js.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /sparql_queries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /endpoints.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /sparql_queries.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:18 -0600
+Served asset /application.js - 304 Not Modified (97ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:46:19 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (2ms)
+
+
+Started GET "/endpoints" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Processing by EndpointsController#index as HTML
+  [1m[36mEndpoint Load (0.1ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" [0m
+  Rendered endpoints/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 86ms (Views: 57.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:20 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:46:21 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/endpoints/3" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Processing by EndpointsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEndpoint Load (0.3ms)[0m  SELECT "endpoints".* FROM "endpoints" WHERE "endpoints"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered endpoints/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:22 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:46:23 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/endpoints/3" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Processing by EndpointsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dPmv0hN48//yW4k0O2sy5UOyHqjw8bZLa1NuFPNIEM=", "id"=>"3"}
+  [1m[36mEndpoint Load (0.1ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" WHERE "endpoints"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mDELETE FROM "endpoints" WHERE "endpoints"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/endpoints
+Completed 302 Found in 10ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/endpoints" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Processing by EndpointsController#index as HTML
+  [1m[36mEndpoint Load (0.2ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" [0m
+  Rendered endpoints/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:29 -0600
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:46:30 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/endpoints/new" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Processing by EndpointsController#new as HTML
+  Rendered endpoints/_form.html.erb (48.7ms)
+  Rendered endpoints/new.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 106ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:46:31 -0600
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:46:32 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started POST "/endpoints" for 127.0.0.1 at 2016-02-03 14:46:38 -0600
+Processing by EndpointsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3dPmv0hN48//yW4k0O2sy5UOyHqjw8bZLa1NuFPNIEM=", "endpoint"=>{"name"=>"test", "sparql_url"=>"something"}, "commit"=>"Create Endpoint"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "endpoints" ("created_at", "name", "sparql_url", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 03 Feb 2016 20:46:38 UTC +00:00], ["name", "test"], ["sparql_url", "something"], ["updated_at", Wed, 03 Feb 2016 20:46:38 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/endpoints/4
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/endpoints/4" for 127.0.0.1 at 2016-02-03 14:46:38 -0600
+Processing by EndpointsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEndpoint Load (0.2ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" WHERE "endpoints"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Completed 500 Internal Server Error in 2ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/endpoints_controller.rb:18:in `+'
+  app/controllers/endpoints_controller.rb:18:in `show'
+
+
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started POST "/endpoints" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Processing by EndpointsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3dPmv0hN48//yW4k0O2sy5UOyHqjw8bZLa1NuFPNIEM=", "endpoint"=>{"name"=>"test", "sparql_url"=>"http://www.opengis.net/def/geosparql/"}, "commit"=>"Create Endpoint"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "endpoints" ("created_at", "name", "sparql_url", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 03 Feb 2016 20:47:09 UTC +00:00], ["name", "test"], ["sparql_url", "http://www.opengis.net/def/geosparql/"], ["updated_at", Wed, 03 Feb 2016 20:47:09 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/endpoints/5
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/endpoints/5" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Processing by EndpointsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEndpoint Load (0.1ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" WHERE "endpoints"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered endpoints/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:47:09 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/endpoints" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Processing by EndpointsController#index as HTML
+  [1m[35mEndpoint Load (0.2ms)[0m  SELECT "endpoints".* FROM "endpoints" 
+  Rendered endpoints/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:50:21 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/endpoints/4" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Processing by EndpointsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dPmv0hN48//yW4k0O2sy5UOyHqjw8bZLa1NuFPNIEM=", "id"=>"4"}
+  [1m[36mEndpoint Load (0.1ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" WHERE "endpoints"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "endpoints" WHERE "endpoints"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/endpoints
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/endpoints" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Processing by EndpointsController#index as HTML
+  [1m[36mEndpoint Load (0.2ms)[0m  [1mSELECT "endpoints".* FROM "endpoints" [0m
+  Rendered endpoints/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (7ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:50:25 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:50:26 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 57ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:51:26 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.1ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 74ms (Views: 61.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/endpoints.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /endpoints.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/endpoints.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /endpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-03 14:51:27 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-03 14:51:28 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
