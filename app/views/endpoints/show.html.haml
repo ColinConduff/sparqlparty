@@ -13,17 +13,17 @@
   %b Sparql url:
   %div= @endpoint.sparql_url
 
-%div.queryArea#query
-  %div#querySelection
-    %form{:onsubmit => "return false;"}
-      - @endpoint.sparql_queries.each do |query|
-        %input{:class => "querySubmit", :type => "submit", :name => query.id, :value => query.name, :onclick => "setQuery(this); return false;"}
-        %input{:type => "hidden", :id => "queryText" + query.id.to_s, :value => query.body} 
+-#%div.queryArea#query
+-#  %div#querySelection 
+-#    %form{:onsubmit => "return false;"}
+-#      - @endpoint.sparql_queries.each do |query|
+-#        %input{:class => "querySubmit", :type => "submit", :name => query.id, :value => query.name, :onclick => "setQuery(this); return false;"}
+-#        %input{:type => "hidden", :id => "queryText" + query.id.to_s, :value => query.body} 
 
-  %div#queryText
-    %form{:onsubmit => "submitquery(); return false;"}
-      %textarea#queryTextArea
-      %input{:id => "submitQuery", :type => "submit", :text => "Submit Query"}
+-#  %div#queryText
+-#    %form{:onsubmit => "submitquery(); return false;"}
+-#      %textarea#queryTextArea
+-#      %input{:id => "submitQuery", :type => "submit", :text => "Submit Query"}
 
 %div.bigmap#map
 
