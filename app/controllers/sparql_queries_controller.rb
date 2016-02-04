@@ -14,7 +14,10 @@ class SparqlQueriesController < ApplicationController
   # GET /sparql_queries/1.json
   def show
     @sparql_query = SparqlQuery.find(params[:id])
-
+    headers['Access-Control-Request-Methods'] = 'GET'
+    # headers['Access-Control-Allow-Origin'] = 'http://' + @sparql_query[:endpoint].split('/')[2]
+    headers['Access-Control-Allow-Credentials'] = 'true'
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @sparql_query }
@@ -40,7 +43,7 @@ class SparqlQueriesController < ApplicationController
   # POST /sparql_queries
   # POST /sparql_queries.json
   def create
-    @sparql_query = SparqlQuery.new(params[:sparql_query])
+    @sparql_query = SparqlQuery.new(params[:query])
 
     respond_to do |format|
       if @sparql_query.save
@@ -59,7 +62,7 @@ class SparqlQueriesController < ApplicationController
     @sparql_query = SparqlQuery.find(params[:id])
 
     respond_to do |format|
-      if @sparql_query.update_attributes(params[:sparql_query])
+      if @sparql_query.update_attributes(params[:query])
         format.html { redirect_to @sparql_query, notice: 'Sparql query was successfully updated.' }
         format.json { head :no_content }
       else

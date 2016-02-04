@@ -13,8 +13,10 @@ In endpoints/show.html.haml
 
   commented out error caused by sql query 
 
-In sparql_queries/index.html.erb
-  endpoints.endpoint_id causes error 
+In sparql_queries/index.html.erb and show.html.erb
+  sparql_query.endpoint_id causes error because 
+    sparql_queries have a one to many relationship with endpoints
+      but are not being assigned an endpoint when they are created 
 
 Basic input validation for forms 
 

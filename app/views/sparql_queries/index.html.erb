@@ -3,8 +3,8 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Body</th>
-    <th>Endpoint id</th>
+    <th>Sparql Query</th>
+    <th>Endpoint</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,10 +14,8 @@
 <% @sparql_queries.each do |sparql_query| %>
   <tr>
     <td><%= sparql_query.name %></td>
-    <td><%= sparql_query.body %></td>
-    
-    <%# the following line is causing an error  %>
-    <td><%#= sparql_query.endpoint_id %></td>
+    <td><%= sparql_query.query %></td>
+    <td><%= sparql_query.endpoint %></td>
 
     <td><%= link_to 'Show', sparql_query %></td>
     <td><%= link_to 'Edit', edit_sparql_query_path(sparql_query) %></td>

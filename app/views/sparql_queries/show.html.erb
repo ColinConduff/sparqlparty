@@ -7,13 +7,12 @@
 
 <p>
   <b>Body:</b>
-  <%= @sparql_query.body %>
+  <%= @sparql_query.query %>
 </p>
 
 <p>
   <b>Endpoint_id:</b>
-  <%# the following line is causing an error  %>
-  <%#= @sparql_query.endpoint_id %>
+  <%= @sparql_query.endpoint %>
 </p>
 
 
