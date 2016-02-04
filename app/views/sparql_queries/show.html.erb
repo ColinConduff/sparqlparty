@@ -1,3 +1,12 @@
+
+
+
+<%= javascript_include_tag "sparql_queries" %>
+
+<script type="text/javascript" charset="utf-8">
+  window.sparqlURL = '<%= @sparql_query.endpoint; %>'
+</script>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,15 +15,48 @@
 </p>
 
 <p>
-  <b>Body:</b>
+  <b>Query:</b>
   <%= @sparql_query.query %>
 </p>
 
 <p>
-  <b>Endpoint_id:</b>
+  <b>Endpoint:</b>
   <%= @sparql_query.endpoint %>
 </p>
 
+<div class='queryArea' id='query'>
+  <div id='querySelection'>
+    <form onsubmit='return false;'>
+    	<input class='querySubmit' type='submit' name=<%= @sparql_query.id.to_s %> value=<%= @sparql_query.name.to_s %> onclick='setQuery(this); return false;'>
+    	<input type='hidden' id=<%= 'queryText' + @sparql_query.id.to_s %> value=<%= @sparql_query.query.to_s %>>
+    </form>
+  </div>
+  <div id='queryText'>
+    <form>
+      <textarea id='queryTextArea'></textarea>
+      <input onclick= <%='submitquery(); return false;' %> id='submitQuery' text='Submit Query' type='submit'>
+    </form>
+  </div>
+</div>
+<div class='bigmap' id='map'></div>
+<div id='tableWrap'></div>
+
+<%#
+%div.queryArea#query
+  %div#querySelection 
+    %form{:onsubmit => "return false;"}
+      - @endpoint.sparql_queries.each do |query|
+        %input{:class => "querySubmit", :type => "submit", :name => query.id, :value => query.name, :onclick => "setQuery(this); return false;"}
+        %input{:type => "hidden", :id => "queryText" + query.id.to_s, :value => query.body} 
+
+  %div#queryText
+    %form{:onsubmit => "submitquery(); return false;"}
+      %textarea#queryTextArea
+      %input{:id => "submitQuery", :type => "submit", :text => "Submit Query"}
+%>
 
 <%= link_to 'Edit', edit_sparql_query_path(@sparql_query) %> |
 <%= link_to 'Back', sparql_queries_path %>
+
+
+

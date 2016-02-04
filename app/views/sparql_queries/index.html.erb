@@ -3,20 +3,18 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Sparql Query</th>
+    <th>Query</th>
     <th>Endpoint</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-
 <% @sparql_queries.each do |sparql_query| %>
   <tr>
     <td><%= sparql_query.name %></td>
     <td><%= sparql_query.query %></td>
     <td><%= sparql_query.endpoint %></td>
-
     <td><%= link_to 'Show', sparql_query %></td>
     <td><%= link_to 'Edit', edit_sparql_query_path(sparql_query) %></td>
     <td><%= link_to 'Destroy', sparql_query, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +26,3 @@
 
 <%= link_to 'New Sparql query', new_sparql_query_path %>
 <%= link_to 'Back', root_path %>
-

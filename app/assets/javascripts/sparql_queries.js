@@ -1,6 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
 var map;
 var prefixes = 
     " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n \
@@ -133,32 +134,38 @@ function drawVectors(resultMsg, matchString, olmap) {
 }
 
 function setQuery(input) {
-	//$('#queryTextArea').value = $('#queryText1');
-        $('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));
+    //$('#queryTextArea').value = $('#queryText1');
+
+    // console.log("#queryTextArea " + $('#queryTextArea').val());
+    // console.log("#queryText " + $('#queryText').attr('value'));
+    // console.log("input.name " + input.name);
+    // console.log("$('#queryText' + input.name).attr('value') " + $('#queryText' + input.name).attr('value'));
+    // console.log("$('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));");
+    // console.log($('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value')));
+    $('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));
 }
 
 function submitquery()
 {
-
+    console.log("window.sparqlURL" + window.sparqlURL);
+    
     var request = $.ajax({
-			     type: "GET",
-                             url: window.sparqlURL,
-			     dataType: "json",
-                             data: {
-                                 "query": $("#queryTextArea").val(),
-                                 "output": "json"
-                             }
-                         });
+    	type: "GET",
+        url: window.sparqlURL,
+    	dataType: "json",
+        data: {
+            "query": $("#queryTextArea").val(),
+            "output": "json"
+        }
+    });
     
     request.done(function( msg ) {
-		     drawVectors(msg, "wkt", map);
-                     updateTable(msg, "tableWrap");
-                 });
+		drawVectors(msg, "wkt", map);
+        updateTable(msg, "tableWrap");
+    });
     
     request.fail(function(jqXHR, textStatus, errorThrown) {
-                     alert( "Request Failed: " + textStatus);
-		     alert(errorThrown + ": " + jqXHR.responseText);
-		     
-                 });
+        alert( "Request Failed: " + textStatus);
+		alert(errorThrown + ": " + jqXHR.responseText);
+    });
 }
-

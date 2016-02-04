@@ -2,7 +2,8 @@ class CreateSparqlQueries < ActiveRecord::Migration
   def change
     create_table :sparql_queries do |t|
       t.string :name
-      t.text :body
+      t.text :query
+      t.string :endpoint
 
       t.timestamps
     end

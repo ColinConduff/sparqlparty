@@ -5,6 +5,7 @@ This web application allows users to ...
 This app was originally developed by David Mattli.  
 
 
+<<<<<<< HEAD
 == TODO
 
 In endpoints/show.html.haml
@@ -21,3 +22,5 @@ In sparql_queries/index.html.erb and show.html.erb
 Basic input validation for forms 
 
 Get bootstrap and apply to views 
+=======
+>>>>>>> parent of e6dadc9... Created list of ToDo's
