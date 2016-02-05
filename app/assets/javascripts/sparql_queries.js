@@ -148,18 +148,6 @@ function drawVectors(resultMsg, matchString, olmap) {
     map.zoomToExtent(bounds);
 }
 
-function setQuery(input) {
-    //$('#queryTextArea').value = $('#queryText1');
-
-    console.log("#queryTextArea " + $('#queryTextArea').val());
-    console.log("#queryText " + $('#queryText').attr('value'));
-    console.log("input.name " + input.name);
-    console.log("$('#queryText' + input.name).attr('value') " + $('#queryText' + input.name).attr('value'));
-    console.log("$('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));");
-    console.log($('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value')));
-    $('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));
-}
-
 function submitquery()
 {
     console.log("window.sparqlEndpoint" + window.sparqlEndpoint);

@@ -8,6 +8,20 @@ This app was originally developed by David Mattli.
 <<<<<<< HEAD
 == TODO
 
+Major concern:
+	Submitting sparql queries fails
+	
+	Error reads:
+		Cross-Origin Request Blocked: The Same Origin policy disallows reading the remote resoruce at <url> (Reason: CORS header 'Access-Control-Allow-Origin' missing)
+		(Reason: CORS request failed)
+	
+	The endpoint or sparql query may be incorrect
+	The sparql_queries controller show method may not be setting the headers correctly
+
+Basic input validation for forms 
+
+Get bootstrap and apply to views 
+
 ~~In endpoints/show.html.haml~~
 ~~  maps not displaying correctly~~ 
 ~~    update nationalmaps api code in endpoints.js file under assets~~  
@@ -19,8 +33,4 @@ Fixed by combining endpoints and sparql_queries models
 ~~      but are not being assigned an endpoint when they are created~~ 
 
 ~~Simplify forms for submitting sparql queries~~
-
-Basic input validation for forms 
-
-Get bootstrap and apply to views 
 

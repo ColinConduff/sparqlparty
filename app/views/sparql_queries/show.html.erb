@@ -1,56 +1,84 @@
 
 
 
-<%= javascript_include_tag "sparql_queries" %>
+<div class="container text-center">
 
-<%= javascript_tag do %>
-  window.sparqlEndpoint = '<%= j @sparql_query.endpoint %>';
-  window.sparqlQuery = '<%= j @sparql_query.query %>';
-<% end %>
+  <%= javascript_tag do %>
+    window.sparqlEndpoint = '<%= j @sparql_query.endpoint %>';
+    window.sparqlQuery = '<%= j @sparql_query.query %>';
+    // submitquery(); // the query should be submitted automatically
+  <% end %>
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @sparql_query.name %>
-</p>
-
-<p>
-  <b>Query:</b>
-  <%= @sparql_query.query %>
-</p>
-
-<p>
-  <b>Endpoint:</b>
-  <%= @sparql_query.endpoint %>
-</p>
-
-<div class='queryArea' id='query'>
-  <div id='queryText'>
-    <form>
-      <input onclick='submitquery(); return false;' id='submitQuery' text='Submit Query' type='submit'>
-    </form>
+  <div class="row">
+    <div class="col-xs-3">
+      <%= link_to 'Back', sparql_queries_path %> 
+    </div>
+    <div class="col-xs-6">
+      <h1>Sparql Query Visualizer</h1>
+    </div>
+    <div class="col-xs-3">
+      <%= link_to 'Edit', edit_sparql_query_path(@sparql_query) %>
+    </div>
   </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+  </button>
+
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+    Name:
+    <%= @sparql_query.name %>
+  
+    Query:
+    <%= @sparql_query.query %>
+  
+    Endpoint:
+    <%= @sparql_query.endpoint %>
+  
+
+  <div>
+    <div>
+      <form>
+        <input onclick='submitquery(); return false;' text='Submit Query' type='submit'>
+      </form>
+    </div>
+  </div>
+  <div class='bigmap' id='map' style="border:.5em solid black"></div>
+  <div id='tableWrap'></div>
+
+  <%#
+  %div.queryArea#query
+    %div#querySelection 
+      %form{:onsubmit => "return false;"}
+        - @endpoint.sparql_queries.each do |query|
+          %input{:class => "querySubmit", :type => "submit", :name => query.id, :value => query.name, :onclick => "setQuery(this); return false;"}
+          %input{:type => "hidden", :id => "queryText" + query.id.to_s, :value => query.body} 
+
+    %div#queryText
+      %form{:onsubmit => "submitquery(); return false;"}
+        %textarea#queryTextArea
+        %input{:id => "submitQuery", :type => "submit", :text => "Submit Query"}
+  %>
 </div>
-<div class='bigmap' id='map'></div>
-<div id='tableWrap'></div>
-
-<%#
-%div.queryArea#query
-  %div#querySelection 
-    %form{:onsubmit => "return false;"}
-      - @endpoint.sparql_queries.each do |query|
-        %input{:class => "querySubmit", :type => "submit", :name => query.id, :value => query.name, :onclick => "setQuery(this); return false;"}
-        %input{:type => "hidden", :id => "queryText" + query.id.to_s, :value => query.body} 
-
-  %div#queryText
-    %form{:onsubmit => "submitquery(); return false;"}
-      %textarea#queryTextArea
-      %input{:id => "submitQuery", :type => "submit", :text => "Submit Query"}
-%>
-
-<%= link_to 'Edit', edit_sparql_query_path(@sparql_query) %> |
-<%= link_to 'Back', sparql_queries_path %>
 
 
 
