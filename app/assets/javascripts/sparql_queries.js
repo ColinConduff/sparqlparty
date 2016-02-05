@@ -43,6 +43,20 @@ function init() {
 	maxExtent: maxExtent,
 	restrictedExtent: restrictedExtent,
 	layers: [
+        new OpenLayers.Layer.XYZ('SmallScale',
+            'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/${z}/${y}/${x}', {
+            sphericalMercator: true,
+            isBaseLayer: true,
+            attribution:'USGS - The National Map'
+        }),
+
+        new OpenLayers.Layer.XYZ('NationalMapLarge',
+            'http://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/${z}/${y}/${x}', {
+            sphericalMercator: true,
+            isBaseLayer: true,
+            attribution:'USGS - The National Map'
+        }),
+        /*
 	    new OpenLayers.Layer.ArcGIS93Rest('Orthoimagery',
 					      'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSImageryOnly/MapServer/export',
 					      {
@@ -50,7 +64,8 @@ function init() {
 					      }),
 	    new OpenLayers.Layer.ArcGIS93Rest('Topo',
 					     'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/export', {}),
-	    new OpenLayers.Layer.OSM(),
+	    */
+        new OpenLayers.Layer.OSM(),
 	    new OpenLayers.Layer.Vector('Vector Layer')
 	],
 	center:  new OpenLayers.LonLat(-84.445, 33.7991).transform(proj, mercator)
@@ -136,25 +151,26 @@ function drawVectors(resultMsg, matchString, olmap) {
 function setQuery(input) {
     //$('#queryTextArea').value = $('#queryText1');
 
-    // console.log("#queryTextArea " + $('#queryTextArea').val());
-    // console.log("#queryText " + $('#queryText').attr('value'));
-    // console.log("input.name " + input.name);
-    // console.log("$('#queryText' + input.name).attr('value') " + $('#queryText' + input.name).attr('value'));
-    // console.log("$('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));");
-    // console.log($('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value')));
+    console.log("#queryTextArea " + $('#queryTextArea').val());
+    console.log("#queryText " + $('#queryText').attr('value'));
+    console.log("input.name " + input.name);
+    console.log("$('#queryText' + input.name).attr('value') " + $('#queryText' + input.name).attr('value'));
+    console.log("$('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));");
+    console.log($('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value')));
     $('#queryTextArea').val(prefixes + $('#queryText' + input.name).attr('value'));
 }
 
 function submitquery()
 {
-    console.log("window.sparqlURL" + window.sparqlURL);
+    console.log("window.sparqlEndpoint" + window.sparqlEndpoint);
+    console.log("window.sparqlQuery" + window.sparqlQuery);
     
     var request = $.ajax({
     	type: "GET",
-        url: window.sparqlURL,
+        url: window.sparqlEndpoint,
     	dataType: "json",
         data: {
-            "query": $("#queryTextArea").val(),
+            "query": window.sparqlQuery, // $("#queryTextArea").val(),
             "output": "json"
         }
     });

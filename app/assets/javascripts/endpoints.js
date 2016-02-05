@@ -1,6 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+/*
 var map;
 var prefixes = 
     " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n \
@@ -71,7 +72,7 @@ function updateTable(resultMsg, tableDivId) {
     var container = $('#' + tableDivId);
     var tbl = $('<table>').attr('id', 'basicTable').attr("class", "resultTable");
 
-    /* Create Table Headings */
+    
     var $tr = $('<tr>').attr("class", "resultTable");
     for (var i = 0; i < resultMsg['head']['vars'].length; ++i) {
 	$tr.append($('<th>').text(resultMsg['head']['vars'][i]));
@@ -162,3 +163,4 @@ function submitquery()
                  });
 }
 
+*/

@@ -3,9 +3,10 @@
 
 <%= javascript_include_tag "sparql_queries" %>
 
-<script type="text/javascript" charset="utf-8">
-  window.sparqlURL = '<%= @sparql_query.endpoint; %>'
-</script>
+<%= javascript_tag do %>
+  window.sparqlEndpoint = '<%= j @sparql_query.endpoint %>';
+  window.sparqlQuery = '<%= j @sparql_query.query %>';
+<% end %>
 
 <p id="notice"><%= notice %></p>
 
@@ -25,16 +26,9 @@
 </p>
 
 <div class='queryArea' id='query'>
-  <div id='querySelection'>
-    <form onsubmit='return false;'>
-    	<input class='querySubmit' type='submit' name=<%= @sparql_query.id.to_s %> value=<%= @sparql_query.name.to_s %> onclick='setQuery(this); return false;'>
-    	<input type='hidden' id=<%= 'queryText' + @sparql_query.id.to_s %> value=<%= @sparql_query.query.to_s %>>
-    </form>
-  </div>
   <div id='queryText'>
     <form>
-      <textarea id='queryTextArea'></textarea>
-      <input onclick= <%='submitquery(); return false;' %> id='submitQuery' text='Submit Query' type='submit'>
+      <input onclick='submitquery(); return false;' id='submitQuery' text='Submit Query' type='submit'>
     </form>
   </div>
 </div>

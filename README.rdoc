@@ -8,19 +8,19 @@ This app was originally developed by David Mattli.
 <<<<<<< HEAD
 == TODO
 
-In endpoints/show.html.haml
-  maps not displaying correctly 
-    update nationalmaps api code in endpoints.js file under assets 
+~~In endpoints/show.html.haml~~
+~~  maps not displaying correctly~~ 
+~~    update nationalmaps api code in endpoints.js file under assets~~  
 
-  commented out error caused by sql query 
+Fixed by combining endpoints and sparql_queries models 
+~~In sparql_queries/index.html.erb and show.html.erb~~
+~~  sparql_query.endpoint_id causes error because~~ 
+~~    sparql_queries have a one to many relationship with endpoints~~
+~~      but are not being assigned an endpoint when they are created~~ 
 
-In sparql_queries/index.html.erb and show.html.erb
-  sparql_query.endpoint_id causes error because 
-    sparql_queries have a one to many relationship with endpoints
-      but are not being assigned an endpoint when they are created 
+~~Simplify forms for submitting sparql queries~~
 
 Basic input validation for forms 
 
 Get bootstrap and apply to views 
-=======
->>>>>>> parent of e6dadc9... Created list of ToDo's
+
