@@ -58151,3 +58151,3931 @@ Served asset /sparql_queries.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:09:04 -0600
 Served asset /application.js - 304 Not Modified (12ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 190ms (Views: 160.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (110ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /proj4js.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /sparql_queries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /sparql_queries.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /application.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:11:49 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (2ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.3ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:11:52 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:11:58 -0600
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:11:59 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:13:17 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:14:02 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (7ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:14:03 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /sparql_queries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:14:15 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:14:16 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:06 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:15:07 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:15:28 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/new" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Processing by SparqlQueriesController#new as HTML
+  Rendered sparql_queries/_form.html.erb (9.5ms)
+  Rendered sparql_queries/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /sparql_queries.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:15:32 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:16:09 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+ERROR: compiling _app_views_sparql_queries_index_html_erb__1127692064333904635_69979882000200 RAISED /RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:7: syntax error, unexpected '='
+..., new_sparql_query_path, class="btn btn-default");@output_bu...
+...                               ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:10: syntax error, unexpected keyword_do_block, expecting keyword_end
+');   @sparql_queries.each do |sparql_query| 
+                             ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input
+Function body:           def _app_views_sparql_queries_index_html_erb__1127692064333904635_69979882000200(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "sparql_queries/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<div class="container">
+  <div class="well">
+    <h1 class="text-center">Listing sparql queries</h1>
+  </div>
+
+  ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path, class="btn btn-default");@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  
+  
+');   @sparql_queries.each do |sparql_query| 
+@output_buffer.safe_concat('    <div class="row">
+        <div class="col-xs-6 col-sm-8 text-center">
+          <h5>');@output_buffer.append= ( link_to sparql_query.name, sparql_query );@output_buffer.safe_concat('</h5>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+          <div class="btn btn-info btn-block">
+            ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, edit_sparql_query_path(sparql_query));@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+          <div class="btn btn-danger btn-block">
+            ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query, method: :delete, data: { confirm: 'Are you sure?' } );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+        </div>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="row">
+    <div class="col-xs-8 text-center">
+      ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+  </div>
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `synchronize'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/share/ruby/benchmark.rb:296:in `realtime'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/controllers/sparql_queries_controller.rb:7:in `index'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2090915151077849385__process_action__101190046825223680__callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/etag.rb:23:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/conditionalget.rb:25:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/session/abstract/id.rb:210:in `context'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/session/abstract/id.rb:205:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__4039078711459447124__call__1315611670081327440__callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/methodoverride.rb:21:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/runtime.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/lock.rb:15:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/content_length.rb:14:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/handler/webrick.rb:59:in `service'
+/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+/usr/share/ruby/webrick/server.rb:295:in `block in start_thread'
+  Rendered sparql_queries/index.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:7: syntax error, unexpected '='
+..., new_sparql_query_path, class="btn btn-default");@output_bu...
+...                               ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:10: syntax error, unexpected keyword_do_block, expecting keyword_end
+');   @sparql_queries.each do |sparql_query| 
+                             ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input):
+    4:     <h1 class="text-center">Listing sparql queries</h1>
+    5:   </div>
+    6: 
+    7:   <%= link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path, class="btn btn-default"%>
+    8:   
+    9:   
+    10:   <% @sparql_queries.each do |sparql_query| %>
+  app/controllers/sparql_queries_controller.rb:7:in `index'
+
+
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (64.3ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:16:16 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /application.js - 304 Not Modified (71ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:16:17 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/new" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Processing by SparqlQueriesController#new as HTML
+  Rendered sparql_queries/_form.html.erb (3.6ms)
+  Rendered sparql_queries/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:16:19 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:16:20 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:17:22 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+ERROR: compiling _app_views_sparql_queries_index_html_erb__1127692064333904635_69980053915720 RAISED /RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:21: syntax error, unexpected ','
+...pan>'.html_safe, sparql_query,, class:"btn btn-danger btn-bl...
+...                               ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:21: syntax error, unexpected ',', expecting ')'
+...ass:"btn btn-danger btn-block", method: :delete, data: { con...
+...                               ^
+Function body:           def _app_views_sparql_queries_index_html_erb__1127692064333904635_69980053915720(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "sparql_queries/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<div class="container">
+  <div class="well">
+    <h1 class="text-center">Listing sparql queries</h1>
+  </div>
+
+  ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path, class:"btn btn-success");@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  
+  
+');   @sparql_queries.each do |sparql_query| 
+@output_buffer.safe_concat('    <div class="row">
+        <div class="col-xs-6 col-sm-8 text-center">
+          <h5>');@output_buffer.append= ( link_to sparql_query.name, sparql_query );@output_buffer.safe_concat('</h5>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+          <div class="btn btn-info btn-block">
+            ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, edit_sparql_query_path(sparql_query));@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+            ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query,, class:"btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?' } );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="row">
+    <div class="col-xs-8 text-center">
+      ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+  </div>
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `synchronize'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/share/ruby/benchmark.rb:296:in `realtime'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/controllers/sparql_queries_controller.rb:7:in `index'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2090915151077849385__process_action__101190046825223680__callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/etag.rb:23:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/conditionalget.rb:25:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/session/abstract/id.rb:210:in `context'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/session/abstract/id.rb:205:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__4039078711459447124__call__1315611670081327440__callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/methodoverride.rb:21:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/runtime.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/lock.rb:15:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/content_length.rb:14:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/handler/webrick.rb:59:in `service'
+/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+/usr/share/ruby/webrick/server.rb:295:in `block in start_thread'
+  Rendered sparql_queries/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:21: syntax error, unexpected ','
+...pan>'.html_safe, sparql_query,, class:"btn btn-danger btn-bl...
+...                               ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:21: syntax error, unexpected ',', expecting ')'
+...ass:"btn btn-danger btn-block", method: :delete, data: { con...
+...                               ^):
+    18:           </div>
+    19:         </div>
+    20:         <div class="col-xs-3 col-sm-2">
+    21:             <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query,, class:"btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?' } %>
+    22:         </div>
+    23:     </div>
+    24:   <% end %>
+  app/controllers/sparql_queries_controller.rb:7:in `index'
+
+
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /sparql_queries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:17:31 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:17:32 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:18:25 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+ERROR: compiling _app_views_sparql_queries_index_html_erb__1127692064333904635_29307920 RAISED /RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:16: syntax error, unexpected ')', expecting :: or '[' or '.'
+... class"btn btn-info btn-block");@output_buffer.safe_concat('
+...                               ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+');   end 
+         ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:30: syntax error, unexpected keyword_ensure, expecting ')'
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_sparql_queries_index_html_erb__1127692064333904635_29307920(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "sparql_queries/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<div class="container">
+  <div class="well">
+    <h1 class="text-center">Listing sparql queries</h1>
+  </div>
+
+  ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path, class:"btn btn-success");@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  
+  
+');   @sparql_queries.each do |sparql_query| 
+@output_buffer.safe_concat('    <div class="row">
+        <div class="col-xs-6 col-sm-8 text-center">
+          <h5>');@output_buffer.append= ( link_to sparql_query.name, sparql_query );@output_buffer.safe_concat('</h5>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+          ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, edit_sparql_query_path(sparql_query), class"btn btn-info btn-block");@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+        <div class="col-xs-3 col-sm-2">
+          ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query, class:"btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?' } );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="row">
+    <div class="col-xs-8 text-center">
+      ');@output_buffer.append= ( link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe, new_sparql_query_path);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+  </div>
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `synchronize'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/share/ruby/benchmark.rb:296:in `realtime'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/controllers/sparql_queries_controller.rb:7:in `index'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2090915151077849385__process_action__101190046825223680__callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/cconduff/.gem/ruby/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/etag.rb:23:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/conditionalget.rb:25:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/session/abstract/id.rb:210:in `context'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/session/abstract/id.rb:205:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/cconduff/.gem/ruby/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__4039078711459447124__call__1315611670081327440__callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/methodoverride.rb:21:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/runtime.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/lock.rb:15:in `call'
+/home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/content_length.rb:14:in `call'
+/home/cconduff/.gem/ruby/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/cconduff/.gem/ruby/gems/rack-1.4.7/lib/rack/handler/webrick.rb:59:in `service'
+/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+/usr/share/ruby/webrick/server.rb:295:in `block in start_thread'
+  Rendered sparql_queries/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:16: syntax error, unexpected ')', expecting :: or '[' or '.'
+... class"btn btn-info btn-block");@output_buffer.safe_concat('
+...                               ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+');   end 
+         ^
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:30: syntax error, unexpected keyword_ensure, expecting ')'
+/RAID/CEGIS_Datasets/ontology/code/SemanticNationalMap/sparqlparty/app/views/sparql_queries/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'):
+    13:           <h5><%= link_to sparql_query.name, sparql_query %></h5>
+    14:         </div>
+    15:         <div class="col-xs-3 col-sm-2">
+    16:           <%= link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, edit_sparql_query_path(sparql_query), class"btn btn-info btn-block"%>
+    17:         </div>
+    18:         <div class="col-xs-3 col-sm-2">
+    19:           <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query, class:"btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?' } %>
+  app/controllers/sparql_queries_controller.rb:7:in `index'
+
+
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/cconduff/.gem/ruby/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:18:34 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5/edit" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/_form.html.erb (4.3ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:18:36 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (39ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:18:37 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /sparql_queries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:09 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:19:10 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /sparql_queries.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:19:51 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:20:28 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:38 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:21:39 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:21:45 -0600
+Served asset /application.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:21:46 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:35 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:22:36 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:22:58 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.1ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (7ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:22:59 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:23:45 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:23:45 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:23:45 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:23:45 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:45 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:23:46 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:24:25 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5/edit" for 127.0.0.1 at 2016-02-09 13:24:29 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/_form.html.erb (3.9ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:29 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:24:30 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (6ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:25:10 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:36 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:27:37 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.1ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /sparql_queries.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:27:52 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:28:30 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:30 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:30 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:30 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:30 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:30 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:28:31 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:28:44 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:28:58 -0600
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:28:59 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:21 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:29:22 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:29:24 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /application.js - 304 Not Modified (57ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:31:22 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/new" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Processing by SparqlQueriesController#new as HTML
+  Rendered sparql_queries/_form.html.erb (4.4ms)
+  Rendered sparql_queries/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 43ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:31:24 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+
+
+Started POST "/sparql_queries" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Processing by SparqlQueriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SHhirrEutaBI1i8oFtxY3ji4RsjcLMOPDkdLYeXYTo=", "sparql_query"=>{"name"=>"geoSparql example from packet", "query"=>"SELECT ?label ?wkt\r\nWHERE {\r\n?feature rdf:type gu:countyOrEquivalent . \r\n?feature rdfs:label ?label .\r\n?feature geo:hasGeometry ?g .\r\n?g geo:asWkt ?wkt .\r\n}", "endpoint"=>"http://www.opengis.net/det/geosparql/"}, "commit"=>"Create Sparql query"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (23.3ms)[0m  INSERT INTO "sparql_queries" ("created_at", "endpoint", "name", "query", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 09 Feb 2016 19:39:24 UTC +00:00], ["endpoint", "http://www.opengis.net/det/geosparql/"], ["name", "geoSparql example from packet"], ["query", "SELECT ?label ?wkt\r\nWHERE {\r\n?feature rdf:type gu:countyOrEquivalent . \r\n?feature rdfs:label ?label .\r\n?feature geo:hasGeometry ?g .\r\n?g geo:asWkt ?wkt .\r\n}"], ["updated_at", Tue, 09 Feb 2016 19:39:24 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/sparql_queries/6
+Completed 302 Found in 33ms (ActiveRecord: 25.8ms)
+
+
+Started GET "/sparql_queries/6" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:24 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/theme/default/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/north-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/west-mini.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/south-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/east-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/zoombar.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 13:39:25 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
