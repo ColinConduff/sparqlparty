@@ -18,11 +18,11 @@ Major concern:
 
 Basic input validation for forms 
 
+== Completed 
+
 Buttons with links are not activated by clicks outside of link but within button borders
 
 Bootstrap javascript components do not work
-
-== Completed 
 
 Get bootstrap 
 
