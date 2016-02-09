@@ -4,8 +4,6 @@ This web application allows users to ...
 
 This app was originally developed by David Mattli.  
 
-
-<<<<<<< HEAD
 == TODO
 
 Major concern:
@@ -20,17 +18,23 @@ Major concern:
 
 Basic input validation for forms 
 
-Get bootstrap and apply to views 
+Buttons with links are not activated by clicks outside of link but within button borders
 
-~~In endpoints/show.html.haml~~
-~~  maps not displaying correctly~~ 
-~~    update nationalmaps api code in endpoints.js file under assets~~  
+Bootstrap javascript components do not work
+
+== Completed 
+
+Get bootstrap 
+
+In endpoints/show.html.haml
+  maps not displaying correctly 
+    update nationalmaps api code in endpoints.js file under assets  
 
 Fixed by combining endpoints and sparql_queries models 
-~~In sparql_queries/index.html.erb and show.html.erb~~
-~~  sparql_query.endpoint_id causes error because~~ 
-~~    sparql_queries have a one to many relationship with endpoints~~
-~~      but are not being assigned an endpoint when they are created~~ 
+In sparql_queries/index.html.erb and show.html.erb
+  sparql_query.endpoint_id causes error because 
+    sparql_queries have a one to many relationship with endpoints
+      but are not being assigned an endpoint when they are created 
 
-~~Simplify forms for submitting sparql queries~~
+Simplify forms for submitting sparql queries
 
