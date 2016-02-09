@@ -1,6 +1,14 @@
-<h1>Editing sparql_query</h1>
+<div class="row text-center">
+	<div class="col-xs-3">
+		<%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 'Back', sparql_queries_path %>
+	</div>
+	<div class="col-xs-6">	
+		<h1>Editing Sparql Query</h1>
+	</div>
+	<div class="col-xs-3">
+		<%= link_to '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>'.html_safe + ' Show', @sparql_query %>
+	</div>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @sparql_query %> |
-<%= link_to 'Back', sparql_queries_path %>
