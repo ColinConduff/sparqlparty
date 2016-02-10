@@ -18,6 +18,8 @@ Major concern:
 
 Basic input validation for forms 
 
+Automatically submit sparql query when a user navigates to the show page.  Delete the submit query button.
+
 == Completed 
 
 Buttons with links are not activated by clicks outside of link but within button borders

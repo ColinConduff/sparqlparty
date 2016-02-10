@@ -75446,3 +75446,942 @@ Served asset /openlayers/img/layer-switcher-maximize.png - 304 Not Modified (2ms
 
 Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-09 16:53:15 -0600
 Served asset /openlayers/img/layer-switcher-minimize.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-10 14:08:42 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 190ms (Views: 160.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:42 -0600
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /proj4js.js - 200 OK (2ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/OpenLayers.js - 200 OK (49ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /sparql_queries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /home.css - 200 OK (2ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers-rails.js - 200 OK (78ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /jquery.js - 200 OK (32ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /application.js - 200 OK (62ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /sparql_queries.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/openlayers/theme/default/style.css" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/theme/default/style.css - 200 OK (4ms)
+
+
+Started GET "/assets/openlayers/img/north-mini.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/north-mini.png - 200 OK (6ms)
+
+
+Started GET "/assets/openlayers/img/east-mini.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/east-mini.png - 200 OK (9ms)
+
+
+Started GET "/assets/openlayers/img/slider.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/slider.png - 200 OK (6ms)
+
+
+Started GET "/assets/openlayers/img/zoom-plus-mini.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/zoom-plus-mini.png - 200 OK (4ms)
+
+
+Started GET "/assets/openlayers/img/south-mini.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/south-mini.png - 200 OK (2ms)
+
+
+Started GET "/assets/openlayers/img/west-mini.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/west-mini.png - 200 OK (2ms)
+
+
+Started GET "/assets/openlayers/img/zoom-minus-mini.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/zoom-minus-mini.png - 200 OK (2ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-maximize.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/layer-switcher-maximize.png - 200 OK (4ms)
+
+
+Started GET "/assets/openlayers/img/layer-switcher-minimize.png" for 127.0.0.1 at 2016-02-10 14:08:43 -0600
+Served asset /openlayers/img/layer-switcher-minimize.png - 200 OK (2ms)
+
+
+Started GET "/sparql_queries/6/edit" for 127.0.0.1 at 2016-02-10 14:08:49 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSparqlQuery Load (0.3ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered sparql_queries/_form.html.erb (41.4ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /sparql_queries.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:50 -0600
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/sparql_queries/6" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/openlayers/img/zoombar.png" for 127.0.0.1 at 2016-02-10 14:08:59 -0600
+Served asset /openlayers/img/zoombar.png - 200 OK (2ms)
+
+
+Started GET "/sparql_queries/6/edit" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSparqlQuery Load (0.1ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered sparql_queries/_form.html.erb (3.6ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /sparql_queries.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /application.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:35 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/sparql_queries/6" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:47 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.3ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:53 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries/6" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:09:57 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/sparql_queries/6/edit" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered sparql_queries/_form.html.erb (4.1ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /sparql_queries.js - 304 Not Modified (59ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:35 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:18:58 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries/5/edit" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.1ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/_form.html.erb (3.3ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:19:00 -0600
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-10 14:22:39 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.3ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /proj4js.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /openlayers/OpenLayers.js - 200 OK (95ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /openlayers-rails.js - 200 OK (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:40 -0600
+Served asset /application.js - 200 OK (12ms)
+
+
+Started GET "/sparql_queries/5" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Processing by SparqlQueriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSparqlQuery Load (0.1ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered sparql_queries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:47 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries/5/edit" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Processing by SparqlQueriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSparqlQuery Load (0.1ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" WHERE "sparql_queries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered sparql_queries/_form.html.erb (3.6ms)
+  Rendered sparql_queries/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Served asset /sparql_queries.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:22:59 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:00 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:00 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:00 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:00 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:00 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:00 -0600
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[35mSparqlQuery Load (0.2ms)[0m  SELECT "sparql_queries".* FROM "sparql_queries" 
+  Rendered sparql_queries/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:16 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries/new" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Processing by SparqlQueriesController#new as HTML
+  Rendered sparql_queries/_form.html.erb (3.8ms)
+  Rendered sparql_queries/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /sparql_queries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:23 -0600
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/sparql_queries" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Processing by SparqlQueriesController#index as HTML
+  [1m[36mSparqlQuery Load (0.2ms)[0m  [1mSELECT "sparql_queries".* FROM "sparql_queries" [0m
+  Rendered sparql_queries/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/proj4js.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /proj4js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sparql_queries.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /sparql_queries.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/openlayers-rails.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /openlayers-rails.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/openlayers/OpenLayers.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /openlayers/OpenLayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/sparql_queries.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /sparql_queries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-10 14:23:36 -0600
+Served asset /application.js - 304 Not Modified (12ms)
