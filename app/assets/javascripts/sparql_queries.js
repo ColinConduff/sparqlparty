@@ -150,26 +150,79 @@ function drawVectors(resultMsg, matchString, olmap) {
 
 function submitquery()
 {
-    console.log("window.sparqlEndpoint" + window.sparqlEndpoint);
-    console.log("window.sparqlQuery" + window.sparqlQuery);
+
+    console.log("window.sparqlEndpoint :" + window.sparqlEndpoint);
+    console.log("window.sparqlQuery :" + window.sparqlQuery);
+
+  //   var request = $.ajax({
+  //   	type: "GET",
+  //       url: window.sparqlEndpoint,
+  //   	dataType: "jsonp",
+  //       data: {
+  //           "query": window.sparqlQuery, // $("#queryTextArea").val(),
+  //           "default-graph-uri": "http://dbpedia.org/"
+  //       },
+  //       async:true,
+  //       crossDomain:true
+  //   });
     
-    var request = $.ajax({
-    	type: "GET",
-        url: window.sparqlEndpoint,
-    	dataType: "json",
+  //   request.done(function( msg ) {
+  //       console.log("msg :" + msg);
+
+		// drawVectors(msg, "wkt", map);
+  //       updateTable(msg, "tableWrap");
+  //   });
+    
+  //   request.fail(function(jqXHR, textStatus, errorThrown) {
+  //       alert( "Request Failed: " + textStatus);
+		// alert(errorThrown + ": " + jqXHR.responseText);
+  //   });
+
+  //   $.ajax({
+  //       data: {
+  //           query: "ASK { FILTER(true && false) }",
+  //           "default-graph-uri": "http://dbpedia.org/"
+  //       },
+  //       dataType: "json",
+  //       url: "http://dbpedia.org/sparql",
+  //       statusCode: {
+  //           400: function (error) {
+  //               //Whatever you want to do if there's an error.
+  //           }
+  //       },
+  //       success: function (data) {
+  //           // Just show the returned data as an alert
+  //           alert(JSON.stringify(data));
+  //       }
+  //   });
+
+  //   $.ajax({
+  //       type: "GET",
+  //       url: 'http://dbpedia.org/sparql',
+  //       data:{query: "ASK { FILTER(true && false) }",
+  //           "default-graph-uri": "http://dbpedia.org/"},
+  //       async:true,
+  //       dataType : 'jsonp',   //you may use jsonp for cross origin request
+  //       crossDomain:true,
+  //       success: function(data, status, xhr) {
+  //           alert(xhr.getResponseHeader('Location'));
+  //       }
+  //   });
+
+// only get a response if the url and query are hard coded
+    $.ajax({
+        type: "GET",
+        url: 'http://dbpedia.org/sparql',
+        dataType: "jsonp",
         data: {
-            "query": window.sparqlQuery, // $("#queryTextArea").val(),
-            "output": "json"
+            "query": "ASK { FILTER(true && false) }", // $("#queryTextArea").val(),
+            "default-graph-uri": "http://dbpedia.org/"
+        },
+        async:true,
+        crossDomain:true,
+        success: function(data, status, xhr) {
+            alert(xhr.getResponseHeader('Location'));
         }
     });
-    
-    request.done(function( msg ) {
-		drawVectors(msg, "wkt", map);
-        updateTable(msg, "tableWrap");
-    });
-    
-    request.fail(function(jqXHR, textStatus, errorThrown) {
-        alert( "Request Failed: " + textStatus);
-		alert(errorThrown + ": " + jqXHR.responseText);
-    });
+
 }

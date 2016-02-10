@@ -13,8 +13,10 @@ Major concern:
 		Cross-Origin Request Blocked: The Same Origin policy disallows reading the remote resoruce at <url> (Reason: CORS header 'Access-Control-Allow-Origin' missing)
 		(Reason: CORS request failed)
 	
-	The endpoint or sparql query may be incorrect
-	The sparql_queries controller show method may not be setting the headers correctly
+	The error does not occur if the data type is jsonp
+
+	However, now the ajax call only works with hard-coded url and query.
+	Also, the functions that use the response are expecting json, so the jsonp format could cause problems.
 
 Basic input validation for forms 
 
