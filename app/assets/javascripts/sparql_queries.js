@@ -212,16 +212,19 @@ function submitquery()
 // only get a response if the url and query are hard coded
     $.ajax({
         type: "GET",
-        url: 'http://dbpedia.org/sparql',
+        url: 'http://www.opengis.net/ont/geosparql#',
         dataType: "jsonp",
         data: {
-            "query": "ASK { FILTER(true && false) }", // $("#queryTextArea").val(),
-            "default-graph-uri": "http://dbpedia.org/"
+            "query": "PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/geosparql/function/> SELECT ?what WHERE { ?what geo:hasGeometry ?geometry . FILTER(geof:sfWithin(?geometry,'POLYGON((-77.089005 38.913574,-77.029953 38.913574,-77.029953 38.886321,-77.089005 38.886321,-77.089005 38.913574))'^^geo:wktLiteral))}"//, // $("#queryTextArea").val(),
+            //"default-graph-uri": "http://dbpedia.org/"
         },
         async:true,
         crossDomain:true,
-        success: function(data, status, xhr) {
-            alert(xhr.getResponseHeader('Location'));
+        success: function (data) {
+            alert("1" + data);
+        },
+        error: function (result) {
+            alert("2" + JSON.stringify(result));
         }
     });
 

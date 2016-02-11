@@ -18,9 +18,20 @@ Major concern:
 	However, now the ajax call only works with hard-coded url and query.
 	Also, the functions that use the response are expecting json, so the jsonp format could cause problems.
 
+	http://www.opengis.net/ont/geosparql#
+	seems to be a valid endpoint, however the response only comes in xml for some reason
+
+The original app may have used parliament for a sparql endpoint, etc.  Creating a parliament triple store may be necessary to access usgs triples.
+Old cegis sparql endpoint was 
+	usgs-ybother.srv.mst.edu:8890/parliament
+
 Basic input validation for forms 
 
 Automatically submit sparql query when a user navigates to the show page.  Delete the submit query button.
+
+Pagination for index sparql queries view
+
+Search bar and sort sparql queries in index view 
 
 == Completed 
 
