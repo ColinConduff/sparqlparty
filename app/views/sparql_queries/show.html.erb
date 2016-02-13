@@ -2,9 +2,10 @@
 <div class="text-center">
 
   <%= javascript_tag do %>
-    window.sparqlEndpoint = '<%= j @sparql_query.endpoint %>';
-    window.sparqlQuery = '<%= j @sparql_query.query %>';
-    // submitquery(); // the query should be submitted automatically
+    var endpoint = '<%= j @sparql_query.endpoint %>';
+    var query = '<%= j escape_javascript(@sparql_query.query.squish).html_safe %>';
+
+    submitquery(endpoint, query); 
   <% end %>
 
   <p id="notice"><%= notice %></p>
@@ -61,29 +62,35 @@
         </div>
       </div>
     </div>
+
     <div class="col-xs-3">
-      <button onclick='submitquery(); return false;' type='submit' class="btn btn-default">
-        Submit Query
+          <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal1">
+        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
       </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel"><%= @sparql_query.name %></h4>
+            </div>
+            <div class="modal-body" id='tableWrap'>
+            
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class='bigmap' id='map' style="border:.5em solid black"></div>
-  <div id='tableWrap'></div>
-
-  <%#
-  %div.queryArea#query
-    %div#querySelection 
-      %form{:onsubmit => "return false;"}
-        - @endpoint.sparql_queries.each do |query|
-          %input{:class => "querySubmit", :type => "submit", :name => query.id, :value => query.name, :onclick => "setQuery(this); return false;"}
-          %input{:type => "hidden", :id => "queryText" + query.id.to_s, :value => query.body} 
-
-    %div#queryText
-      %form{:onsubmit => "submitquery(); return false;"}
-        %textarea#queryTextArea
-        %input{:id => "submitQuery", :type => "submit", :text => "Submit Query"}
-  %>
 </div>
 
 

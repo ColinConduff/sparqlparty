@@ -125,6 +125,8 @@ function drawVectors(resultMsg, matchString, olmap) {
 
     vectorLayer.removeAllFeatures();
 
+    console.log("resultMSG " + JSON.stringify(resultMsg));
+
     for (i=0; i < resultMsg['results']['bindings'].length; ++i) {
         for (var key in resultMsg['results']['bindings'][i]) {
             if(resultMsg['results']['bindings'][i][key]['datatype'] == "http://www.opengis.net/ont/geosparql#wktLiteral") {
@@ -148,84 +150,30 @@ function drawVectors(resultMsg, matchString, olmap) {
     map.zoomToExtent(bounds);
 }
 
-function submitquery()
+function submitquery(endpoint, query)
 {
+    console.log("query :" + query);
+    console.log("endpoint :" + endpoint);
 
-    console.log("window.sparqlEndpoint :" + window.sparqlEndpoint);
-    console.log("window.sparqlQuery :" + window.sparqlQuery);
-
-  //   var request = $.ajax({
-  //   	type: "GET",
-  //       url: window.sparqlEndpoint,
-  //   	dataType: "jsonp",
-  //       data: {
-  //           "query": window.sparqlQuery, // $("#queryTextArea").val(),
-  //           "default-graph-uri": "http://dbpedia.org/"
-  //       },
-  //       async:true,
-  //       crossDomain:true
-  //   });
-    
-  //   request.done(function( msg ) {
-  //       console.log("msg :" + msg);
-
-		// drawVectors(msg, "wkt", map);
-  //       updateTable(msg, "tableWrap");
-  //   });
-    
-  //   request.fail(function(jqXHR, textStatus, errorThrown) {
-  //       alert( "Request Failed: " + textStatus);
-		// alert(errorThrown + ": " + jqXHR.responseText);
-  //   });
-
-  //   $.ajax({
-  //       data: {
-  //           query: "ASK { FILTER(true && false) }",
-  //           "default-graph-uri": "http://dbpedia.org/"
-  //       },
-  //       dataType: "json",
-  //       url: "http://dbpedia.org/sparql",
-  //       statusCode: {
-  //           400: function (error) {
-  //               //Whatever you want to do if there's an error.
-  //           }
-  //       },
-  //       success: function (data) {
-  //           // Just show the returned data as an alert
-  //           alert(JSON.stringify(data));
-  //       }
-  //   });
-
-  //   $.ajax({
-  //       type: "GET",
-  //       url: 'http://dbpedia.org/sparql',
-  //       data:{query: "ASK { FILTER(true && false) }",
-  //           "default-graph-uri": "http://dbpedia.org/"},
-  //       async:true,
-  //       dataType : 'jsonp',   //you may use jsonp for cross origin request
-  //       crossDomain:true,
-  //       success: function(data, status, xhr) {
-  //           alert(xhr.getResponseHeader('Location'));
-  //       }
-  //   });
-
-// only get a response if the url and query are hard coded
-    $.ajax({
-        type: "GET",
-        url: 'http://www.opengis.net/ont/geosparql#',
-        dataType: "jsonp",
-        data: {
-            "query": "PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/geosparql/function/> SELECT ?what WHERE { ?what geo:hasGeometry ?geometry . FILTER(geof:sfWithin(?geometry,'POLYGON((-77.089005 38.913574,-77.029953 38.913574,-77.029953 38.886321,-77.089005 38.886321,-77.089005 38.913574))'^^geo:wktLiteral))}"//, // $("#queryTextArea").val(),
-            //"default-graph-uri": "http://dbpedia.org/"
-        },
-        async:true,
-        crossDomain:true,
-        success: function (data) {
-            alert("1" + data);
-        },
-        error: function (result) {
-            alert("2" + JSON.stringify(result));
-        }
+    var request = $.ajax({
+    type: "GET",
+    url: endpoint, //"http://geoquery.cs.jmu.edu:8081/parliament/sparql",
+    dataType: "json",
+    data: {
+         "query": query,
+         //"query": "PREFIX geo0:   <http://www.opengis.net/def/geosparql/> PREFIX geo:    <http://www.opengis.net/ont/geosparql#> PREFIX geof:   <http://www.opengis.net/ont/geosparql#/function/> PREFIX geo-sf: <http://www.opengis.net/ont/geosparql#/sf/>  PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#> PREFIX gnis:   <http://cegis.usgs.gov/rdf/gnis/> PREFIX nhd:    <http://cegis.usgs.gov/rdf/nhd/> PREFIX gu:     <http://cegis.usgs.gov/rdf/gu/> SELECT ?wkt WHERE { ?feature rdf:type gu:countyOrEquivalent . ?feature rdfs:label ?label . ?feature geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }" ,
+         "output": "json"
+      }
     });
-
+    
+    request.done(function( msg ) {
+         drawVectors(msg, "wkt", map);
+                     updateTable(msg, "tableWrap");
+                 });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+                     alert( "Request Failed: " + textStatus);
+         alert(errorThrown + ": " + jqXHR.responseText);
+         
+                 });
 }

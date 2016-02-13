@@ -6,34 +6,24 @@ This app was originally developed by David Mattli.
 
 == TODO
 
-Major concern:
-	Submitting sparql queries fails
-	
-	Error reads:
-		Cross-Origin Request Blocked: The Same Origin policy disallows reading the remote resoruce at <url> (Reason: CORS header 'Access-Control-Allow-Origin' missing)
-		(Reason: CORS request failed)
-	
-	The error does not occur if the data type is jsonp
-
-	However, now the ajax call only works with hard-coded url and query.
-	Also, the functions that use the response are expecting json, so the jsonp format could cause problems.
-
-	http://www.opengis.net/ont/geosparql#
-	seems to be a valid endpoint, however the response only comes in xml for some reason
-
-The original app may have used parliament for a sparql endpoint, etc.  Creating a parliament triple store may be necessary to access usgs triples.
-Old cegis sparql endpoint was 
-	usgs-ybother.srv.mst.edu:8890/parliament
+Consider creating a new sparql endpoint for new usgs data
+	Old cegis sparql endpoint was 
+		usgs-ybother.srv.mst.edu:8890/parliament/sparql
 
 Basic input validation for forms 
-
-Automatically submit sparql query when a user navigates to the show page.  Delete the submit query button.
+	check for valid endpoint
+	check for valid sparql query 
 
 Pagination for index sparql queries view
 
 Search bar and sort sparql queries in index view 
 
 == Completed 
+
+Automatically submit sparql query when a user navigates to the show page.  Delete the submit query button.
+
+Sparql queries submit successfully 
+	The sparql endpoint must be correct, and the response data needs to be in json
 
 Buttons with links are not activated by clicks outside of link but within button borders
 
