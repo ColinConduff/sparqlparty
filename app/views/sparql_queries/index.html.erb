@@ -4,22 +4,42 @@
   <h1 class="text-center">Listing sparql queries</h1>
 </div>
 
-<% @sparql_queries.each do |sparql_query| %>
-  <div class="row">
-      <div class="col-xs-6 col-sm-8 text-center">
-        <h5><%= link_to sparql_query.name, sparql_query %></h5>
-      </div>
-      <div class="col-xs-3 col-sm-2">
-        <%= link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, edit_sparql_query_path(sparql_query), class:"btn btn-info btn-block"%>
-      </div>
-      <div class="col-xs-3 col-sm-2">
-        <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query, class:"btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-  </div>
-<% end %>
-
-<div class="row">
-  <div class="col-xs-6 text-center">
+<div class="row text-center">
+  <div class="col-xs-6">
     <%= link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'.html_safe + " New Sparql Query", new_sparql_query_path, class:"btn btn-success"%>
   </div>
+  <div class="col-xs-6">
+    <div id="pagination"></div>
+  </div>
 </div>
+
+<div id="queryData">
+  <% @sparql_queries.each do |sparql_query| %>
+    <div class="row" id="queryRow">
+        <div class="col-xs-6 col-sm-8 text-center">
+          <h5><%= link_to sparql_query.name, sparql_query %></h5>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+          <%= link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, edit_sparql_query_path(sparql_query), class:"btn btn-info btn-block"%>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+          <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, sparql_query, class:"btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+<%= javascript_tag do %>
+  var items = $("#queryData #queryRow");
+  var numItems = items.length;
+  var perPage = 1;
+  var selector = "#pagination";
+
+  customPagination(items, numItems, perPage, selector);
+<% end %>
+
+<style>
+.simple-pagination ul {
+  display: inline-block;
+}
+</style>
