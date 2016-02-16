@@ -6,19 +6,18 @@ This app was originally developed by David Mattli.
 
 == TODO
 
-Consider creating a new sparql endpoint for new usgs data
-	Old cegis sparql endpoint was 
+Consider using parliament to create a new sparql endpoint for new usgs data
 		usgs-ybother.srv.mst.edu:8890/parliament/sparql
 
 Basic input validation for forms 
 	check for valid endpoint
 	check for valid sparql query 
 
-Pagination for index sparql queries view
-
 Search bar and sort sparql queries in index view 
 
 == Completed 
+
+Pagination for index sparql queries view
 
 Automatically submit sparql query when a user navigates to the show page.  Delete the submit query button.
 
