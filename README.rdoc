@@ -12,10 +12,11 @@ Consider using parliament to create a new sparql endpoint for new usgs data
 Basic input validation for forms 
 	check for valid endpoint
 	check for valid sparql query 
-
-Search bar and sort sparql queries in index view 
+	use ruby gem to check queries 
 
 == Completed 
+
+Search bar and sort sparql queries in index view 
 
 Pagination for index sparql queries view
 
