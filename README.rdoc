@@ -6,15 +6,23 @@ This app was originally developed by David Mattli.
 
 == TODO
 
-Consider using parliament to create a new sparql endpoint for new usgs data
-		usgs-ybother.srv.mst.edu:8890/parliament/sparql
+Replace Sparql queries with a graphical user interface
+
+Sparql syntax highlighting 
 
 Basic input validation for forms 
 	check for valid endpoint
 	check for valid sparql query 
 	use ruby gem to check queries 
 
+Replace with new version of openlayers 
+	error prevents scrolling and click-dragging 
+
 == Completed 
+
+Replace button in edit and create forms with bootstrap buttons
+
+Oracle Spatial is being set up to provide a new USGS sparql endpoint
 
 Search bar and sort sparql queries in index view 
 
