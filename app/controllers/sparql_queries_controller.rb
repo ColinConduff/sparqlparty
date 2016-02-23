@@ -7,6 +7,7 @@ class SparqlQueriesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sparql_queries }
+      format.js
     end
   end
 
@@ -20,6 +21,7 @@ class SparqlQueriesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @sparql_query }
+      format.js
     end
   end
 
@@ -31,6 +33,7 @@ class SparqlQueriesController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @sparql_query }
+      format.js
     end
   end
 
@@ -48,9 +51,11 @@ class SparqlQueriesController < ApplicationController
       if @sparql_query.save
         format.html { redirect_to @sparql_query, notice: 'Sparql query was successfully created.' }
         format.json { render json: @sparql_query, status: :created, location: @sparql_query }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @sparql_query.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -64,9 +69,11 @@ class SparqlQueriesController < ApplicationController
       if @sparql_query.update_attributes(params[:sparql_query])
         format.html { redirect_to @sparql_query, notice: 'Sparql query was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @sparql_query.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -80,6 +87,7 @@ class SparqlQueriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to sparql_queries_url }
       format.json { head :no_content }
+      format.js
     end
   end
 end

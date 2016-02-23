@@ -119,9 +119,7 @@ function drawVectors(resultMsg, matchString, olmap) {
     var parser = new OpenLayers.Format.WKT(options);
     var vectorLayer = map.getLayersByName("Vector Layer")[0];
 
-    if (vectorLayer == undefined) {
-	return;
-    }
+    if (vectorLayer == undefined) { return; }
 
     vectorLayer.removeAllFeatures();
 
@@ -160,22 +158,20 @@ function submitquery(endpoint, query)
     url: endpoint, //"http://geoquery.cs.jmu.edu:8081/parliament/sparql",
     dataType: "json",
     data: {
-         "query": query,
-         //"query": "PREFIX geo0:   <http://www.opengis.net/def/geosparql/> PREFIX geo:    <http://www.opengis.net/ont/geosparql#> PREFIX geof:   <http://www.opengis.net/ont/geosparql#/function/> PREFIX geo-sf: <http://www.opengis.net/ont/geosparql#/sf/>  PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#> PREFIX gnis:   <http://cegis.usgs.gov/rdf/gnis/> PREFIX nhd:    <http://cegis.usgs.gov/rdf/nhd/> PREFIX gu:     <http://cegis.usgs.gov/rdf/gu/> SELECT ?wkt WHERE { ?feature rdf:type gu:countyOrEquivalent . ?feature rdfs:label ?label . ?feature geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }" ,
-         "output": "json"
-      }
+            "query": query,
+            "output": "json"
+        }
     });
     
     request.done(function( msg ) {
-         drawVectors(msg, "wkt", map);
-                     updateTable(msg, "tableWrap");
-                 });
+        drawVectors(msg, "wkt", map);
+        updateTable(msg, "tableWrap");
+    });
     
     request.fail(function(jqXHR, textStatus, errorThrown) {
-                     alert( "Request Failed: " + textStatus);
-         alert(errorThrown + ": " + jqXHR.responseText);
-         
-                 });
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
 }
 
 // custom code for pagination for index.html.erb
@@ -229,3 +225,120 @@ var customPagination = function(items, numItems, perPage, selector) {
     checkFragment();
 
 };
+
+function getFeatureTypes()
+{
+    var query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?type WHERE { ?feature rdf:type ?type . }";
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+
+    var request = $.ajax({
+    type: "GET",
+    url: endpoint,
+    dataType: "json",
+    data: {
+            "query": query,
+            "output": "json"
+        }
+    });
+    
+    request.done(function( msg ) {
+        var arrayOfObjects = msg.results.bindings;
+
+        for(var i = 0; i < arrayOfObjects.length; i++)
+        {
+            $(".featureTypes").append("<option>" + arrayOfObjects[i].type.value + "</option>")
+        }
+    });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
+}
+
+function getFeatureRelationships(selectedFeatureType)
+{
+    var query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?rel WHERE { ?feature rdf:type <" + selectedFeatureType + "> ; ?rel ?obj . }";
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    
+    var request = $.ajax({
+    type: "GET",
+    url: endpoint,
+    dataType: "json",
+    data: {
+            "query": query,
+            "output": "json"
+        }
+    });
+    
+    request.done(function( msg ) {
+        var arrayOfObjects = msg.results.bindings;
+
+        for(var i = 0; i < arrayOfObjects.length; i++)
+        {
+            $(".featureRelationships").append("<option>" + arrayOfObjects[i].rel.value + "</option>")
+        }
+    });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
+}
+
+function getFeatureAndLabel(feature, relationship, searchTerm)
+{
+    var query = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature + '> . ?feature rdfs:label ?label . ?feature <' + relationship + '> ?obj . FILTER( regex(str(?obj), "' + searchTerm + '", "i" ) ) . }';
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    
+    var request = $.ajax({
+    type: "GET",
+    url: endpoint,
+    dataType: "json",
+    data: {
+            "query": query,
+            "output": "json"
+        }
+    });
+    
+    request.done(function( msg ) {
+        var arrayOfObjects = msg.results.bindings;
+
+        for(var i = 0; i < arrayOfObjects.length; i++)
+        {
+            $('#someid').attr('name', 'value');
+            $(".featureResults").append("<option featureID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
+        }
+    });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
+}
+
+function getFeatureData(selectedFeature)
+{
+    var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }';
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+
+    var request = $.ajax({
+    type: "GET",
+    url: endpoint,
+    dataType: "json",
+    data: {
+            "query": query,
+            "output": "json"
+        }
+    });
+    
+    request.done(function( msg ) {
+        drawVectors(msg, "wkt", map);
+        updateTable(msg, "tableWrap");
+    });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
+}

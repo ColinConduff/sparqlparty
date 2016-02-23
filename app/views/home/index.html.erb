@@ -1,0 +1,57 @@
+<div class="text-center">
+
+  <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
+      "View Sparql Queries", sparql_queries_path%> 
+    </div>
+    <div class="col-xs-6">
+      <h3>Sparql Query Visualizer</h3>
+    </div>
+  
+  </div>
+
+  <select class="featureTypes"></select>
+
+  <select class="featureRelationships"></select>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="searchBar" placeholder="Search">
+  </div>
+
+  <button class="btn btn-default featureSearch">Submit</button>
+
+  <select class="featureResults"></select>
+
+  <div class='bigmap' id='map' style="border:.5em solid black"></div>
+
+  <%= javascript_tag do %>
+    //var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    //var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> SELECT ?wkt WHERE { <http://cegis.usgs.gov/rdf/trans/Features/VA000145>geo:hasGeometry ?g . ?g geo:asWKT ?wkt . } ';
+
+    //submitquery(endpoint, query); 
+
+    getFeatureTypes();
+
+    var selectedFeatureType = "";
+
+    $(".featureTypes").change(function () {
+      selectedFeatureType = $('.featureTypes').children(':selected').text();
+      getFeatureRelationships(selectedFeatureType);
+    });
+
+    $('.featureSearch').click(function(){
+      var selectedFeatureRel = $('.featureRelationships').children(':selected').text();
+      var searchTerm = $('#searchBar').val();
+      getFeatureAndLabel(selectedFeatureType, selectedFeatureRel, searchTerm);
+    });
+
+    $(".featureResults").change(function () {
+      var selectedFeature = $('.featureResults').children(':selected').attr('featureID');
+      getFeatureData(selectedFeature);
+    });
+
+  <% end %>
+</div>
