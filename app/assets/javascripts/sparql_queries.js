@@ -226,7 +226,7 @@ var customPagination = function(items, numItems, perPage, selector) {
 
 };
 
-function getFeatureTypes()
+function getFeatureTypes(selector)
 {
     var query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?type WHERE { ?feature rdf:type ?type . }";
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
@@ -246,7 +246,7 @@ function getFeatureTypes()
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
-            $(".featureTypes").append("<option>" + arrayOfObjects[i].type.value + "</option>")
+            $(selector).append("<option>" + arrayOfObjects[i].type.value + "</option>")
         }
     });
     
@@ -256,7 +256,7 @@ function getFeatureTypes()
     });
 }
 
-function getFeatureRelationships(selectedFeatureType)
+function getFeatureRelationships(selector, selectedFeatureType)
 {
     var query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?rel WHERE { ?feature rdf:type <" + selectedFeatureType + "> ; ?rel ?obj . }";
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
@@ -276,7 +276,7 @@ function getFeatureRelationships(selectedFeatureType)
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
-            $(".featureRelationships").append("<option>" + arrayOfObjects[i].rel.value + "</option>")
+            $(selector).append("<option>" + arrayOfObjects[i].rel.value + "</option>")
         }
     });
     
@@ -286,7 +286,7 @@ function getFeatureRelationships(selectedFeatureType)
     });
 }
 
-function getFeatureAndLabel(feature, relationship, searchTerm)
+function getFeatureAndLabel(selector, feature, relationship, searchTerm)
 {
     var query = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature + '> . ?feature rdfs:label ?label . ?feature <' + relationship + '> ?obj . FILTER( regex(str(?obj), "' + searchTerm + '", "i" ) ) . }';
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
@@ -306,8 +306,7 @@ function getFeatureAndLabel(feature, relationship, searchTerm)
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
-            $('#someid').attr('name', 'value');
-            $(".featureResults").append("<option featureID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
+            $(selector).append("<option featureID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
         }
     });
     
@@ -317,7 +316,7 @@ function getFeatureAndLabel(feature, relationship, searchTerm)
     });
 }
 
-function getFeatureData(selectedFeature)
+function getFeatureWKTData(selectedFeature)
 {
     var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }';
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";

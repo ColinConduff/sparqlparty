@@ -8,8 +8,6 @@ This app was originally developed by David Mattli.
 
 create capacity for more than one openlayer per page
 
-gui for second feature
-
 Get detailed info/attributes for features 
 
 gui for advanced features (spatial relationship, intersection, etc.)
@@ -28,7 +26,7 @@ error prevents scrolling and click-dragging
 
 == Completed 
 
-Implemented feature selection for graphical user interface
+Implemented graphical user interface which allows users to select two features without writing sparql queries.
 
 codeMirror2 used to create in browser text editor for sparql queries
 
