@@ -11,9 +11,11 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require proj4js
-//= require openlayers-rails
+//= require OpenLayers/OpenLayers
+//= require OpenLayers/OpenLayers.debug
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 //= require codemirror
 //= require codemirror/modes/sparql
+//= require_tree .
+//= require home.index

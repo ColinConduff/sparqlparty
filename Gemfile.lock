@@ -41,8 +41,6 @@ GEM
     coffee-script-source (1.10.0)
     erubis (2.7.0)
     execjs (2.6.0)
-    haml (4.0.7)
-      tilt
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -56,8 +54,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.11.2)
-    openlayers-rails (0.0.4)
-      railties (>= 3.1)
     polyglot (0.3.5)
     rack (1.4.7)
     rack-cache (1.5.1)
@@ -116,9 +112,7 @@ DEPENDENCIES
   codemirror-rails (~> 5.6)
   coffee-rails (~> 3.2.1)
   execjs
-  haml
   jquery-rails
-  openlayers-rails
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3

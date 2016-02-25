@@ -52,67 +52,77 @@
   <div class='bigmap' id='map' style="border:.5em solid black"></div>
 
   <%= javascript_tag do %> 
-    $('.featureRelationships1').hide();
-    $('#searchBar1').hide();
-    $('.featureSearch1').hide();
-    $('.featureResults1').hide();
 
-    $('.featureTypes2').hide();
-    $('.featureRelationships2').hide();
-    $('#searchBar2').hide();
-    $('.featureSearch2').hide();
-    $('.featureResults2').hide();
+  // hide dropdown/select menus until data is queried
+  $('.featureRelationships1').hide();
+  $('#searchBar1').hide();
+  $('.featureSearch1').hide();
+  $('.featureResults1').hide();
 
-    getFeatureTypes('.featureTypes1');
+  $('.featureTypes2').hide();
+  $('.featureRelationships2').hide();
+  $('#searchBar2').hide();
+  $('.featureSearch2').hide();
+  $('.featureResults2').hide();
 
-    var selectedFeatureType1 = "";
+  // get the types of all of the features in the dataset
+  getFeatureTypes('.featureTypes1');
 
-    $(".featureTypes1").change(function () {
-      selectedFeatureType1 = $('.featureTypes1').children(':selected').text();
-      getFeatureRelationships('.featureRelationships1', selectedFeatureType1);
-      $('.featureRelationships1').show();
-      $('#searchBar1').show();
-      $('.featureSearch1').show();
-    });
+  var selectedFeatureType1 = "";
 
-    $('.featureSearch1').click(function(){
-      var selectedFeatureRel = $('.featureRelationships1').children(':selected').text();
-      var searchTerm = $('#searchBar1').val();
-      getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm);
-      $('.featureResults1').show();
-    });
+  // when a feature type is selected, get all of the relationships related
+  // to that feature type
+  $(".featureTypes1").change(function () {
+    selectedFeatureType1 = $('.featureTypes1').children(':selected').text();
+    getFeatureRelationships('.featureRelationships1', selectedFeatureType1);
+    $('.featureRelationships1').show();
+    $('#searchBar1').show();
+    $('.featureSearch1').show();
+  });
 
-    $(".featureResults1").change(function () {
-      var selectedFeature = $('.featureResults1').children(':selected').attr('featureID');
-      getFeatureWKTData(selectedFeature);
-      
-      // beginning feature 2 //////////////////////////////
+  // when the search button is clicked,
+  // use all of the user specified information to find all of the feature URIs
+  // and lables in the dataset matching the user's specifications
+  $('.featureSearch1').click(function(){
+    var selectedFeatureRel = $('.featureRelationships1').children(':selected').text();
+    var searchTerm = $('#searchBar1').val();
+    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm);
+    $('.featureResults1').show();
+  });
 
-      $('.featureTypes2').show();
-      getFeatureTypes('.featureTypes2');
-    });
+  // find one feature's wkt data and create a map layer
+  $(".featureResults1").change(function () {
+    var selectedFeature = $('.featureResults1').children(':selected').attr('featureID');
+    //getFeatureWKTData(selectedFeature);
+    
+    // beginning feature 2 //////////////////////////////
+    // do all of the same stuff for the second feature
 
-    var selectedFeatureType2 = "";
+    $('.featureTypes2').show();
+    getFeatureTypes('.featureTypes2');
+  });
 
-    $(".featureTypes2").change(function () {
-      selectedFeatureType2 = $('.featureTypes2').children(':selected').text();
-      getFeatureRelationships('.featureRelationships2', selectedFeatureType2);
-      $('.featureRelationships2').show();
-      $('#searchBar2').show();
-      $('.featureSearch2').show();
-    });
+  var selectedFeatureType2 = "";
 
-    $('.featureSearch2').click(function(){
-      var selectedFeatureRel = $('.featureRelationships2').children(':selected').text();
-      var searchTerm = $('#searchBar2').val();
-      getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm);
-      $('.featureResults2').show();
-    });
+  $(".featureTypes2").change(function () {
+    selectedFeatureType2 = $('.featureTypes2').children(':selected').text();
+    getFeatureRelationships('.featureRelationships2', selectedFeatureType2);
+    $('.featureRelationships2').show();
+    $('#searchBar2').show();
+    $('.featureSearch2').show();
+  });
 
-    $(".featureResults2").change(function () {
-      var selectedFeature = $('.featureResults2').children(':selected').attr('featureID');
-      getFeatureWKTData(selectedFeature);
-    });
+  $('.featureSearch2').click(function(){
+    var selectedFeatureRel = $('.featureRelationships2').children(':selected').text();
+    var searchTerm = $('#searchBar2').val();
+    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm);
+    $('.featureResults2').show();
+  });
+
+  $(".featureResults2").change(function () {
+    var selectedFeature = $('.featureResults2').children(':selected').attr('featureID');
+    getFeatureWKTData(selectedFeature);
+  });
 
   <% end %>
 

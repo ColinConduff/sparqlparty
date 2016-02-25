@@ -39,7 +39,5 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer'
-gem 'haml'
-gem 'openlayers-rails'
 
 gem 'codemirror-rails', '~> 5.6'

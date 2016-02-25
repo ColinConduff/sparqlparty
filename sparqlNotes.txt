@@ -66,6 +66,24 @@ WHERE {
    ?g geo:asWKT ?wkt . 
 } 
 
+# experimental query 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+SELECT DISTINCT ?feature ?label ?wkt
+WHERE { 
+  # Select features of the specified type: 
+  ?feature rdf:type <http://cegis.usgs.gov/rdf/trans/airportPoint> . 
+  ?feature rdfs:label ?label . 
+  
+  # Filter features by property: 
+  ?feature <http://www.w3.org/2000/01/rdf-schema#label> ?obj .
+  FILTER( regex(str(?obj), "airport", "i" ) ) . 
+
+  ?feature geo:hasGeometry ?g . 
+  ?g geo:asWKT ?wkt .
+}
+
 # Return all of the attributes related to a feature (occurs when double clicking feature)
 SELECT ?rel ?obj 
 WHERE { 
