@@ -3,113 +3,158 @@
   <p id="notice"><%= notice %></p>
 
   <div class="row">
-    <div class="col-xs-3">
-      <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
-      "View Sparql Queries", sparql_queries_path%> 
-    </div>
-    <div class="col-xs-6">
-      <h3>Sparql Query Visualizer</h3>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <select class="featureTypes1"></select>
-
-      <select class="featureRelationships1"></select>
-
-      <div class="input-group">
-        <input type="text" class="form-control" id="searchBar1" placeholder="Search">
-
-        <span class="input-group-btn">
-          <button class="btn btn-default featureSearch1">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
+    <div class="col-lg-3">
+      <div class="row">
+        <div class="col-xs-3">
+          <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
+          "View Sparql Queries", sparql_queries_path%> 
+        </div>
+        <div class="col-xs-6">
+          <h3>Sparql Query Visualizer</h3>
+        </div>
       </div>
 
-      <select class="featureResults1"></select>
-      
-      <!-- Display feature's attributes -->
-      <div> 
-        <!-- Button trigger modal -->
-        <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal1">
-          <span class="glyphicon glyphicon-pencil"></span>
-        </button>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
+          <select class="featureTypes1"></select>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="attributeModalTitle1"></div>
-              </div>
-              <div class="modal-body">
-                <table class="table table-condensed featureAttributesList1">
-                  <tr></tr>
-                </table>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <select class="featureRelationships1"></select>
+
+          <div class="input-group">
+            <input type="text" class="form-control" id="searchBar1" placeholder="Search">
+
+            <span class="input-group-btn">
+              <button class="btn btn-default featureSearch1">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+
+          <select class="featureResults1"></select>
+          
+          <!-- Display feature's attributes -->
+          <div> 
+            <!-- Button trigger modal -->
+            <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal1">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="attributeModalTitle1"></div>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table table-condensed featureAttributesList1">
+                      <tr></tr>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <select class="featureTypes2"></select>
 
-      <select class="featureRelationships2"></select>
+        <!-- Feature 2 menus -->
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
+          <select class="featureTypes2"></select>
 
-      <div class="input-group">
-        <input type="text" class="form-control" id="searchBar2" placeholder="Search">
+          <select class="featureRelationships2"></select>
 
-        <span class="input-group-btn">
-          <button class="btn btn-default featureSearch2">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
+          <div class="input-group">
+            <input type="text" class="form-control" id="searchBar2" placeholder="Search">
 
-      <select class="featureResults2"></select>
+            <span class="input-group-btn">
+              <button class="btn btn-default featureSearch2">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
 
-      <!-- Display feature's attributes -->
-      <div> 
-        <!-- Button trigger modal -->
-        <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal2">
-          <span class="glyphicon glyphicon-pencil"></span>
-        </button>
+          <select class="featureResults2"></select>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="attributeModalTitle2"></div>
-              </div>
-              <div class="modal-body">
-                <table class="table table-condensed featureAttributesList2">
-                  <tr></tr>
-                </table>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- Display feature's attributes -->
+          <div> 
+            <!-- Button trigger modal -->
+            <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal2">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="attributeModalTitle2"></div>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table table-condensed featureAttributesList2">
+                      <tr></tr>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
+          <div class="spatialRelationshipGroup">
+            <select class="featuresForSpatial1">
+              <option featureSpatialID="all">All</option>
+            </select>
+            <select class="featuresForSpatial2">
+              <option featureSpatialID="all">All</option>
+            </select>
+            <button class="btn btn-success startSpatialRelBtn">Submit</button>
+
+            <!-- Display results of spatial relationship  -->
+              <div> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3>Spatial Relationship Results</h3>
+                      </div>
+                      <div class="modal-body" id="spatialRelResultsTable"></div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class='bigmap' id='map' style="border:.5em solid black"></div>
+    <div class="col-lg-9">
+      <div class='bigmap' id='map' style="border:.5em solid black"></div>
+    </div>
+  </div>
 
   <%= javascript_tag do %> 
 
   // hide dropdown/select menus until data is queried
+  /*
   $('.featureRelationships1').hide();
   $('#searchBar1').hide();
   $('.featureSearch1').hide();
@@ -122,6 +167,9 @@
   $('.featureSearch2').hide();
   $('.featureResults2').hide();
   $('.displayAttributesBtn2').hide();
+
+  $('.spatialRelationshipGroup').hide();
+  */
 
   // get the types of all of the features in the dataset
   getFeatureTypes('.featureTypes1');
@@ -144,8 +192,11 @@
   $('.featureSearch1').click(function(){
     var selectedFeatureRel = $('.featureRelationships1').children(':selected').text();
     var searchTerm = $('#searchBar1').val();
-    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm);
+    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '.featuresForSpatial1');
     $('.featureResults1').show();
+
+    $('.featureTypes2').show();
+    getFeatureTypes('.featureTypes2');
   });
 
   // find one feature's wkt data and create a map layer
@@ -156,13 +207,10 @@
     var attributeModalTitle = '.attributeModalTitle1';
     getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle);
     $('.displayAttributesBtn1').show();
-    
-    // beginning feature 2 //////////////////////////////
-    // do all of the same stuff for the second feature
-
-    $('.featureTypes2').show();
-    getFeatureTypes('.featureTypes2');
   });
+
+  // beginning feature 2 //////////////////////////////
+  // do all of the same stuff for the second feature
 
   var selectedFeatureType2 = "";
 
@@ -177,8 +225,10 @@
   $('.featureSearch2').click(function(){
     var selectedFeatureRel = $('.featureRelationships2').children(':selected').text();
     var searchTerm = $('#searchBar2').val();
-    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm);
+    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '.featuresForSpatial2');
     $('.featureResults2').show();
+
+    $('.spatialRelationshipGroup').show();
   });
 
   $(".featureResults2").change(function () {
@@ -189,6 +239,44 @@
     getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle);
     $('.displayAttributesBtn2').show();
   });
+
+  $(".startSpatialRelBtn").click(function () {
+
+    // sfWithin, sfEquals, sfContains, sfDisjoint, sfIntersects, sfOverlaps, sfTouches
+    // ehEquals, ehDisjoint, ehMeet, ehOverlap, ehCovers, ehCoverdBy, ehInside, ehContains
+
+    var feature1 = $('.featuresForSpatial1').children(':selected').attr('featureSpatialID');
+    var feature2 = $('.featuresForSpatial2').children(':selected').attr('featureSpatialID');
+
+    if(feature1 == "all" && feature2 == "all")
+    {
+      alert("case1");
+    }
+    else if (feature1 == "all" && feature2 != "all")
+    {
+      var feature1Type = selectedFeatureType1;
+      var feature1Relationship = $('.featureRelationships1').children(':selected').text();
+      var feature1SearchTerm = $('#searchBar1').val();
+      
+      drawSpatialRelationshipLayerWithManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, "sfWithin");
+    }
+    else if (feature1 != "all" && feature2 == "all")
+    {
+      var feature2Type = selectedFeatureType2;
+      var feature2Relationship = $('.featureRelationships2').children(':selected').text();
+      var feature2SearchTerm = $('#searchBar2').val();
+      
+      drawSpatialRelationshipLayerWithManyToOne(feature2Type, feature2Relationship, feature2SearchTerm, feature1, "sfWithin");
+    }
+    else if (feature1 != "all" && feature2 != "all")
+    {
+      drawSpatialRelationshipLayerWith2Features(feature1, feature2, "sfWithin");
+    }
+    else
+    {
+      alert("error!");
+    }
+  })
 
   <% end %>
 

@@ -59,7 +59,7 @@ function getFeatureRelationships(selector, selectedFeatureType)
     });
 }
 
-function getFeatureAndLabel(selector, feature, relationship, searchTerm)
+function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial)
 {
     var query = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature + '> . ?feature rdfs:label ?label . ?feature <' + relationship + '> ?obj . FILTER( regex(str(?obj), "' + searchTerm + '", "i" ) ) . }';
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
@@ -80,6 +80,7 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm)
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
           $(selector).append("<option featureID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
+          $(selectorForSpatial).append("<option featureSpatialID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           getFeatureWKTData(arrayOfObjects[i].feature.value);
         }
     });
@@ -121,8 +122,6 @@ function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarg
     var query = 'SELECT ?rel ?obj WHERE { <' + selectedFeature + '> ?rel ?obj . }'
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
 
-    console.log(query);
-
     var request = $.ajax({
         type: "GET",
         url: endpoint,
@@ -155,4 +154,50 @@ function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarg
         alert( "Request Failed: " + textStatus);
         alert(errorThrown + ": " + jqXHR.responseText);
     });
+}
+
+function baseQueryRequest(query, ifSuccessfulDoThis)
+{
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+
+    console.log(query);
+
+    var request = $.ajax({
+        type: "GET",
+        url: endpoint,
+        dataType: "json",
+        data: {
+            "query": query,
+            "output": "json"
+        }
+    });
+    
+    request.done(function( msg ) {
+        ifSuccessfulDoThis(msg);
+    });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
+}
+
+function drawSpatialRelationshipLayerWithManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, operation)
+{
+    var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature1Type + '> . ?feature rdfs:label ?label . ?feature <' + feature1Relationship +'> ?obj1 . FILTER( regex(str(?obj1), "' + feature1SearchTerm + '", "i" ) ) . ?feature geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1 . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wktf2 . BIND(?wktf2 AS ?wkt2) . FILTER (geof:' + operation + '(?wkt1, ?wkt2)) .}';
+    var willDoThisUponSuccessfulQuery = function(msg) { 
+        updateTable(msg, 'spatialRelResultsTable');
+    }
+
+    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+}
+
+function drawSpatialRelationshipLayerWith2Features(feature1, feature2, operation)
+{
+    var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT DISTINCT ?feature ?label WHERE { <' + feature1 + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf1 . BIND(?wktf1 AS ?wkt1) . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wktf2 . BIND(?wktf2 AS ?wkt2) . FILTER (geof:' + operation + '(?wkt1, ?wkt2)) .}';
+    var willDoThisUponSuccessfulQuery = function(msg) { 
+        updateTable(msg, 'spatialRelResultsTable');
+    }
+
+    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
