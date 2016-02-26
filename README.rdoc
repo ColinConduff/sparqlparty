@@ -6,9 +6,9 @@ This app was originally developed by David Mattli.
 
 == TODO
 
-create capacity for more than one openlayer per page
+Get detailed info/attributes for a single selected feature by selecting it from dropdown or from layer on map.  
 
-Get detailed info/attributes for features 
+prevent map from zooming too far (which results in error loading the map)
 
 gui for advanced features (spatial relationship, intersection, etc.)
 
@@ -17,14 +17,13 @@ check for valid endpoint before submitting
 check for valid sparql query before submitting
 use ruby gem to check queries (gem sparql does not work with rails 3.2 [I think anyways])
 Instead use sparqljs (npm install)
-json stringify before api request
-
-Openlayers-rails gem is no longer maintained
-use rails-assets-openlayers gem instead
-Replace with new version of openlayers 
-error prevents scrolling and click-dragging 
+json stringify before api request 
 
 == Completed 
+
+Openlayers 2 js files included under app/assets/javascripts instead of using openlayers-rails gem.  The error: "window.controllers is deprecated. Do not use it for UA detection." is caused by firefox not openlayers.
+
+create capacity for more than one openlayer per page
 
 Implemented graphical user interface which allows users to select two features without writing sparql queries.
 

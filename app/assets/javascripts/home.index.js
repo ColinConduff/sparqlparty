@@ -115,3 +115,40 @@ function getFeatureWKTData(selectedFeature)
         alert(errorThrown + ": " + jqXHR.responseText);
     });
 }
+
+function getFeatureAttributes(selectedFeature, attributeTableTarget, attributeModalTitle)
+{
+    var query = 'SELECT ?rel ?obj WHERE { <' + selectedFeature + '> ?rel ?obj . }'
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+
+    console.log(query);
+
+    var request = $.ajax({
+        type: "GET",
+        url: endpoint,
+        dataType: "json",
+        data: {
+            "query": query,
+            "output": "json"
+        }
+    });
+    
+    request.done(function( msg ) {
+        var featureAttributes = msg.results.bindings;
+
+        for(var i = 0; i < featureAttributes.length; i++)
+        {
+            var type = featureAttributes[i].obj.type;
+            var val = featureAttributes[i].obj.value;
+            var uri = featureAttributes[i].rel.value;
+
+            $(attributeTableTarget+' > tbody:last-child').append('<tr><td>' + uri + '</td><td>' + type + ' : ' + val + '</td></tr>');
+            //$(attributeModalTitle).append(selectedFeature);
+        }
+    });
+    
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+        alert( "Request Failed: " + textStatus);
+        alert(errorThrown + ": " + jqXHR.responseText);
+    });
+}

@@ -35,40 +35,40 @@ function init() {
 
     var options = {
         controls: [new OpenLayers.Control.PanZoomBar() ],
-	projection: new OpenLayers.Projection('EPSG:900913'),
-	displayProjection: new OpenLayers.Projection('EPSG:4326'),
-	units: 'm',
-	numZoomLevels: 18,
-	maxResolution: maxResolution,
-	maxExtent: maxExtent,
-	restrictedExtent: restrictedExtent,
-	layers: [
-        new OpenLayers.Layer.XYZ('SmallScale',
-            'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/${z}/${y}/${x}', {
-            sphericalMercator: true,
-            isBaseLayer: true,
-            attribution:'USGS - The National Map'
-        }),
+    	projection: new OpenLayers.Projection('EPSG:900913'),
+    	displayProjection: new OpenLayers.Projection('EPSG:4326'),
+    	units: 'm',
+    	numZoomLevels: 18,
+    	maxResolution: maxResolution,
+    	maxExtent: maxExtent,
+    	restrictedExtent: restrictedExtent,
+    	layers: [
+            new OpenLayers.Layer.XYZ('SmallScale',
+                'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/${z}/${y}/${x}', {
+                sphericalMercator: true,
+                isBaseLayer: true,
+                attribution:'USGS - The National Map'
+            }),
 
-        new OpenLayers.Layer.XYZ('NationalMapLarge',
-            'http://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/${z}/${y}/${x}', {
-            sphericalMercator: true,
-            isBaseLayer: true,
-            attribution:'USGS - The National Map'
-        }),
-        /*
-	    new OpenLayers.Layer.ArcGIS93Rest('Orthoimagery',
-					      'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSImageryOnly/MapServer/export',
-					      {
-						  layers: "2"
-					      }),
-	    new OpenLayers.Layer.ArcGIS93Rest('Topo',
-					     'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/export', {}),
-	    */
-        new OpenLayers.Layer.OSM(),
-	    new OpenLayers.Layer.Vector('Vector Layer')
-	],
-	center:  new OpenLayers.LonLat(-84.445, 33.7991).transform(proj, mercator)
+            new OpenLayers.Layer.XYZ('NationalMapLarge',
+                'http://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/${z}/${y}/${x}', {
+                sphericalMercator: true,
+                isBaseLayer: true,
+                attribution:'USGS - The National Map'
+            }),
+            /*
+    	    new OpenLayers.Layer.ArcGIS93Rest('Orthoimagery',
+    					      'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSImageryOnly/MapServer/export',
+    					      {
+    						  layers: "2"
+    					      }),
+    	    new OpenLayers.Layer.ArcGIS93Rest('Topo',
+    					     'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/export', {}),
+    	    */
+            new OpenLayers.Layer.OSM(),
+    	    new OpenLayers.Layer.Vector('Vector Layer') // not necessary
+    	],
+	   center:  new OpenLayers.LonLat(-84.445, 33.7991).transform(proj, mercator)
     };
 
     map = new OpenLayers.Map('map', options);
@@ -118,8 +118,6 @@ function drawVectors(resultMsg) {
     };   
     var parser = new OpenLayers.Format.WKT(options);
 
-    console.log("resultMSG " + JSON.stringify(resultMsg));
-
     for (i=0; i < resultMsg['results']['bindings'].length; ++i) {
         for (var key in resultMsg['results']['bindings'][i]) {
             if(resultMsg['results']['bindings'][i][key]['datatype'] == "http://www.opengis.net/ont/geosparql#wktLiteral") {
@@ -147,9 +145,6 @@ function drawVectors(resultMsg) {
 
 function submitquery(endpoint, query)
 {
-    console.log("query :" + query);
-    console.log("endpoint :" + endpoint);
-
     var request = $.ajax({
     type: "GET",
     url: endpoint, //"http://geoquery.cs.jmu.edu:8081/parliament/sparql",

@@ -29,6 +29,37 @@
       </div>
 
       <select class="featureResults1"></select>
+      
+      <!-- Display feature's attributes -->
+      <div> 
+        <!-- Button trigger modal -->
+        <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title attributeModalTitle1" id="myModalLabel"></h4>
+              </div>
+              <div class="modal-body">
+                <table class="table table-condensed featureAttributesList1">
+                  <tr>
+                    <th class="text-center">URI</th>
+                    <th></th>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-sm-6">
       <select class="featureTypes2"></select>
@@ -46,6 +77,37 @@
       </div>
 
       <select class="featureResults2"></select>
+
+      <!-- Display feature's attributes -->
+      <div> 
+        <!-- Button trigger modal -->
+        <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title attributeModalTitle2" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                <table class="table table-condensed featureAttributesList2">
+                  <tr>
+                    <th class="text-center">URI</th>
+                    <th></th>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -58,12 +120,14 @@
   $('#searchBar1').hide();
   $('.featureSearch1').hide();
   $('.featureResults1').hide();
+  $('.displayAttributesBtn1').hide();
 
   $('.featureTypes2').hide();
   $('.featureRelationships2').hide();
   $('#searchBar2').hide();
   $('.featureSearch2').hide();
   $('.featureResults2').hide();
+  $('.displayAttributesBtn2').hide();
 
   // get the types of all of the features in the dataset
   getFeatureTypes('.featureTypes1');
@@ -88,12 +152,15 @@
     var searchTerm = $('#searchBar1').val();
     getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm);
     $('.featureResults1').show();
+    $('.displayAttributesBtn1').show();
   });
 
   // find one feature's wkt data and create a map layer
   $(".featureResults1").change(function () {
     var selectedFeature = $('.featureResults1').children(':selected').attr('featureID');
-    //getFeatureWKTData(selectedFeature);
+    var attributeTableTarget = '.featureAttributesList1';
+    var attributeModalTitle = '.attributeModalTitle1';
+    getFeatureAttributes(selectedFeature, attributeTableTarget, attributeModalTitle);
     
     // beginning feature 2 //////////////////////////////
     // do all of the same stuff for the second feature
@@ -117,11 +184,14 @@
     var searchTerm = $('#searchBar2').val();
     getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm);
     $('.featureResults2').show();
+    $('.displayAttributesBtn2').show();
   });
 
   $(".featureResults2").change(function () {
     var selectedFeature = $('.featureResults2').children(':selected').attr('featureID');
-    getFeatureWKTData(selectedFeature);
+    var attributeTableTarget = '.featureAttributesList2';
+    var attributeModalTitle = '.attributeModalTitle2';
+    getFeatureAttributes(selectedFeature, attributeTableTarget, attributeModalTitle);
   });
 
   <% end %>
