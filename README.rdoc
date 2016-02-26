@@ -6,22 +6,29 @@ This app was originally developed by David Mattli.
 
 == TODO
 
+Make the map fullscreen.  Make the dropdown menus slide over from the side.
+
+Add a dropdown menu to select different operations for the spatial relationship function.
+
+Implement: intersection, union, difference, symDifference, distance, buffer, boundary
+
 Color layers different colors
 
-Get detailed info/attributes for a single selected feature by selecting it from dropdown or from layer on map.  
+When a user selects a layer on the map, pan over to it, submit sparql query for the features attributes, fill a tooltip with the data as well as the existing modal for the data. Do all of this when a user selects the feature from a dropdown menu as well.    
 
-prevent map from zooming too far (which results in error loading the map)
+prevent map from zooming in too far (which results in error loading the map)
 
-gui for advanced features (spatial relationship, intersection, etc.)
+Refactor javascript and html code.  Generalize ajax queries.  Use a for loop in index.html.erb to minimize redundant code.  
 
-Basic input validation for forms 
-check for valid endpoint before submitting
-check for valid sparql query before submitting
-use ruby gem to check queries (gem sparql does not work with rails 3.2 [I think anyways])
-Instead use sparqljs (npm install)
-json stringify before api request 
+Use sparqljs (npm install) to validate sparql queries while they are being edited. sparqljs creates a json object so use JSON.stringify before sending the query. 
+
+Unit testing
 
 == Completed 
+
+Initial gui for spatial analysis of two features completed.  
+
+Get detailed info/attributes for a single selected feature by selecting it from dropdown.  The data appears in a modal.
 
 Openlayers 2 js files included under app/assets/javascripts instead of using openlayers-rails gem.  The error: "window.controllers is deprecated. Do not use it for UA detection." is caused by firefox not openlayers.
 
