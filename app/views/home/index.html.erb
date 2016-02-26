@@ -33,24 +33,21 @@
       <!-- Display feature's attributes -->
       <div> 
         <!-- Button trigger modal -->
-        <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal">
+        <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal1">
           <span class="glyphicon glyphicon-pencil"></span>
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title attributeModalTitle1" id="myModalLabel"></h4>
+                <div class="attributeModalTitle1"></div>
               </div>
               <div class="modal-body">
                 <table class="table table-condensed featureAttributesList1">
-                  <tr>
-                    <th class="text-center">URI</th>
-                    <th></th>
-                  </tr>
+                  <tr></tr>
                 </table>
               </div>
               <div class="modal-footer">
@@ -81,24 +78,21 @@
       <!-- Display feature's attributes -->
       <div> 
         <!-- Button trigger modal -->
-        <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal">
+        <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal2">
           <span class="glyphicon glyphicon-pencil"></span>
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title attributeModalTitle2" id="myModalLabel">Modal title</h4>
+                <div class="attributeModalTitle2"></div>
               </div>
               <div class="modal-body">
                 <table class="table table-condensed featureAttributesList2">
-                  <tr>
-                    <th class="text-center">URI</th>
-                    <th></th>
-                  </tr>
+                  <tr></tr>
                 </table>
               </div>
               <div class="modal-footer">
@@ -152,15 +146,16 @@
     var searchTerm = $('#searchBar1').val();
     getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm);
     $('.featureResults1').show();
-    $('.displayAttributesBtn1').show();
   });
 
   // find one feature's wkt data and create a map layer
   $(".featureResults1").change(function () {
     var selectedFeature = $('.featureResults1').children(':selected').attr('featureID');
+    var selectedLabel = $('.featureResults1').children(':selected').text();
     var attributeTableTarget = '.featureAttributesList1';
     var attributeModalTitle = '.attributeModalTitle1';
-    getFeatureAttributes(selectedFeature, attributeTableTarget, attributeModalTitle);
+    getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle);
+    $('.displayAttributesBtn1').show();
     
     // beginning feature 2 //////////////////////////////
     // do all of the same stuff for the second feature
@@ -184,14 +179,15 @@
     var searchTerm = $('#searchBar2').val();
     getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm);
     $('.featureResults2').show();
-    $('.displayAttributesBtn2').show();
   });
 
   $(".featureResults2").change(function () {
     var selectedFeature = $('.featureResults2').children(':selected').attr('featureID');
+    var selectedLabel = $('.featureResults2').children(':selected').text();
     var attributeTableTarget = '.featureAttributesList2';
     var attributeModalTitle = '.attributeModalTitle2';
-    getFeatureAttributes(selectedFeature, attributeTableTarget, attributeModalTitle);
+    getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle);
+    $('.displayAttributesBtn2').show();
   });
 
   <% end %>

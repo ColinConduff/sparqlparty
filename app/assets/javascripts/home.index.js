@@ -116,7 +116,7 @@ function getFeatureWKTData(selectedFeature)
     });
 }
 
-function getFeatureAttributes(selectedFeature, attributeTableTarget, attributeModalTitle)
+function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle)
 {
     var query = 'SELECT ?rel ?obj WHERE { <' + selectedFeature + '> ?rel ?obj . }'
     var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
@@ -136,6 +136,8 @@ function getFeatureAttributes(selectedFeature, attributeTableTarget, attributeMo
     request.done(function( msg ) {
         var featureAttributes = msg.results.bindings;
 
+        $(attributeTableTarget+' > tbody').empty();
+
         for(var i = 0; i < featureAttributes.length; i++)
         {
             var type = featureAttributes[i].obj.type;
@@ -143,8 +145,10 @@ function getFeatureAttributes(selectedFeature, attributeTableTarget, attributeMo
             var uri = featureAttributes[i].rel.value;
 
             $(attributeTableTarget+' > tbody:last-child').append('<tr><td>' + uri + '</td><td>' + type + ' : ' + val + '</td></tr>');
-            //$(attributeModalTitle).append(selectedFeature);
         }
+
+        $(attributeModalTitle).empty();
+        $(attributeModalTitle).append('<h4 class="modal-title">' + selectedLabel + '</h4>');
     });
     
     request.fail(function(jqXHR, textStatus, errorThrown) {
