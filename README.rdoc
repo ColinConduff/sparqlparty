@@ -8,8 +8,6 @@ This app was originally developed by David Mattli.
 
 Make the map fullscreen.  Make the dropdown menus slide over from the side.
 
-Add a dropdown menu to select different operations for the spatial relationship function.
-
 Implement: intersection, union, difference, symDifference, distance, buffer, boundary
 
 Color layers different colors
@@ -25,6 +23,8 @@ Use sparqljs (npm install) to validate sparql queries while they are being edite
 Unit testing
 
 == Completed 
+
+Added a dropdown menu to select different operations for the spatial relationship function.
 
 Initial gui for spatial analysis of two features completed.  
 

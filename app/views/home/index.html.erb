@@ -116,6 +116,23 @@
             <select class="featuresForSpatial2">
               <option featureSpatialID="all">All</option>
             </select>
+            <select class="availableOperationsForSpatial">
+              <option>sfWithin</option>
+              <option>sfEquals</option>
+              <option>sfContains</option>
+              <option>sfDisjoint</option>
+              <option>sfIntersects</option>
+              <option>sfOverlaps</option>
+              <option>sfTouches</option>
+              <option>ehEquals</option>
+              <option>ehDisjoint</option>
+              <option>ehMeet</option>
+              <option>ehOverlap</option>
+              <option>ehCovers</option>
+              <option>ehCoverdBy</option>
+              <option>ehInside</option>
+              <option>ehContains</option>
+            </select>
             <button class="btn btn-success startSpatialRelBtn">Submit</button>
 
             <!-- Display results of spatial relationship  -->
@@ -151,10 +168,9 @@
     </div>
   </div>
 
-  <%= javascript_tag do %> 
+  <script> 
 
   // hide dropdown/select menus until data is queried
-  /*
   $('.featureRelationships1').hide();
   $('#searchBar1').hide();
   $('.featureSearch1').hide();
@@ -169,7 +185,6 @@
   $('.displayAttributesBtn2').hide();
 
   $('.spatialRelationshipGroup').hide();
-  */
 
   // get the types of all of the features in the dataset
   getFeatureTypes('.featureTypes1');
@@ -242,15 +257,25 @@
 
   $(".startSpatialRelBtn").click(function () {
 
+    // available operations
     // sfWithin, sfEquals, sfContains, sfDisjoint, sfIntersects, sfOverlaps, sfTouches
     // ehEquals, ehDisjoint, ehMeet, ehOverlap, ehCovers, ehCoverdBy, ehInside, ehContains
 
     var feature1 = $('.featuresForSpatial1').children(':selected').attr('featureSpatialID');
     var feature2 = $('.featuresForSpatial2').children(':selected').attr('featureSpatialID');
+    var operation = $('.availableOperationsForSpatial').children(':selected').text();
 
     if(feature1 == "all" && feature2 == "all")
     {
-      alert("case1");
+      var feature1Type = selectedFeatureType1;
+      var feature1Relationship = $('.featureRelationships1').children(':selected').text();
+      var feature1SearchTerm = $('#searchBar1').val();
+
+      var feature2Type = selectedFeatureType2;
+      var feature2Relationship = $('.featureRelationships2').children(':selected').text();
+      var feature2SearchTerm = $('#searchBar2').val();
+
+      getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relationship, feature1SearchTerm, feature2Type, feature2Relationship, feature2SearchTerm, operation);
     }
     else if (feature1 == "all" && feature2 != "all")
     {
@@ -258,7 +283,7 @@
       var feature1Relationship = $('.featureRelationships1').children(':selected').text();
       var feature1SearchTerm = $('#searchBar1').val();
       
-      drawSpatialRelationshipLayerWithManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, "sfWithin");
+      getSpatialRelationshipResultsOfManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, operation);
     }
     else if (feature1 != "all" && feature2 == "all")
     {
@@ -266,11 +291,11 @@
       var feature2Relationship = $('.featureRelationships2').children(':selected').text();
       var feature2SearchTerm = $('#searchBar2').val();
       
-      drawSpatialRelationshipLayerWithManyToOne(feature2Type, feature2Relationship, feature2SearchTerm, feature1, "sfWithin");
+      getSpatialRelationshipResultsOfManyToOne(feature2Type, feature2Relationship, feature2SearchTerm, feature1, operation);
     }
     else if (feature1 != "all" && feature2 != "all")
     {
-      drawSpatialRelationshipLayerWith2Features(feature1, feature2, "sfWithin");
+      getSpatialRelationshipResultsOf2Features(feature1, feature2, operation);
     }
     else
     {
@@ -278,7 +303,7 @@
     }
   })
 
-  <% end %>
+  </script>
 
   <style>
     select{
