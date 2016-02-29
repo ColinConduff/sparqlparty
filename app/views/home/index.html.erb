@@ -15,7 +15,7 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping">
           <select class="featureTypes1"></select>
 
           <select class="featureRelationships1"></select>
@@ -62,7 +62,7 @@
         </div>
 
         <!-- Feature 2 menus -->
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping2">
           <select class="featureTypes2"></select>
 
           <select class="featureRelationships2"></select>
@@ -108,7 +108,7 @@
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping3">
           <div class="spatialRelationshipGroup">
             <select class="featuresForSpatial1">
               <option featureSpatialID="all">All</option>
@@ -138,7 +138,7 @@
             <!-- Display results of spatial relationship  -->
               <div> 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+                <button type="button" class="btn btn-primary spatialResultsModalBtn" data-toggle="modal" data-target="#myModal3">
                   <span class="glyphicon glyphicon-pencil"></span>
                 </button>
 
@@ -177,6 +177,7 @@
   $('.featureResults1').hide();
   $('.displayAttributesBtn1').hide();
 
+  $('.menuGrouping2').hide();
   $('.featureTypes2').hide();
   $('.featureRelationships2').hide();
   $('#searchBar2').hide();
@@ -184,6 +185,7 @@
   $('.featureResults2').hide();
   $('.displayAttributesBtn2').hide();
 
+  $('.menuGrouping3').hide();
   $('.spatialRelationshipGroup').hide();
 
   // get the types of all of the features in the dataset
@@ -210,6 +212,7 @@
     getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '.featuresForSpatial1');
     $('.featureResults1').show();
 
+    $('.menuGrouping2').show();
     $('.featureTypes2').show();
     getFeatureTypes('.featureTypes2');
   });
@@ -243,7 +246,9 @@
     getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '.featuresForSpatial2');
     $('.featureResults2').show();
 
+    $('.menuGrouping3').show();
     $('.spatialRelationshipGroup').show();
+    $('.spatialResultsModalBtn').hide();
   });
 
   $(".featureResults2").change(function () {
@@ -301,18 +306,26 @@
     {
       alert("error!");
     }
+
+    $('.spatialResultsModalBtn').show();
   })
 
   </script>
 
   <style>
     select{
-      width:100%;
+      width:90%;
       
       -ms-box-sizing:content-box;
       -moz-box-sizing:content-box;
       box-sizing:content-box;
       -webkit-box-sizing:content-box; 
+    }
+
+    .menuGrouping {
+      background-color: #b3c6ff;
+      padding: .5em;
+      margin: .5em;
     }
   </style>
 </div>

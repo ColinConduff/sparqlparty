@@ -118,8 +118,6 @@ function drawVectors(resultMsg) {
     };   
     var parser = new OpenLayers.Format.WKT(options);
 
-    console.log(resultMsg);
-
     for (i=0; i < resultMsg['results']['bindings'].length; ++i) {
         for (var key in resultMsg['results']['bindings'][i]) {
             if(resultMsg['results']['bindings'][i][key]['datatype'] == "http://www.opengis.net/ont/geosparql#wktLiteral") {
