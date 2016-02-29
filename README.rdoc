@@ -6,6 +6,8 @@ This app was originally developed by David Mattli.
 
 == TODO
 
+Regarding spatial relationship: color the map layers that correspond to the results of the spatial relationship query a new color [this can be done by naming map vector layers when created and then using that name to select and change their color].  Also list the resulting map layers/features in a dropdown list so that the user can select them on the map.
+
 Make the map fullscreen.  Make the dropdown menus slide over from the side.
 
 Implement: intersection, union, difference, symDifference, distance, buffer, boundary
@@ -16,13 +18,15 @@ When a user selects a layer on the map, pan over to it, submit sparql query for 
 
 prevent map from zooming in too far (which results in error loading the map)
 
-Refactor javascript and html code.  Generalize ajax queries.  Use a for loop in index.html.erb to minimize redundant code.  
+Refactor html code.  Use a for loop in index.html.erb to minimize redundant jquery code.  
 
 Use sparqljs (npm install) to validate sparql queries while they are being edited. sparqljs creates a json object so use JSON.stringify before sending the query. 
 
 Unit testing
 
 == Completed 
+
+Generalized ajax queries and refactored javascript in home.index.js
 
 Added a dropdown menu to select different operations for the spatial relationship function.
 

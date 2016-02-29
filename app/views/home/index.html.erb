@@ -160,6 +160,49 @@
               </div>
           </div>
         </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping4">
+          <div class="binaryGroup">
+            <select class="featuresForBinary1">
+              <option featureSpatialID="all">All</option>
+            </select>
+            <select class="featuresForBinary2">
+              <option featureSpatialID="all">All</option>
+            </select>
+            <select class="availableOperationsForBinary">
+              <option>intersection</option>
+              <option>union</option>
+              <option>difference</option>
+              <option>symDifference</option>
+              <option>distance</option>
+            </select>
+            <button class="btn btn-success startBinaryBtn">Submit</button>
+
+            <!-- Display results of spatial relationship  -->
+              <div> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary binaryResultsModalBtn" data-toggle="modal" data-target="#myModal4">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3>Binary Relationship Results</h3>
+                      </div>
+                      <div class="modal-body" id="binarySpatialResultsTable"></div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
 
@@ -188,6 +231,9 @@
   $('.menuGrouping3').hide();
   $('.spatialRelationshipGroup').hide();
 
+  $('.menuGrouping4').hide();
+  $('.binaryGroup').hide();
+
   // get the types of all of the features in the dataset
   getFeatureTypes('.featureTypes1');
 
@@ -209,7 +255,7 @@
   $('.featureSearch1').click(function(){
     var selectedFeatureRel = $('.featureRelationships1').children(':selected').text();
     var searchTerm = $('#searchBar1').val();
-    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '.featuresForSpatial1');
+    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '.featuresForSpatial1', '.featuresForBinary1');
     $('.featureResults1').show();
 
     $('.menuGrouping2').show();
@@ -243,12 +289,16 @@
   $('.featureSearch2').click(function(){
     var selectedFeatureRel = $('.featureRelationships2').children(':selected').text();
     var searchTerm = $('#searchBar2').val();
-    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '.featuresForSpatial2');
+    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '.featuresForSpatial2', '.featuresForBinary2');
     $('.featureResults2').show();
 
     $('.menuGrouping3').show();
     $('.spatialRelationshipGroup').show();
     $('.spatialResultsModalBtn').hide();
+
+    $('.menuGrouping4').show();
+    $('.binaryGroup').show();
+    $('.binaryResultsModalBtn').hide();
   });
 
   $(".featureResults2").change(function () {
@@ -308,7 +358,18 @@
     }
 
     $('.spatialResultsModalBtn').show();
-  })
+  });
+
+  $(".startBinaryBtn").click(function () {
+
+    var feature1 = $('.featuresForBinary1').children(':selected').attr('featureBinaryID');
+    var feature2 = $('.featuresForBinary2').children(':selected').attr('featureBinaryID');
+    var binaryOperation = $('.availableOperationsForBinary').children(':selected').text();
+
+    getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, binaryOperation);
+
+    $('.binaryResultsModalBtn').show();
+  });
 
   </script>
 

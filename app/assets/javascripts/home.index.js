@@ -56,7 +56,7 @@ function getFeatureRelationships(selector, selectedFeatureType)
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
 
-function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial)
+function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial, selectorForBinary)
 {
     var query = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature + '> . ?feature rdfs:label ?label . ?feature <' + relationship + '> ?obj . FILTER( regex(str(?obj), "' + searchTerm + '", "i" ) ) . }';
 
@@ -67,6 +67,7 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
         {
           $(selector).append("<option featureID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           $(selectorForSpatial).append("<option featureSpatialID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
+          $(selectorForBinary).append("<option featureBinaryID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           getFeatureWKTData(arrayOfObjects[i].feature.value);
         }
     };
@@ -111,6 +112,8 @@ function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarg
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
 
+// spatial relationship functionality 
+
 function getSpatialRelationshipResultsOfManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, operation)
 {
     var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature1Type + '> . ?feature rdfs:label ?label . ?feature <' + feature1Relationship +'> ?obj1 . FILTER( regex(str(?obj1), "' + feature1SearchTerm + '", "i" ) ) . ?feature geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1 . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wktf2 . BIND(?wktf2 AS ?wkt2) . FILTER (geof:' + operation + '(?wkt1, ?wkt2)) .}';
@@ -139,4 +142,31 @@ function getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relatio
     }
 
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+}
+
+// binary spatial functionality 
+
+function getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, operation){
+
+    if(operation == "distance")
+    {
+        var distanceQuery = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?distance WHERE { <' + feature1 + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1 . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wkt2 . BIND(geof:distance(?wkt1, ?wkt2, units:metre) AS ?distance) . }';
+    
+        var willDoThisUponSuccessfulQuery = function(msg) { 
+            updateTable(msg, 'binarySpatialResultsTable');
+        }
+
+        baseQueryRequest(distanceQuery, willDoThisUponSuccessfulQuery);
+    }
+    else
+    {
+        var nonDistanceOperationQuery = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + feature1 + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1f . BIND(?wkt1f AS ?wkt1) . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wkt2f . BIND(?wkt2f AS ?wkt2) . BIND(geof:' + operation + '(?wkt1, ?wkt2) AS ?wkt) . }';
+
+        var willDoThisUponSuccessfulQuery = function(msg) { 
+            drawVectors(msg);
+            updateTable(msg, 'binarySpatialResultsTable');
+        }
+
+        baseQueryRequest(nonDistanceOperationQuery, willDoThisUponSuccessfulQuery);
+    }
 }

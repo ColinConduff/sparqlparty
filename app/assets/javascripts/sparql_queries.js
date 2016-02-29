@@ -110,6 +110,7 @@ function updateTable(resultMsg, tableDivId) {
 }
 
 function drawVectors(resultMsg) {
+    var unexpectedResults = false;
     var features = new Array();
     var bounds = new OpenLayers.Bounds();
     var options = {
@@ -117,6 +118,8 @@ function drawVectors(resultMsg) {
         'externalProjection': new OpenLayers.Projection('EPSG:4269')
     };   
     var parser = new OpenLayers.Format.WKT(options);
+
+    console.log(resultMsg);
 
     for (i=0; i < resultMsg['results']['bindings'].length; ++i) {
         for (var key in resultMsg['results']['bindings'][i]) {
@@ -134,13 +137,27 @@ function drawVectors(resultMsg) {
     }
     
     for (i=0; i<features.length; ++i) {
-	   bounds.extend(features[i].geometry.getBounds());   
+        if(features[i].geometry == undefined) { 
+            
+            unexpectedResults = true; 
+            break;
+
+        } else {
+            bounds.extend(features[i].geometry.getBounds());
+        }   
     }
 
-    var newVectorLayer = new OpenLayers.Layer.Vector();
-    newVectorLayer.addFeatures(features);
-    map.addLayer(newVectorLayer);
-    map.zoomToExtent(bounds);
+    if(unexpectedResults) {
+        // sometimes a geometry collection or collection with no entries is returned
+        // by a query which can't be used to draw a map layer
+        alert("A map layer could not be created for this query's results.");
+    }
+    else {
+        var newVectorLayer = new OpenLayers.Layer.Vector();
+        newVectorLayer.addFeatures(features);
+        map.addLayer(newVectorLayer);
+        map.zoomToExtent(bounds);
+    }
 }
 
 function submitquery(endpoint, query)
