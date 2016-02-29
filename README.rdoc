@@ -10,8 +10,6 @@ Regarding spatial relationship: color the map layers that correspond to the resu
 
 Make the map fullscreen.  Make the dropdown menus slide over from the side.
 
-Implement: intersection, union, difference, symDifference, distance, buffer, boundary
-
 Color layers different colors
 
 When a user selects a layer on the map, pan over to it, submit sparql query for the features attributes, fill a tooltip with the data as well as the existing modal for the data. Do all of this when a user selects the feature from a dropdown menu as well.    
@@ -25,6 +23,10 @@ Use sparqljs (npm install) to validate sparql queries while they are being edite
 Unit testing
 
 == Completed 
+
+Implemented: buffer, boundary [Not sure if boundary is working properly though.  An empty collection is returned from the query]
+
+Implemented: intersection, union, difference, symDifference, distance,
 
 Generalized ajax queries and refactored javascript in home.index.js
 

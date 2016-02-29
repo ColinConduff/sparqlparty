@@ -20,8 +20,39 @@
 
           <select class="featureRelationships1"></select>
 
+          <div class="featureOptions1">
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="noneRadio1" value="option1" checked>
+                None
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="bufferRadio1" value="option2">
+                Buffer
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="boundaryRadio1" value="option3">
+                Boundary
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input type="text" class="form-control buffer1" placeholder="Buffer">
+          </div>
+
           <div class="input-group">
             <input type="text" class="form-control" id="searchBar1" placeholder="Search">
+
+            <span class="input-group-btn">
+              <button class="btn btn-default toggleFeatureOptions1">
+                <span class="glyphicon glyphicon-collapse-up"></span>
+              </button>
+            </span>
 
             <span class="input-group-btn">
               <button class="btn btn-default featureSearch1">
@@ -67,8 +98,39 @@
 
           <select class="featureRelationships2"></select>
 
+          <div class="featureOptions2">
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="noneRadio2" value="option1" checked>
+                None
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="bufferRadio2" value="option2">
+                Buffer
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="boundaryRadio2" value="option3">
+                Boundary
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input type="text" class="form-control buffer2" placeholder="Buffer">
+          </div>
+
           <div class="input-group">
             <input type="text" class="form-control" id="searchBar2" placeholder="Search">
+
+            <span class="input-group-btn">
+              <button class="btn btn-default toggleFeatureOptions2">
+                <span class="glyphicon glyphicon-collapse-up"></span>
+              </button>
+            </span>
 
             <span class="input-group-btn">
               <button class="btn btn-default featureSearch2">
@@ -219,7 +281,37 @@
   $('.featureSearch1').hide();
   $('.featureResults1').hide();
   $('.displayAttributesBtn1').hide();
+  
+  $('.toggleFeatureOptions1').hide();
+  $('.featureOptions1').hide();
+  $('.buffer1').hide();
 
+  var bufferTextFieldHidden1 = true;
+
+  $('.toggleFeatureOptions1').click(function() {
+    if(!bufferTextFieldHidden1) {
+      $('.buffer1').hide();
+      bufferTextFieldHidden1 = true;
+    }
+    $('.featureOptions1').toggle();
+  });
+
+  $('#bufferRadio1').click(function() {
+    $('.buffer1').show();
+    bufferTextFieldHidden1 = false;
+  });
+
+  $('#noneRadio1').click(function() {
+    $('.buffer1').hide();
+    bufferTextFieldHidden1 = true;
+  });
+
+  $('#boundaryRadio1').click(function() {
+    $('.buffer1').hide();
+    bufferTextFieldHidden1 = true;
+  });
+
+  // feature two stuff
   $('.menuGrouping2').hide();
   $('.featureTypes2').hide();
   $('.featureRelationships2').hide();
@@ -227,6 +319,35 @@
   $('.featureSearch2').hide();
   $('.featureResults2').hide();
   $('.displayAttributesBtn2').hide();
+
+  $('.toggleFeatureOptions2').hide();
+  $('.featureOptions2').hide();
+  $('.buffer2').hide();
+
+  var bufferTextFieldHidden2 = true;
+
+  $('.toggleFeatureOptions2').click(function() {
+    if(!bufferTextFieldHidden2) {
+      $('.buffer2').hide();
+      bufferTextFieldHidden2 = true;
+    }
+    $('.featureOptions2').toggle();
+  });
+
+  $('#bufferRadio2').click(function() {
+    $('.buffer2').show();
+    bufferTextFieldHidden2 = false;
+  });
+
+  $('#noneRadio2').click(function() {
+    $('.buffer2').hide();
+    bufferTextFieldHidden2 = true;
+  });
+
+  $('#boundaryRadio2').click(function() {
+    $('.buffer2').hide();
+    bufferTextFieldHidden2 = true;
+  });
 
   $('.menuGrouping3').hide();
   $('.spatialRelationshipGroup').hide();
@@ -246,6 +367,7 @@
     getFeatureRelationships('.featureRelationships1', selectedFeatureType1);
     $('.featureRelationships1').show();
     $('#searchBar1').show();
+    $('.toggleFeatureOptions1').show();
     $('.featureSearch1').show();
   });
 
@@ -255,7 +377,12 @@
   $('.featureSearch1').click(function(){
     var selectedFeatureRel = $('.featureRelationships1').children(':selected').text();
     var searchTerm = $('#searchBar1').val();
-    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '.featuresForSpatial1', '.featuresForBinary1');
+    var withBoundary = false;
+    var bufferValue = null;
+    if($('#boundaryRadio1').is(':checked')) { withBoundary = true; }
+    if($('#bufferRadio1').is(':checked')) { bufferValue = $('.buffer1').val(); }
+    
+    getFeatureAndLabel('.featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '.featuresForSpatial1', '.featuresForBinary1', withBoundary, bufferValue);
     $('.featureResults1').show();
 
     $('.menuGrouping2').show();
@@ -263,7 +390,7 @@
     getFeatureTypes('.featureTypes2');
   });
 
-  // find one feature's wkt data and create a map layer
+  // find one feature's attribute data and fill a table with that data
   $(".featureResults1").change(function () {
     var selectedFeature = $('.featureResults1').children(':selected').attr('featureID');
     var selectedLabel = $('.featureResults1').children(':selected').text();
@@ -283,13 +410,19 @@
     getFeatureRelationships('.featureRelationships2', selectedFeatureType2);
     $('.featureRelationships2').show();
     $('#searchBar2').show();
+    $('.toggleFeatureOptions2').show();
     $('.featureSearch2').show();
   });
 
   $('.featureSearch2').click(function(){
     var selectedFeatureRel = $('.featureRelationships2').children(':selected').text();
     var searchTerm = $('#searchBar2').val();
-    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '.featuresForSpatial2', '.featuresForBinary2');
+    var withBoundary = false;
+    var bufferValue = null;
+    if($('#boundaryRadio2').is(':checked')) { withBoundary = true; }
+    if($('#bufferRadio2').is(':checked')) { bufferValue = $('.buffer2').val(); }
+
+    getFeatureAndLabel('.featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '.featuresForSpatial2', '.featuresForBinary2', withBoundary, bufferValue);
     $('.featureResults2').show();
 
     $('.menuGrouping3').show();
