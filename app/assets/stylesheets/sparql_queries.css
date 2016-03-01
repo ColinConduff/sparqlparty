@@ -17,9 +17,40 @@ div.olMap {
     height: 50em;
 }
 
+.Panel1 {
+    width: 18px;
+    height: 54px;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+}
+
+.firstItemInactive,.secondItemInactive {
+    background: #30d5c8;
+    border: 2px solid #075f67;
+    width: 18px;
+    height: 18px;
+}
+
+.firstItemActive, .secondItemActive {
+    background: #ffffdd;
+    border: 2px solid #dddddd;
+    width: 18px;
+    height: 18px;
+}
+
+.olControlLayerSwitcher .layersDiv {
+    background-color: #ff0000;
+    height: 100%;
+    padding: 5px 75px 5px 10px;
+    width: 100%;
+}
+
+/*
 #notice {
     clear: both;
 }
+
 
 #querySelection {
     width: 15%;
@@ -64,3 +95,4 @@ table.resultTable td {
 	border-color: gray;
 	background-color: white;
 }
+*/

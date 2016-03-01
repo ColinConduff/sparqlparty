@@ -1,15 +1,4 @@
 $( document ).ready(function() {
-    
-  // hide dropdown/select menus until data is queried
-  $('.featureRelationships1').hide();
-  $('#searchBar1').hide();
-  $('.featureSearch1').hide();
-  $('.featureResults1').hide();
-  $('.displayAttributesBtn1').hide();
-  
-  $('.toggleFeatureOptions1').hide();
-  $('.featureOptions1').hide();
-  $('.buffer1').hide();
 
   var bufferTextFieldHidden1 = true;
 
@@ -36,19 +25,6 @@ $( document ).ready(function() {
     bufferTextFieldHidden1 = true;
   });
 
-  // feature two stuff
-  $('.menuGrouping2').hide();
-  $('.featureTypes2').hide();
-  $('.featureRelationships2').hide();
-  $('#searchBar2').hide();
-  $('.featureSearch2').hide();
-  $('.featureResults2').hide();
-  $('.displayAttributesBtn2').hide();
-
-  $('.toggleFeatureOptions2').hide();
-  $('.featureOptions2').hide();
-  $('.buffer2').hide();
-
   var bufferTextFieldHidden2 = true;
 
   $('.toggleFeatureOptions2').click(function() {
@@ -73,12 +49,6 @@ $( document ).ready(function() {
     $('.buffer2').hide();
     bufferTextFieldHidden2 = true;
   });
-
-  $('.menuGrouping3').hide();
-  $('.spatialRelationshipGroup').hide();
-
-  $('.menuGrouping4').hide();
-  $('.binaryGroup').hide();
 
   // get the types of all of the features in the dataset
   getFeatureTypes('.featureTypes1');

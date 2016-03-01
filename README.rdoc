@@ -14,7 +14,7 @@ Color layers different colors
 
 When a user selects a layer on the map, pan over to it, submit sparql query for the features attributes, fill a tooltip with the data as well as the existing modal for the data. Do all of this when a user selects the feature from a dropdown menu as well.    
 
-prevent map from zooming in too far (which results in error loading the map)
+Prevent map from zooming in too far (which results in error loading the map). This has been partially fixed.  It may still happen though.  
 
 Refactor html code.  Use a for loop in index.html.erb to minimize redundant jquery code.  
 

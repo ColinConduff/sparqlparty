@@ -94,7 +94,6 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
         var arrayOfObjects = msg.results.bindings;
 
         $(selectorForSpatial).append("<option featureSpatialID=all>All Features</option>");
-        $(selectorForBinary).append("<option featureBinaryID=all>All Features</option>");
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {

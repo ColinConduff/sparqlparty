@@ -2,48 +2,39 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-var map;
-/* don't think these prefixes are used 
-var prefixes = 
-    " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n \
-PREFIX par: <http://parliament.semwebcentral.org/parliament#>\n \
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n \
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n \
-PREFIX time: <http://www.w3.org/2006/time#>\n \
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n \
-PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>\n \
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n \
-PREFIX gnis: <http://cegis.usgs.gov/rdf/gnis/>\n \
-PREFIX gnisf: <http://cegis.usgs.gov/rdf/gnis/Features/>\n \
-PREFIX nhd: <http://cegis.usgs.gov/rdf/nhd/>\n \
-PREFIX nhdf: <http://cegis.usgs.gov/rdf/nhd/Features/>\n \
-PREFIX gu: <http://cegis.usgs.gov/rdf/gu/>\n \
-PREFIX guf: <http://cegis.usgs.gov/rdf/gu/Features/>\n \
-PREFIX category: <http://dbpedia.org/class/yago/>\n \
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n \
-PREFIX geo: <http://www.opengis.net/ont/geosparql#>\n \
-PREFIX geof: <http://www.opengis.net/def/function/geosparql/>\n\n\n";
-*/
+//var map;
 
 function initializeMap() {
 
-    var proj = new OpenLayers.Projection('EPSG:4326');
-    var mercator = new OpenLayers.Projection('EPSG:900913');
     var maxExtent = new OpenLayers.Bounds(-20037508, -20037508, 20037508, 20037508),
-    restrictedExtent = maxExtent.clone(),
-    maxResolution = 156543.0339;
+        restrictedExtent = maxExtent.clone();
 
+    function button1Clicked() { alert("clicked"); }
+    
+    var panel = new OpenLayers.Control.Panel({ displayClass: 'Panel1' });
+    panel.addControls([
+        new OpenLayers.Control.Button({
+            displayClass: 'first', 
+            trigger: button1Clicked, 
+            title: 'Button is to be clicked'
+        })
+    ]);
 
-    var options = {
-        controls: [new OpenLayers.Control.PanZoomBar() ],
-    	projection: new OpenLayers.Projection('EPSG:900913'),
-    	displayProjection: new OpenLayers.Projection('EPSG:4326'),
-    	units: 'm',
-    	numZoomLevels: 18,
-    	maxResolution: maxResolution,
-    	maxExtent: maxExtent,
-    	restrictedExtent: restrictedExtent,
-    	layers: [
+    var map = new OpenLayers.Map({
+        div: 'map', 
+        controls: [
+            new OpenLayers.Control.PanZoomBar(),
+            new OpenLayers.Control.LayerSwitcher(),
+            panel
+        ],
+        projection: new OpenLayers.Projection('EPSG:900913'),
+        displayProjection: new OpenLayers.Projection('EPSG:4326'),
+        units: 'm',
+        numZoomLevels: 18,
+        maxResolution: 156543.0339,
+        maxExtent: maxExtent,
+        restrictedExtent: restrictedExtent,
+        layers: [
             new OpenLayers.Layer.XYZ('SmallScale',
                 'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/${z}/${y}/${x}', {
                 sphericalMercator: true,
@@ -58,16 +49,12 @@ function initializeMap() {
                 attribution:'USGS - The National Map'
             }),
             new OpenLayers.Layer.OSM(), // open street map 
-    	    new OpenLayers.Layer.Vector('Vector Layer') // not necessary
-    	],
-	   center:  new OpenLayers.LonLat(-84.445, 33.7991).transform(proj, mercator)
-    };
+            new OpenLayers.Layer.Vector('Vector Layer') // not necessary
+        ]
+    });
 
-    map = new OpenLayers.Map('map', options);
-
-    // Add controls to map
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
-
+    var proj = new OpenLayers.Projection('EPSG:4326');
+    var mercator = new OpenLayers.Projection('EPSG:900913');
     var point = new OpenLayers.LonLat(-84.445, 33.7991);
     map.setCenter(point.transform(proj, mercator), 12);
 
@@ -75,10 +62,11 @@ function initializeMap() {
 
 $(document).ready(initializeMap);
 
+var bounds = new OpenLayers.Bounds();
+
 function drawVectors(resultMsg) {
     var unexpectedResults = false;
     var features = new Array();
-    var bounds = new OpenLayers.Bounds();
     var options = {
         'internalProjection': map.baseLayer.projection, 
         'externalProjection': new OpenLayers.Projection('EPSG:4269')
@@ -119,7 +107,15 @@ function drawVectors(resultMsg) {
         alert("A map layer could not be created for this query's results.");
     }
     else {
-        var newVectorLayer = new OpenLayers.Layer.Vector();
+        // var style = new OpenLayers.StyleMap({
+        //     "default": new OpenLayers.Style({
+        //         strokeColor: "#81F7D8",
+        //         strokeOpacity: 1,
+        //         strokeWidth: 1
+        //     })
+        // });
+
+        var newVectorLayer = new OpenLayers.Layer.Vector(/*"Point Layer", {styleMap: style}*/);
         newVectorLayer.addFeatures(features);
         map.addLayer(newVectorLayer);
         map.zoomToExtent(bounds);
