@@ -25,7 +25,6 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>\n \
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>\n\n\n";
 */
 
-
 function initializeMap() {
 
     var proj = new OpenLayers.Projection('EPSG:4326');

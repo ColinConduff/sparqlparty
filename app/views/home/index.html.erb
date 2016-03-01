@@ -170,11 +170,12 @@
           </div>
         </div>
 
+        <!-- Spatial Relationship Related Elements -->
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping3">
           <div class="spatialRelationshipGroup">
-            <select class="featuresForSpatial1">
-              <option featureSpatialID="all">All</option>
-            </select>
+            <div class="spatialOperand1">
+              <select class="featuresForSpatial1"></select>
+            </div>
             <select class="availableOperationsForSpatial">
               <option>sfWithin</option>
               <option>sfEquals</option>
@@ -192,9 +193,10 @@
               <option>ehInside</option>
               <option>ehContains</option>
             </select>
-            <select class="featuresForSpatial2">
-              <option featureSpatialID="all">All</option>
-            </select>
+            <div class="spatialOperand2">
+              <select class="featuresForSpatial2"></select>
+            </div>
+            <button class="btn btn-success reverseSpatialOperands">Reverse Operands</button>
             <button class="btn btn-success startSpatialRelBtn">Submit</button>
 
             <!-- Display results of spatial relationship  -->
@@ -223,11 +225,10 @@
           </div>
         </div>
 
+        <!-- Binary Spatial Relationship Related Elements -->
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping4">
           <div class="binaryGroup">
-            <select class="featuresForBinary1">
-              <option featureSpatialID="all">All</option>
-            </select>
+            <select class="featuresForBinary1"></select>
             <select class="availableOperationsForBinary">
               <option>intersection</option>
               <option>union</option>
@@ -235,9 +236,7 @@
               <option>symDifference</option>
               <option>distance</option>
             </select>
-            <select class="featuresForBinary2">
-              <option featureSpatialID="all">All</option>
-            </select>
+            <select class="featuresForBinary2"></select>
             <button class="btn btn-success startBinaryBtn">Submit</button>
 
             <!-- Display results of spatial relationship  -->
@@ -275,6 +274,21 @@
 
   <style>
     select{
+
+      display: inline-block;
+      padding: 6px 12px;
+      margin-bottom: 0px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.42857;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      -moz-user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
       width:90%;
       
       -ms-box-sizing:content-box;

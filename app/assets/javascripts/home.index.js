@@ -218,6 +218,20 @@ $( document ).ready(function() {
     $('.spatialResultsModalBtn').show();
   });
 
+  var spatialOperandsReversed = false;
+
+  $('.reverseSpatialOperands').click(function () {
+    if(spatialOperandsReversed) {
+      $(".featuresForSpatial2").detach().appendTo('.spatialOperand2');
+      $(".featuresForSpatial1").detach().appendTo('.spatialOperand1');
+      spatialOperandsReversed = false;
+    } else {
+      $(".featuresForSpatial2").detach().appendTo('.spatialOperand1');
+      $(".featuresForSpatial1").detach().appendTo('.spatialOperand2');
+      spatialOperandsReversed = true;
+    }
+  });
+
   $(".startBinaryBtn").click(function () {
 
     var feature1 = $('.featuresForBinary1').children(':selected').attr('featureBinaryID');
