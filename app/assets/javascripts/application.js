@@ -18,4 +18,6 @@
 //= require codemirror
 //= require codemirror/modes/sparql
 //= require_tree .
+//= require home.map
+//= require home.queries
 //= require home.index
