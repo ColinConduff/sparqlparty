@@ -2,7 +2,9 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-//var map;
+var map;
+var selectControl;
+var vectorLayers = [];
 
 function initializeMap() {
 
@@ -20,7 +22,7 @@ function initializeMap() {
         })
     ]);
 
-    var map = new OpenLayers.Map({
+    map = new OpenLayers.Map({
         div: 'map', 
         controls: [
             new OpenLayers.Control.PanZoomBar(),
@@ -35,6 +37,7 @@ function initializeMap() {
         maxExtent: maxExtent,
         restrictedExtent: restrictedExtent,
         layers: [
+            new OpenLayers.Layer.OSM(), // open street map
             new OpenLayers.Layer.XYZ('SmallScale',
                 'http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/${z}/${y}/${x}', {
                 sphericalMercator: true,
@@ -48,7 +51,6 @@ function initializeMap() {
                 isBaseLayer: true,
                 attribution:'USGS - The National Map'
             }),
-            new OpenLayers.Layer.OSM(), // open street map 
             new OpenLayers.Layer.Vector('Vector Layer') // not necessary
         ]
     });
@@ -57,69 +59,163 @@ function initializeMap() {
     var mercator = new OpenLayers.Projection('EPSG:900913');
     var point = new OpenLayers.LonLat(-84.445, 33.7991);
     map.setCenter(point.transform(proj, mercator), 12);
-
 }
 
 $(document).ready(initializeMap);
 
-var bounds = new OpenLayers.Bounds();
+function parseFeaturesIntoArray(queryResult) {
 
-function drawVectors(resultMsg) {
-    var unexpectedResults = false;
-    var features = new Array();
+    var features = [];
     var options = {
         'internalProjection': map.baseLayer.projection, 
         'externalProjection': new OpenLayers.Projection('EPSG:4269')
     };   
     var parser = new OpenLayers.Format.WKT(options);
 
-    console.log(resultMsg);
+    //console.log(queryResult);
 
-    for (i=0; i < resultMsg['results']['bindings'].length; ++i) {
-        for (var key in resultMsg['results']['bindings'][i]) {
-            if(resultMsg['results']['bindings'][i][key]['datatype'] == "http://www.opengis.net/ont/geosparql#wktLiteral") {
-                var wkt2 = resultMsg['results']['bindings'][i][key]['value'];
-    	        if (wkt2.split(/\>/)[1] != undefined) {
-    	            wkt2 = wkt2.split(/\>/)[1];
-    	        }
+    for (i=0; i < queryResult['results']['bindings'].length; ++i) {
+        for (var key in queryResult['results']['bindings'][i]) {
+            if(queryResult['results']['bindings'][i][key]['datatype'] == "http://www.opengis.net/ont/geosparql#wktLiteral") {
+                var wkt2 = queryResult['results']['bindings'][i][key]['value'];
+                if (wkt2.split(/\>/)[1] != undefined) {
+                    wkt2 = wkt2.split(/\>/)[1];
+                }
                 var feat = parser.read(wkt2);
-    	        if (feat != undefined) {
-    	            features.push(feat);	    
-    	        }
+                if (feat != undefined) {
+                    features.push(feat);        
+                }
             }
-	   }
+       }
     }
-    
+
+    return features;
+}
+
+// global variable so that extent contains all layers
+var bounds = new OpenLayers.Bounds();
+function findNewBounds(features) {
+
     for (i=0; i<features.length; ++i) {
-        if(features[i].geometry == undefined) { 
-            
-            unexpectedResults = true; 
-            break;
+        bounds.extend(features[i].geometry.getBounds()); 
+    }
+}
 
-        } else {
-            bounds.extend(features[i].geometry.getBounds());
-        }   
+function hideAllVectorLayers() {
+    for(var i = 0; i < vectorLayers.length; i++) {
+        vectorLayers[i].setVisibility(false);
+    }
+}
+
+function showAllVectorLayers() {
+    for(var i = 0; i < vectorLayers.length; i++) {
+        vectorLayers[i].setVisibility(true);
+    }
+}
+
+function showOnlySelectedLayer(layerID) {
+    for(var i = 0; i < vectorLayers.length; i++) {
+        if(vectorLayers[i].features[0].id == layerID) {
+            hideAllVectorLayers();
+            vectorLayers[i].setVisibility(true);
+            selectControl.select(vectorLayers[i].features[0]);
+        }
+    }
+}
+
+function drawVectors(features, vectorLayerStyle) {
+
+    var newVectorLayer;
+
+    if(vectorLayerStyle != null) { 
+        newVectorLayer = new OpenLayers.Layer.Vector("styled vector layer", {styleMap: vectorLayerStyle});
+    
+    } else {
+        newVectorLayer = new OpenLayers.Layer.Vector();
     }
 
-    if(unexpectedResults) {
-        // sometimes a geometry collection or collection with no entries is returned
-        // by a query which can't be used to draw a map layer
-        alert("A map layer could not be created for this query's results.");
-    }
-    else {
-        // var style = new OpenLayers.StyleMap({
-        //     "default": new OpenLayers.Style({
-        //         strokeColor: "#81F7D8",
-        //         strokeOpacity: 1,
-        //         strokeWidth: 1
-        //     })
-        // });
+    newVectorLayer.addFeatures(features);
+    map.addLayer(newVectorLayer);
 
-        var newVectorLayer = new OpenLayers.Layer.Vector(/*"Point Layer", {styleMap: style}*/);
-        newVectorLayer.addFeatures(features);
-        map.addLayer(newVectorLayer);
-        map.zoomToExtent(bounds);
-    }
+    findNewBounds(features);
+    map.zoomToExtent(bounds);
+
+    vectorLayers.push(newVectorLayer);
+
+    selectControl = new OpenLayers.Control.SelectFeature(
+        vectorLayers,
+        {
+            onSelect: function(event) { 
+                hideAllVectorLayers();
+                event.layer.setVisibility(true); 
+            } ,
+            onUnselect: function(event) { 
+                showAllVectorLayers(); 
+            }
+            /* 
+             clickout: true, toggle: false,
+             multiple: false, hover: false,
+             toggleKey: "ctrlKey", // ctrl key removes from selection
+             multipleKey: "shiftKey" // shift key adds to selection
+            */
+        }
+    );
+
+    map.addControl(selectControl);
+    selectControl.activate();
+}
+
+function drawVectorsForFeatures(resultMsg, featureID) {
+
+    var features = parseFeaturesIntoArray(resultMsg);
+    
+    // add layerID attribute to options in dropdown menus to enable 
+    // selecting specific layers
+    $('.featureResults1 > option[data-featureid="' + featureID + '"]').attr('data-layerid', features[0].id);
+    $('.featureResults2 > option[data-featureid="' + featureID + '"]').attr('data-layerid', features[0].id);
+
+    // create style object for features 
+    var style = new OpenLayers.StyleMap({
+        "default":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor:"red",
+            strokeColor:"gray",
+            graphicName:"square",
+            rotation:45,
+            pointRadius:15
+        }, OpenLayers.Feature.Vector.style["default"])),
+        "select":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor:"black",
+            graphicName:"square",
+            rotation:45,
+            pointRadius:15
+        }, OpenLayers.Feature.Vector.style["select"])),
+        "highlight":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            graphicName:"square",
+            fillColor:"green",
+            rotation:45,
+            pointRadius:15
+        }, OpenLayers.Feature.Vector.style["highlight"]))
+    });
+
+    drawVectors(features, style);
+}
+
+function drawVectorsForSpatialRelationshipQuery(resultMsg) {
+
+    var features = parseFeaturesIntoArray(resultMsg);
+
+    // specific style for spatial relationship query results 
+
+    drawVectors(features, null);
+}
+
+function drawVectorsForBinaryRelationshipQuery(resultMsg) {
+
+    var features = parseFeaturesIntoArray(resultMsg);
+
+    // specific style for binary relationship query results 
+
+    drawVectors(features, null);
 }
 
 function submitquery(endpoint, query)
@@ -135,7 +231,8 @@ function submitquery(endpoint, query)
     });
     
     request.done(function( msg ) {
-        drawVectors(msg);
+        var features = parseFeaturesIntoArray(msg);
+        drawVectors(features, null);
         updateTable(msg, "tableWrap");
     });
     

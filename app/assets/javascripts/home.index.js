@@ -87,7 +87,11 @@ $( document ).ready(function() {
 
   // find one feature's attribute data and fill a table with that data
   $(".featureResults1").change(function () {
-    var selectedFeature = $('.featureResults1').children(':selected').attr('featureID');
+    // hide all other features on the map
+    var layerID = $('.featureResults1').children(':selected').data('layerid');
+    showOnlySelectedLayer(layerID);
+
+    var selectedFeature = $('.featureResults1').children(':selected').data('featureid');
     var selectedLabel = $('.featureResults1').children(':selected').text();
     var attributeTableTarget = '.featureAttributesList1';
     var attributeModalTitle = '.attributeModalTitle1';
@@ -130,7 +134,11 @@ $( document ).ready(function() {
   });
 
   $(".featureResults2").change(function () {
-    var selectedFeature = $('.featureResults2').children(':selected').attr('featureID');
+    // hide all other features on the map
+    var layerID = $('.featureResults2').children(':selected').data('layerid');
+    showOnlySelectedLayer(layerID);
+
+    var selectedFeature = $('.featureResults2').children(':selected').data('featureid');
     var selectedLabel = $('.featureResults2').children(':selected').text();
     var attributeTableTarget = '.featureAttributesList2';
     var attributeModalTitle = '.attributeModalTitle2';

@@ -97,7 +97,7 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
-          $(selector).append("<option featureID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
+          $(selector).append("<option data-featureid="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           $(selectorForSpatial).append("<option featureSpatialID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           $(selectorForBinary).append("<option featureBinaryID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           
@@ -108,10 +108,10 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
 
-function sendQueryAndCallDrawVectors(query) 
+function sendQueryAndCallDrawVectors(query, selectedFeature) 
 {
     var willDoThisUponSuccessfulQuery = function(msg) {
-        drawVectors(msg);
+        drawVectorsForFeatures(msg, selectedFeature)
     };
     
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
@@ -123,19 +123,19 @@ function getFeatureWKTData(selectedFeature, withBoundary, buffer)
     {
         var queryWithBoundary = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf . BIND(geof:boundary(?wktf) AS ?wkt) . }';
     
-        sendQueryAndCallDrawVectors(queryWithBoundary);
+        sendQueryAndCallDrawVectors(queryWithBoundary, selectedFeature);
     }
     else if (buffer != null)
     {
         var queryWithBuffer = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf . BIND(geof:buffer(?wktf, ' + buffer + ', units:metre) AS ?wkt) . }';
 
-        sendQueryAndCallDrawVectors(queryWithBuffer);
+        sendQueryAndCallDrawVectors(queryWithBuffer, selectedFeature);
     }
     else 
     {
         var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }';
     
-        sendQueryAndCallDrawVectors(query);
+        sendQueryAndCallDrawVectors(query, selectedFeature);
     }
 }
 
@@ -171,7 +171,7 @@ function getSpatialRelationshipResultsOfManyToOne(feature1Type, feature1Relation
     var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature1Type + '> . ?feature rdfs:label ?label . ?feature <' + feature1Relationship +'> ?obj1 . FILTER( regex(str(?obj1), "' + feature1SearchTerm + '", "i" ) ) . ?feature geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1 . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wktf2 . BIND(?wktf2 AS ?wkt2) . FILTER (geof:' + operation + '(?wkt1, ?wkt2)) .}';
     var willDoThisUponSuccessfulQuery = function(msg) { 
         updateTable(msg, 'spatialRelResultsTable');
-        drawVectors(msg);
+        drawVectorsForSpatialRelationshipQuery(msg);
     }
 
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
@@ -182,7 +182,7 @@ function getSpatialRelationshipResultsOf2Features(feature1, feature2, operation)
     var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT DISTINCT ?feature ?label WHERE { <' + feature1 + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf1 . BIND(?wktf1 AS ?wkt1) . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wktf2 . BIND(?wktf2 AS ?wkt2) . FILTER (geof:' + operation + '(?wkt1, ?wkt2)) .}';
     var willDoThisUponSuccessfulQuery = function(msg) { 
         updateTable(msg, 'spatialRelResultsTable');
-        drawVectors(msg);
+        drawVectorsForSpatialRelationshipQuery(msg);
     }
 
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
@@ -193,7 +193,7 @@ function getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relatio
     var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature1Type + '> . ?feature rdfs:label ?label . ?feature <' + feature1Relationship +'> ?obj1 . FILTER( regex(str(?obj1), "' + feature1SearchTerm + '", "i" ) ) . ?feature geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1 . ?feature2 rdf:type <' + feature2Type + '> . ?feature2 rdfs:label ?label2 . ?feature2 <' + feature2Relationship +'> ?obj2 . FILTER( regex(str(?obj2), "' + feature2SearchTerm + '", "i" ) ) . ?feature2 geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wkt2 . FILTER (geof:' + operation + '(?wkt1, ?wkt2)) .}';
     var willDoThisUponSuccessfulQuery = function(msg) { 
         updateTable(msg, 'spatialRelResultsTable');
-        drawVectors(msg);
+        drawVectorsForSpatialRelationshipQuery(msg);
     }
 
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
@@ -218,7 +218,7 @@ function getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, ope
         var nonDistanceOperationQuery = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + feature1 + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wkt1f . BIND(?wkt1f AS ?wkt1) . <' + feature2 + '> geo:hasGeometry ?g2 . ?g2 geo:asWKT ?wkt2f . BIND(?wkt2f AS ?wkt2) . BIND(geof:' + operation + '(?wkt1, ?wkt2) AS ?wkt) . }';
 
         var willDoThisUponSuccessfulQuery = function(msg) { 
-            drawVectors(msg);
+            drawVectorsForBinaryRelationshipQuery(msg);
             updateTable(msg, 'binarySpatialResultsTable');
         }
 
