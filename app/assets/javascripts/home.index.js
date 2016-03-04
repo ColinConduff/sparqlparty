@@ -87,7 +87,7 @@ $(document).ready(function() {
     if($('#boundaryRadio1').is(':checked')) { withBoundary = true; }
     if($('#bufferRadio1').is(':checked')) { bufferValue = $('.buffer1').val(); }
     
-    getFeatureAndLabel('#featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '#featuresForSpatial1', '#featuresForBinary1', withBoundary, bufferValue);
+    getFeatureAndLabel('#featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '#featuresForSpatial1', '#featuresForBinary1', withBoundary, bufferValue, "red");
     $('#featureResults1').show();
     $('.step3').show();
 
@@ -133,7 +133,7 @@ $(document).ready(function() {
     if($('#boundaryRadio2').is(':checked')) { withBoundary = true; }
     if($('#bufferRadio2').is(':checked')) { bufferValue = $('.buffer2').val(); }
 
-    getFeatureAndLabel('#featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '#featuresForSpatial2', '#featuresForBinary2', withBoundary, bufferValue);
+    getFeatureAndLabel('#featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '#featuresForSpatial2', '#featuresForBinary2', withBoundary, bufferValue, "blue");
     $('#featureResults2').show();
     $('.step5').show();
 

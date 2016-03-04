@@ -87,7 +87,7 @@ function getFeatureRelationships(selector, selectedFeatureType)
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
 
-function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial, selectorForBinary, withBoundary, buffer)
+function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial, selectorForBinary, withBoundary, buffer, featureFillColor)
 {
     var query = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature + '> . ?feature rdfs:label ?label . ?feature <' + relationship + '> ?obj . FILTER( regex(str(?obj), "' + searchTerm + '", "i" ) ) . }';
 
@@ -105,7 +105,7 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
           $(selectorForSpatial).append("<option featureSpatialID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           $(selectorForBinary).append("<option featureBinaryID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           
-          getFeatureWKTData(arrayOfObjects[i].feature.value, withBoundary, buffer);
+          getFeatureWKTData(arrayOfObjects[i].feature.value, withBoundary, buffer, featureFillColor);
         }
         $(selector).selectpicker('refresh');
         $(selectorForSpatial).selectpicker('refresh');
@@ -115,34 +115,34 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
 
-function sendQueryAndCallDrawVectors(query, selectedFeature) 
+function sendQueryAndCallDrawVectors(query, selectedFeature, featureFillColor) 
 {
     var willDoThisUponSuccessfulQuery = function(msg) {
-        drawVectorsForFeatures(msg, selectedFeature)
+        drawVectorsForFeatures(msg, selectedFeature, featureFillColor);
     };
     
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
 }
 
-function getFeatureWKTData(selectedFeature, withBoundary, buffer)
+function getFeatureWKTData(selectedFeature, withBoundary, buffer, featureFillColor)
 {
     if(withBoundary)
     {
         var queryWithBoundary = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf . BIND(geof:boundary(?wktf) AS ?wkt) . }';
     
-        sendQueryAndCallDrawVectors(queryWithBoundary, selectedFeature);
+        sendQueryAndCallDrawVectors(queryWithBoundary, selectedFeature, featureFillColor);
     }
     else if (buffer != null)
     {
         var queryWithBuffer = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf . BIND(geof:buffer(?wktf, ' + buffer + ', units:metre) AS ?wkt) . }';
 
-        sendQueryAndCallDrawVectors(queryWithBuffer, selectedFeature);
+        sendQueryAndCallDrawVectors(queryWithBuffer, selectedFeature, featureFillColor);
     }
     else 
     {
         var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }';
     
-        sendQueryAndCallDrawVectors(query, selectedFeature);
+        sendQueryAndCallDrawVectors(query, selectedFeature, featureFillColor);
     }
 }
 

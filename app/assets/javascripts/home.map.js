@@ -165,7 +165,7 @@ function drawVectors(features, vectorLayerStyle) {
     selectControl.activate();
 }
 
-function drawVectorsForFeatures(resultMsg, featureID) {
+function drawVectorsForFeatures(resultMsg, featureID, featureFillColor) {
 
     var features = parseFeaturesIntoArray(resultMsg);
     
@@ -177,23 +177,25 @@ function drawVectorsForFeatures(resultMsg, featureID) {
     // create style object for features 
     var style = new OpenLayers.StyleMap({
         "default":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
-            fillColor:"red",
-            strokeColor:"gray",
-            graphicName:"square",
-            rotation:45,
-            pointRadius:15
+            fillColor: featureFillColor,
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
         }, OpenLayers.Feature.Vector.style["default"])),
         "select":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
-            fillColor:"black",
-            graphicName:"square",
-            rotation:45,
-            pointRadius:15
+            fillColor:"yellow",
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
         }, OpenLayers.Feature.Vector.style["select"])),
         "highlight":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
-            graphicName:"square",
-            fillColor:"green",
-            rotation:45,
-            pointRadius:15
+            fillColor:"yellow",
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
         }, OpenLayers.Feature.Vector.style["highlight"]))
     });
 
