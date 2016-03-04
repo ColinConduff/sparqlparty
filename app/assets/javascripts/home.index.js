@@ -1,11 +1,16 @@
-function initializeSelectPicker() {
-  $('.selectpicker').selectpicker({width: '100%'});
-  return true;
-}
+  
 
-$(document).ready(function() {
-  $.when(initializeSelectPicker()).done(getFeatureTypes('#featureTypes1'));
-});
+  function initializeSelectPicker() {
+    $('.selectpicker').selectpicker({width: '100%'});
+    return true;
+  }
+
+  $(document).ready(function() {
+    $.when(initializeSelectPicker()).done(/*getFeatureTypes('#featureTypes1')*/);
+
+    // add glyphicon to map
+    $('.firstItemInactive').html('<button class="btn btn-default"><span class="glyphicon glyphicon-fullscreen"></span></button>');
+  });
 
   // get the types of all of the features in the dataset
   //getFeatureTypes('.featureTypes1');

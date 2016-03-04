@@ -5,19 +5,42 @@
 var map;
 var selectControl;
 var vectorLayers = [];
+var toggleFullScreenMapBtnClicked = false;
+
+$('.firstItemInactive').html('<span class="glyphicon glyphicon-search"></span>');
+$('.firstItemActive').html('<span class="glyphicon glyphicon-search"></span>');
+
+$('<button />', {
+  class: 'firstItemInactive',
+  type: 'button',
+  html: '<span class="glyphicon glyphicon-arrow-left"></span>'
+});
+
+function toggleFullScreenMapBtn() { 
+    if(toggleFullScreenMapBtnClicked == false) {
+        $('.sideBar').hide();
+        $('.mapOuterDiv').removeClass('col-lg-6');
+        map.updateSize();
+        toggleFullScreenMapBtnClicked = true;
+
+    } else {
+        $('.sideBar').show();
+        $('.mapOuterDiv').addClass('col-lg-6');
+        map.updateSize();
+        toggleFullScreenMapBtnClicked = false;
+    }
+}
 
 function initializeMap() {
 
     var maxExtent = new OpenLayers.Bounds(-20037508, -20037508, 20037508, 20037508),
         restrictedExtent = maxExtent.clone();
-
-    function button1Clicked() { alert("clicked"); }
     
     var panel = new OpenLayers.Control.Panel({ displayClass: 'Panel1' });
     panel.addControls([
         new OpenLayers.Control.Button({
             displayClass: 'first', 
-            trigger: button1Clicked, 
+            trigger: toggleFullScreenMapBtn, 
             title: 'Button is to be clicked'
         })
     ]);
