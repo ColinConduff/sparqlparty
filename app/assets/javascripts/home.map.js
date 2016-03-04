@@ -171,8 +171,8 @@ function drawVectorsForFeatures(resultMsg, featureID) {
     
     // add layerID attribute to options in dropdown menus to enable 
     // selecting specific layers
-    $('.featureResults1 > option[data-featureid="' + featureID + '"]').attr('data-layerid', features[0].id);
-    $('.featureResults2 > option[data-featureid="' + featureID + '"]').attr('data-layerid', features[0].id);
+    $('#featureResults1 > option[data-featureid="' + featureID + '"]').attr('data-layerid', features[0].id);
+    $('#featureResults2 > option[data-featureid="' + featureID + '"]').attr('data-layerid', features[0].id);
 
     // create style object for features 
     var style = new OpenLayers.StyleMap({

@@ -54,12 +54,14 @@ function getFeatureTypes(selector)
     
     var willDoThisUponSuccessfulQuery = function(msg) {
         $(selector).empty();
+        $(selector).append("<option>Select a Feature Type</option>");
         var arrayOfObjects = msg.results.bindings;
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
-            $(selector).append("<option>" + arrayOfObjects[i].type.value + "</option>")
+            $(selector).append("<option>" + arrayOfObjects[i].type.value + "</option>");
         }
+        $(selector).selectpicker('refresh');
     };
 
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
@@ -72,12 +74,14 @@ function getFeatureRelationships(selector, selectedFeatureType)
     
     var willDoThisUponSuccessfulQuery = function(msg) {
         $(selector).empty();
+        $(selector).append("<option>Select a Feature Relationship</option>");
         var arrayOfObjects = msg.results.bindings;
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
-            $(selector).append("<option>" + arrayOfObjects[i].rel.value + "</option>")
+            $(selector).append("<option>" + arrayOfObjects[i].rel.value + "</option>");
         }
+        $(selector).selectpicker('refresh');
     };
     
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);
@@ -93,7 +97,7 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
         $(selectorForBinary).empty();
         var arrayOfObjects = msg.results.bindings;
 
-        $(selectorForSpatial).append("<option featureSpatialID=all>All Features</option>");
+        $(selector).append("<option featureSpatialID=all>All Features</option>");
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
@@ -103,6 +107,9 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
           
           getFeatureWKTData(arrayOfObjects[i].feature.value, withBoundary, buffer);
         }
+        $(selector).selectpicker('refresh');
+        $(selectorForSpatial).selectpicker('refresh');
+        $(selectorForBinary).selectpicker('refresh');
     };
     
     baseQueryRequest(query, willDoThisUponSuccessfulQuery);

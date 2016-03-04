@@ -3,22 +3,23 @@
   <p id="notice"><%= notice %></p>
 
   <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-4">
       <div class="row">
         <div class="col-xs-3">
           <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
           "View Sparql Queries", sparql_queries_path%> 
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-9">
           <h3>Sparql Query Visualizer</h3>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping">
-          <select class="featureTypes1"></select>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 menuGrouping well">
+          <h5>Feature Set 1</h5>
+          <select class="selectpicker" id="featureTypes1"></select>
 
-          <select class="featureRelationships1"></select>
+          <select class="selectpicker" id="featureRelationships1"></select>
 
           <div class="featureOptions1">
             <div class="radio-inline">
@@ -56,19 +57,21 @@
 
             <span class="input-group-btn">
               <button class="btn btn-default featureSearch1">
-                <span class="glyphicon glyphicon-search"></span>
+                <span class="glyphicon glyphicon-send"></span>
               </button>
             </span>
           </div>
 
-          <select class="featureResults1"></select>
+          <!-- Display feature's attributes and select map layer -->
+          <div class="input-group"> 
+            <select class="selectpicker" id="featureResults1"></select>
           
-          <!-- Display feature's attributes -->
-          <div> 
             <!-- Button trigger modal -->
-            <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal1">
-              <span class="glyphicon glyphicon-pencil"></span>
-            </button>
+            <span class="input-group-btn">
+              <button type="button" class="displayAttributesBtn1 btn btn-primary" data-toggle="modal" data-target="#myModal1">
+                <span class="glyphicon glyphicon-th-list"></span>
+              </button>
+            </span>
 
             <!-- Modal -->
             <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -93,10 +96,12 @@
         </div>
 
         <!-- Feature 2 menus -->
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping2">
-          <select class="featureTypes2"></select>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 menuGrouping menuGrouping2 well">
+          <h5>Feature Set 2</h5>
 
-          <select class="featureRelationships2"></select>
+          <select class="selectpicker" id="featureTypes2"></select>
+
+          <select class="selectpicker" id="featureRelationships2"></select>
 
           <div class="featureOptions2">
             <div class="radio-inline">
@@ -134,19 +139,21 @@
 
             <span class="input-group-btn">
               <button class="btn btn-default featureSearch2">
-                <span class="glyphicon glyphicon-search"></span>
+                <span class="glyphicon glyphicon-send"></span>
               </button>
             </span>
           </div>
 
-          <select class="featureResults2"></select>
-
           <!-- Display feature's attributes -->
-          <div> 
+          <div class="input-group"> 
+            <select class="selectpicker" id="featureResults2"></select>
+
             <!-- Button trigger modal -->
-            <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal2">
-              <span class="glyphicon glyphicon-pencil"></span>
-            </button>
+            <span class="input-group-btn">
+              <button type="button" class="displayAttributesBtn2 btn btn-primary" data-toggle="modal" data-target="#myModal2">
+                <span class="glyphicon glyphicon-th-list"></span>
+              </button>
+            </span>
 
             <!-- Modal -->
             <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -169,14 +176,17 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="row">
         <!-- Spatial Relationship Related Elements -->
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping3">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 menuGrouping menuGrouping3 well">
           <div class="spatialRelationshipGroup">
+            <h5>Spatial Relationship Analysis</h5>
             <div class="spatialOperand1">
-              <select class="featuresForSpatial1"></select>
+              <select class="selectpicker" id="featuresForSpatial1"></select>
             </div>
-            <select class="availableOperationsForSpatial">
+            <select class="selectpicker" id="availableOperationsForSpatial">
               <option>sfWithin</option>
               <option>sfEquals</option>
               <option>sfContains</option>
@@ -194,91 +204,111 @@
               <option>ehContains</option>
             </select>
             <div class="spatialOperand2">
-              <select class="featuresForSpatial2"></select>
+              <select class="selectpicker" id="featuresForSpatial2"></select>
             </div>
-            <button class="btn btn-success reverseSpatialOperands">Reverse Operands</button>
-            <button class="btn btn-success startSpatialRelBtn">Submit</button>
 
-            <!-- Display results of spatial relationship  -->
-              <div> 
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary spatialResultsModalBtn" data-toggle="modal" data-target="#myModal3">
-                  <span class="glyphicon glyphicon-pencil"></span>
+            <!-- <div class="row"> -->
+              <div class="col-xs-3">
+                <button class="btn btn-success reverseSpatialOperands">
+                  <span class="glyphicon glyphicon-refresh"></span>
                 </button>
+              </div>
+              <div class="col-xs-6">
+                <button class="btn btn-success startSpatialRelBtn">
+                  <span class="glyphicon glyphicon-send"></span> Submit
+                </button>
+              </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h3>Spatial Relationship Results</h3>
-                      </div>
-                      <div class="modal-body" id="spatialRelResultsTable"></div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
+              <!-- Display results of spatial relationship  -->
+              <!-- Button trigger modal -->
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-primary spatialResultsModalBtn" data-toggle="modal" data-target="#myModal3">
+                  <span class="glyphicon glyphicon-th-list"></span>
+                </button>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h3>Spatial Relationship Results</h3>
+                    </div>
+                    <div class="modal-body" id="spatialRelResultsTable"></div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
               </div>
+            <!-- </div> -->
           </div>
         </div>
 
         <!-- Binary Spatial Relationship Related Elements -->
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 menuGrouping menuGrouping4">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 menuGrouping menuGrouping4 well">
           <div class="binaryGroup">
-            <select class="featuresForBinary1"></select>
-            <select class="availableOperationsForBinary">
+            <h5>Binary Spatial Analysis</h5>
+            <select class="selectpicker" id="featuresForBinary1"></select>
+            <select class="selectpicker" id="availableOperationsForBinary">
               <option>intersection</option>
               <option>union</option>
               <option>difference</option>
               <option>symDifference</option>
               <option>distance</option>
             </select>
-            <select class="featuresForBinary2"></select>
-            <button class="btn btn-success startBinaryBtn">Submit</button>
-
-            <!-- Display results of spatial relationship  -->
-              <div> 
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary binaryResultsModalBtn" data-toggle="modal" data-target="#myModal4">
-                  <span class="glyphicon glyphicon-pencil"></span>
+            <select class="selectpicker" id="featuresForBinary2"></select>
+            
+            <!-- <div class="row"> -->
+              <div class="col-xs-9">
+                <button class="btn btn-success startBinaryBtn">
+                  <span class="glyphicon glyphicon-send"></span> Submit
                 </button>
+              </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h3>Binary Relationship Results</h3>
-                      </div>
-                      <div class="modal-body" id="binarySpatialResultsTable"></div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
+              <!-- Display results of spatial relationship  --> 
+              <!-- Button trigger modal -->
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-primary binaryResultsModalBtn" data-toggle="modal" data-target="#myModal4">
+                  <span class="glyphicon glyphicon-th-list"></span>
+                </button>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h3>Binary Relationship Results</h3>
+                    </div>
+                    <div class="modal-body" id="binarySpatialResultsTable"></div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
+        </div>
       </div>
     </div>
 
-    <div class="col-lg-9">
+    <div class="col-lg-8">
       <div class='bigmap' id='map'></div>
     </div>
   </div>
 
   <script>
+  /*
 
   // hide dropdown/select menus until data is queried
-  $('.featureRelationships1').hide();
+  $('#featureRelationships1').hide();
   $('#searchBar1').hide();
   $('.featureSearch1').hide();
-  $('.featureResults1').hide();
+  $('#featureResults1').hide();
   $('.displayAttributesBtn1').hide();
   
   $('.toggleFeatureOptions1').hide();
@@ -287,11 +317,11 @@
 
   // feature two stuff
   $('.menuGrouping2').hide();
-  $('.featureTypes2').hide();
-  $('.featureRelationships2').hide();
+  $('#featureTypes2').hide();
+  $('#featureRelationships2').hide();
   $('#searchBar2').hide();
   $('.featureSearch2').hide();
-  $('.featureResults2').hide();
+  $('#featureResults2').hide();
   $('.displayAttributesBtn2').hide();
 
   $('.toggleFeatureOptions2').hide();
@@ -304,10 +334,13 @@
   $('.menuGrouping4').hide();
   $('.binaryGroup').hide();
 
+  */
+
   </script>
 
   <style>
 
+    /*Button on the map*/
     .olControlButton1ItemActive {
       position: absolute;
       top: 0;
@@ -316,12 +349,18 @@
       height: 18px;
     }
 
+    .selectpicker {
+      width: 10%;
+    }
+
+    /*
     select{
 
-      /* style to match bootstrap buttons */
+      
       display: inline-block;
       padding: 6px 12px;
-      margin-bottom: 0px;
+      margin-top: .25em;
+      margin-bottom: .25em;
       font-size: 14px;
       font-weight: 400;
       line-height: 1.42857;
@@ -340,6 +379,7 @@
       box-sizing:content-box;
       -webkit-box-sizing:content-box; 
     }
+    */
 
     .menuGrouping {
       background-color: #b3c6ff;
