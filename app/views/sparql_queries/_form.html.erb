@@ -26,7 +26,8 @@
   <div class="form-actions">
     <input name="commit" value="Submit" type="submit" class="btn btn-default btn-block btn-primary">
   </div>
-  <%= javascript_tag do %>
+  <script>
+  $('document').ready(function() { 
     $("textarea").each(function() {
       CodeMirror.fromTextArea($(this).get(0), {
         lineNumbers: true,
@@ -34,6 +35,7 @@
         mode: "sparql"
       });
     });
-  <% end %>
+  });
+  </script>
 <% end %>
 

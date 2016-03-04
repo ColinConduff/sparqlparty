@@ -1,7 +1,13 @@
 
 
 <div class="well">
-  <h1 class="text-center">Listing sparql queries</h1>
+  <div class="row">
+    <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
+            "Back", root_path%>
+  </div>
+  <div class="row">
+    <h1 class="text-center">Listing sparql queries</h1>
+  </div>
 </div>
 
 <div class="row text-center">
@@ -44,7 +50,9 @@
   </div>
 </div>
 
-<%= javascript_tag do %>
+<script>
+$('document').ready(function() {
+  
   // filter for search bar
 
   $('#searchBar').keyup(function(){
@@ -103,7 +111,9 @@
   var selector = "#pagination";
 
   customPagination(items, numItems, perPage, selector);
-<% end %>
+
+});
+</script>
 
 <style>
 /* center pagination block */

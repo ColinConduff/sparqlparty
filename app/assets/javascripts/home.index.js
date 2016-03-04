@@ -1,4 +1,94 @@
+  // toggle the none, buffer, and boundary radial buttons
+  var bufferTextFieldHidden1 = true;
+
+  $('.toggleFeatureOptions1').click(function() {
+    if(!bufferTextFieldHidden1) {
+      $('.buffer1').hide();
+      bufferTextFieldHidden1 = true;
+    }
+    $('.featureOptions1').toggle();
+  });
+
+  $('#bufferRadio1').click(function() {
+    $('.buffer1').show();
+    bufferTextFieldHidden1 = false;
+  });
+
+  $('#noneRadio1').click(function() {
+    $('.buffer1').hide();
+    bufferTextFieldHidden1 = true;
+  });
+
+  $('#boundaryRadio1').click(function() {
+    $('.buffer1').hide();
+    bufferTextFieldHidden1 = true;
+  });
+
+  var bufferTextFieldHidden2 = true;
+
+  $('.toggleFeatureOptions2').click(function() {
+    if(!bufferTextFieldHidden2) {
+      $('.buffer2').hide();
+      bufferTextFieldHidden2 = true;
+    }
+    $('.featureOptions2').toggle();
+  });
+
+  $('#bufferRadio2').click(function() {
+    $('.buffer2').show();
+    bufferTextFieldHidden2 = false;
+  });
+
+  $('#noneRadio2').click(function() {
+    $('.buffer2').hide();
+    bufferTextFieldHidden2 = true;
+  });
+
+  $('#boundaryRadio2').click(function() {
+    $('.buffer2').hide();
+    bufferTextFieldHidden2 = true;
+  });
+
+  $('.step2').hide();
+  $('.step3').hide();
+  $('.step4').hide();
+  $('.step5').hide();
+
+  // hide dropdown/select menus until data is queried
+  $('#featureRelationships1').hide();
+  $('#searchBar1').hide();
+  $('.featureSearch1').hide();
+  $('#featureResults1').hide();
+  $('.displayAttributesBtn1').hide();
   
+  $('.toggleFeatureOptions1').hide();
+  $('.featureOptions1').hide();
+  $('.buffer1').hide();
+
+  // feature two stuff
+  $('.menuGrouping2').hide();
+  $('#featureTypes2').hide();
+  $('#featureRelationships2').hide();
+  $('#searchBar2').hide();
+  $('.featureSearch2').hide();
+  $('#featureResults2').hide();
+  $('.displayAttributesBtn2').hide();
+
+  $('.toggleFeatureOptions2').hide();
+  $('.featureOptions2').hide();
+  $('.buffer2').hide();
+
+  $('.menuGrouping3').hide();
+  $('.spatialRelationshipGroup').hide();
+  $('#featuresForSpatial1').hide();
+  $('#featuresForSpatial2').hide();
+  $('#availableOperationsForSpatial').hide();
+
+  $('.menuGrouping4').hide();
+  $('.binaryGroup').hide();
+  $('#featuresForBinary1').hide();
+  $('#featuresForBinary2').hide();
+  $('#availableOperationsForBinary').hide();
 
   function initializeSelectPicker() {
     $('.selectpicker').selectpicker({width: '100%'});

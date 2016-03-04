@@ -79,7 +79,8 @@ body {
 }
 
 .well {
-  background-color: #b3c6ff;
+  background-color: #3366cc;
+  color: white;
 }
 
 /*Button on the map*/
