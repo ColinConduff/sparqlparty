@@ -1,7 +1,10 @@
-$( document ).ready(function() {
-  $.when($('.selectpicker').selectpicker({
-    width: '100%'
-  })).done(getFeatureTypes('#featureTypes1'));
+function initializeSelectPicker() {
+  $('.selectpicker').selectpicker({width: '100%'});
+  return true;
+}
+
+$(document).ready(function() {
+  $.when(initializeSelectPicker()).done(getFeatureTypes('#featureTypes1'));
 
   var bufferTextFieldHidden1 = true;
 
@@ -60,13 +63,17 @@ $( document ).ready(function() {
 
   // when a feature type is selected, get all of the relationships related
   // to that feature type
-  $("#featureTypes1").change(function () {
-    selectedFeatureType1 = $('#featureTypes1').children(':selected').text();
-    getFeatureRelationships('#featureRelationships1', selectedFeatureType1);
-    $('#featureRelationships1').show();
-    $('#searchBar1').show();
-    $('.toggleFeatureOptions1').show();
-    $('.featureSearch1').show();
+  $('#featureTypes1').on('changed.bs.select', function (e) {
+    $("#featureTypes1").change(function () {
+      selectedFeatureType1 = $('#featureTypes1').children(':selected').text();
+      getFeatureRelationships('#featureRelationships1', selectedFeatureType1);
+      $('.hideUntilFeatureTypeSelected').show();
+      $('#featureRelationships1').show();
+      $('#searchBar1').show();
+      $('.toggleFeatureOptions1').show();
+      $('.featureSearch1').show();
+      $('.step2').show();
+    });
   });
 
   // when the search button is clicked,
@@ -82,6 +89,7 @@ $( document ).ready(function() {
     
     getFeatureAndLabel('#featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '#featuresForSpatial1', '#featuresForBinary1', withBoundary, bufferValue);
     $('#featureResults1').show();
+    $('.step3').show();
 
     $('.menuGrouping2').show();
     $('.featureTypes2').show();
@@ -114,6 +122,7 @@ $( document ).ready(function() {
     $('#searchBar2').show();
     $('.toggleFeatureOptions2').show();
     $('.featureSearch2').show();
+    $('.step4').show();
   });
 
   $('.featureSearch2').click(function(){
@@ -126,6 +135,7 @@ $( document ).ready(function() {
 
     getFeatureAndLabel('#featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '#featuresForSpatial2', '#featuresForBinary2', withBoundary, bufferValue);
     $('#featureResults2').show();
+    $('.step5').show();
 
     $('.menuGrouping3').show();
     $('.spatialRelationshipGroup').show();
