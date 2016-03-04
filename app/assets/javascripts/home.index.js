@@ -5,56 +5,7 @@ function initializeSelectPicker() {
 
 $(document).ready(function() {
   $.when(initializeSelectPicker()).done(getFeatureTypes('#featureTypes1'));
-
-  var bufferTextFieldHidden1 = true;
-
-  $('.toggleFeatureOptions1').click(function() {
-    if(!bufferTextFieldHidden1) {
-      $('.buffer1').hide();
-      bufferTextFieldHidden1 = true;
-    }
-    $('.featureOptions1').toggle();
-  });
-
-  $('#bufferRadio1').click(function() {
-    $('.buffer1').show();
-    bufferTextFieldHidden1 = false;
-  });
-
-  $('#noneRadio1').click(function() {
-    $('.buffer1').hide();
-    bufferTextFieldHidden1 = true;
-  });
-
-  $('#boundaryRadio1').click(function() {
-    $('.buffer1').hide();
-    bufferTextFieldHidden1 = true;
-  });
-
-  var bufferTextFieldHidden2 = true;
-
-  $('.toggleFeatureOptions2').click(function() {
-    if(!bufferTextFieldHidden2) {
-      $('.buffer2').hide();
-      bufferTextFieldHidden2 = true;
-    }
-    $('.featureOptions2').toggle();
-  });
-
-  $('#bufferRadio2').click(function() {
-    $('.buffer2').show();
-    bufferTextFieldHidden2 = false;
-  });
-
-  $('#noneRadio2').click(function() {
-    $('.buffer2').hide();
-    bufferTextFieldHidden2 = true;
-  });
-
-  $('#boundaryRadio2').click(function() {
-    $('.buffer2').hide();
-    bufferTextFieldHidden2 = true;
-  });
+});
 
   // get the types of all of the features in the dataset
   //getFeatureTypes('.featureTypes1');
@@ -63,17 +14,15 @@ $(document).ready(function() {
 
   // when a feature type is selected, get all of the relationships related
   // to that feature type
-  $('#featureTypes1').on('changed.bs.select', function (e) {
-    $("#featureTypes1").change(function () {
-      selectedFeatureType1 = $('#featureTypes1').children(':selected').text();
-      getFeatureRelationships('#featureRelationships1', selectedFeatureType1);
-      $('.hideUntilFeatureTypeSelected').show();
-      $('#featureRelationships1').show();
-      $('#searchBar1').show();
-      $('.toggleFeatureOptions1').show();
-      $('.featureSearch1').show();
-      $('.step2').show();
-    });
+  $("#featureTypes1").change(function () {
+    selectedFeatureType1 = $('#featureTypes1').children(':selected').text();
+    getFeatureRelationships('#featureRelationships1', selectedFeatureType1);
+    $('.hideUntilFeatureTypeSelected').show();
+    $('#featureRelationships1').show();
+    $('#searchBar1').show();
+    $('.toggleFeatureOptions1').show();
+    $('.featureSearch1').show();
+    $('.step2').show();
   });
 
   // when the search button is clicked,
@@ -167,7 +116,9 @@ $(document).ready(function() {
 
     var feature1 = $('#featuresForSpatial1').children(':selected').attr('featureSpatialID');
     var feature2 = $('#featuresForSpatial2').children(':selected').attr('featureSpatialID');
-    var operation = $('.availableOperationsForSpatial').children(':selected').text();
+    
+    $('#availableOperationsForSpatial').selectpicker('refresh');
+    var operation = $('#availableOperationsForSpatial').children(':selected').text();
 
     if(feature1 == "all" && feature2 == "all")
     {
@@ -179,7 +130,7 @@ $(document).ready(function() {
       var feature2Relationship = $('#featureRelationships2').children(':selected').text();
       var feature2SearchTerm = $('#searchBar2').val();
 
-      getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relationship, feature1SearchTerm, feature2Type, feature2Relationship, feature2SearchTerm, operation);
+      getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relationship, feature1SearchTerm, feature2Type, feature2Relationship, feature2SearchTerm, operation, "green");
     }
     else if (feature1 == "all" && feature2 != "all")
     {
@@ -187,7 +138,7 @@ $(document).ready(function() {
       var feature1Relationship = $('#featureRelationships1').children(':selected').text();
       var feature1SearchTerm = $('#searchBar1').val();
       
-      getSpatialRelationshipResultsOfManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, operation);
+      getSpatialRelationshipResultsOfManyToOne(feature1Type, feature1Relationship, feature1SearchTerm, feature2, operation, "green");
     }
     else if (feature1 != "all" && feature2 == "all")
     {
@@ -195,11 +146,11 @@ $(document).ready(function() {
       var feature2Relationship = $('#featureRelationships2').children(':selected').text();
       var feature2SearchTerm = $('#searchBar2').val();
       
-      getSpatialRelationshipResultsOfManyToOne(feature2Type, feature2Relationship, feature2SearchTerm, feature1, operation);
+      getSpatialRelationshipResultsOfManyToOne(feature2Type, feature2Relationship, feature2SearchTerm, feature1, operation, "green");
     }
     else if (feature1 != "all" && feature2 != "all")
     {
-      getSpatialRelationshipResultsOf2Features(feature1, feature2, operation);
+      getSpatialRelationshipResultsOf2Features(feature1, feature2, operation, "green");
     }
     else
     {
@@ -230,8 +181,7 @@ $(document).ready(function() {
     var feature2 = $('#featuresForBinary2').children(':selected').attr('featureBinaryID');
     var binaryOperation = $('#availableOperationsForBinary').children(':selected').text();
 
-    getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, binaryOperation);
+    getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, binaryOperation, "green");
 
     $('.binaryResultsModalBtn').show();
   });
-});

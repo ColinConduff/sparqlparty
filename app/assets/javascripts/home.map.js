@@ -202,22 +202,68 @@ function drawVectorsForFeatures(resultMsg, featureID, featureFillColor) {
     drawVectors(features, style);
 }
 
-function drawVectorsForSpatialRelationshipQuery(resultMsg) {
+function drawVectorsForSpatialRelationshipQuery(resultMsg, spatialFillColor) {
 
     var features = parseFeaturesIntoArray(resultMsg);
 
     // specific style for spatial relationship query results 
+    var style = new OpenLayers.StyleMap({
+        "default":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor: spatialFillColor,
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
+        }, OpenLayers.Feature.Vector.style["default"])),
+        "select":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor:"yellow",
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
+        }, OpenLayers.Feature.Vector.style["select"])),
+        "highlight":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor:"yellow",
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
+        }, OpenLayers.Feature.Vector.style["highlight"]))
+    });
 
-    drawVectors(features, null);
+    drawVectors(features, style);
 }
 
-function drawVectorsForBinaryRelationshipQuery(resultMsg) {
+function drawVectorsForBinaryRelationshipQuery(resultMsg, binaryFillColor) {
 
     var features = parseFeaturesIntoArray(resultMsg);
 
     // specific style for binary relationship query results 
+    var style = new OpenLayers.StyleMap({
+        "default":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor: binaryFillColor,
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
+        }, OpenLayers.Feature.Vector.style["default"])),
+        "select":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor:"yellow",
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
+        }, OpenLayers.Feature.Vector.style["select"])),
+        "highlight":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+            fillColor:"yellow",
+            strokeColor:"black",
+            graphicName:"circle",
+            rotation:0,
+            pointRadius:10
+        }, OpenLayers.Feature.Vector.style["highlight"]))
+    });
 
-    drawVectors(features, null);
+    drawVectors(features, style);
 }
 
 function submitquery(endpoint, query)

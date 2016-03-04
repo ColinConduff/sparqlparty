@@ -4,15 +4,17 @@
 
   <div class="row">
     <div class="col-lg-6 col-xs-12">
-      <div class="row">
-        <div class="col-xs-3">
-          <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
-          "View Sparql Queries", sparql_queries_path%> 
+      <div class="well">
+        <div class="row">
+          <div class="col-xs-3">
+            <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
+            "View Sparql Queries", sparql_queries_path%> 
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <h3>Sparql Query Visualizer</h3>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>GeoSparql Query Visualizer</h3>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -322,6 +324,57 @@
 
   <script>
 
+  // toggle the none, buffer, and boundary radial buttons
+  var bufferTextFieldHidden1 = true;
+
+  $('.toggleFeatureOptions1').click(function() {
+    if(!bufferTextFieldHidden1) {
+      $('.buffer1').hide();
+      bufferTextFieldHidden1 = true;
+    }
+    $('.featureOptions1').toggle();
+  });
+
+  $('#bufferRadio1').click(function() {
+    $('.buffer1').show();
+    bufferTextFieldHidden1 = false;
+  });
+
+  $('#noneRadio1').click(function() {
+    $('.buffer1').hide();
+    bufferTextFieldHidden1 = true;
+  });
+
+  $('#boundaryRadio1').click(function() {
+    $('.buffer1').hide();
+    bufferTextFieldHidden1 = true;
+  });
+
+  var bufferTextFieldHidden2 = true;
+
+  $('.toggleFeatureOptions2').click(function() {
+    if(!bufferTextFieldHidden2) {
+      $('.buffer2').hide();
+      bufferTextFieldHidden2 = true;
+    }
+    $('.featureOptions2').toggle();
+  });
+
+  $('#bufferRadio2').click(function() {
+    $('.buffer2').show();
+    bufferTextFieldHidden2 = false;
+  });
+
+  $('#noneRadio2').click(function() {
+    $('.buffer2').hide();
+    bufferTextFieldHidden2 = true;
+  });
+
+  $('#boundaryRadio2').click(function() {
+    $('.buffer2').hide();
+    bufferTextFieldHidden2 = true;
+  });
+
   $('.step2').hide();
   $('.step3').hide();
   $('.step4').hide();
@@ -366,6 +419,15 @@
   </script>
 
   <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-color: #fff5e6;
+    }
+
+    .well {
+      background-color: #b3c6ff;
+    }
 
     /*Button on the map*/
     .olControlButton1ItemActive {
@@ -376,40 +438,7 @@
       height: 18px;
     }
 
-    .selectpicker {
-      width: 10%;
-    }
-
-    /*
-    select{
-
-      
-      display: inline-block;
-      padding: 6px 12px;
-      margin-top: .25em;
-      margin-bottom: .25em;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.42857;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      -moz-user-select: none;
-      background-image: none;
-      border: 1px solid transparent;
-      border-radius: 4px;
-      width:90%;
-      
-      -ms-box-sizing:content-box;
-      -moz-box-sizing:content-box;
-      box-sizing:content-box;
-      -webkit-box-sizing:content-box; 
-    }
-    */
-
     .menuGrouping {
-      background-color: #b3c6ff;
       padding: .5em;
       margin: .5em;
     }
