@@ -89,7 +89,7 @@
 <script>
   $('document').ready(function() { 
     var endpoint = '<%= j @sparql_query.endpoint %>';
-    var query = '<%= j escape_javascript(@sparql_query.query.squish).html_safe %>';
+    var query = '<%= j @sparql_query.query.squish.html_safe %>';
 
     submitquery(endpoint, query); 
 

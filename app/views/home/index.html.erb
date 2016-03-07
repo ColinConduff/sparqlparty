@@ -6,9 +6,11 @@
     <div class="col-lg-6 col-xs-12 sideBar">
       <div class="well">
         <div class="row">
-          <div class="col-xs-3">
-            <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
-            "View Sparql Queries", sparql_queries_path%> 
+          <div class="col-xs-12">
+            <span class="pull-left">  
+              <%= link_to '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'.html_safe + 
+              "View Sparql Queries", sparql_queries_path, {:style => "color:white"}%> 
+            </span>
           </div>
         </div>
         <div class="row">

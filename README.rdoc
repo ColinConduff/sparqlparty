@@ -6,6 +6,8 @@ This app was originally developed by David Mattli.
 
 == TODO
 
+Don't show wkt data in modals 
+
 Allow users to select the sparql endpoint that is used.  If the feature sets use different sparql endpoints, the spatial and binary relationship queries may need to use a federated query to query two separate sparql endpoints at the same time.
 
 Regarding spatial relationship: List the resulting map layers/features in a dropdown list so that the user can select them on the map.

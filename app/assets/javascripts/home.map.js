@@ -292,13 +292,13 @@ function drawVectorsForBinaryRelationshipQuery(resultMsg, binaryFillColor) {
 function submitquery(endpoint, query)
 {
     var request = $.ajax({
-    type: "GET",
-    url: endpoint, //"http://geoquery.cs.jmu.edu:8081/parliament/sparql",
-    dataType: "json",
-    data: {
-            "query": query,
-            "output": "json"
-        }
+        type: "GET",
+        url: endpoint, //"http://geoquery.cs.jmu.edu:8081/parliament/sparql",
+        dataType: "json",
+        data: {
+                "query": query,
+                "output": "json"
+            }
     });
     
     request.done(function( msg ) {

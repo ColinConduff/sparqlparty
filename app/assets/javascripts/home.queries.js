@@ -29,18 +29,28 @@ function updateTable(resultMsg, tableDivId) {
 
     /* Create Table Headings */
     var $tr = $('<tr>').attr("class", "resultTable");
+    
     for (var i = 0; i < resultMsg['head']['vars'].length; ++i) {
-    $tr.append($('<th>').text(resultMsg['head']['vars'][i]));
+        $tr.append($('<th>').text(resultMsg['head']['vars'][i]));
     }
+    
     tbl.append($tr);
 
     for (var j=0; j < resultMsg['results']['bindings'].length; ++j) {
         $tr = $('<tr>').attr("class", "resultTable");
+        
         for (var key in resultMsg['results']['bindings'][j]) {
             var td = $('<td>').attr('class', 'resultCell');
-            td.text(resultMsg['results']['bindings'][j][key].value);
+            if(resultMsg['results']['bindings'][j][key].value.length > 500)
+            {
+                td.text("Too much text to display.");
+            
+            } else {
+                 td.text(resultMsg['results']['bindings'][j][key].value);
+            }
             $tr.append(td);
         }
+
         tbl.append($tr);
     }
     
