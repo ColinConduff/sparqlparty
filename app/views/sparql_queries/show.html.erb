@@ -85,12 +85,25 @@
 
   <div class='bigmap' id='map' style="border:.5em solid black"></div>
 </div>
+<%= csrf_meta_tags %>
+<!-- errors relating to $ undefined if this is not up here rather than in body -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<%= javascript_include_tag "proj4js" %>
+<%= javascript_include_tag "OpenLayers/OpenLayers" %>
+<%= javascript_include_tag "Openlayers/Openlayers.debug" %>
+<%= javascript_include_tag "home.queries" %>
+<%= javascript_include_tag "home.map" %>
+<%= javascript_include_tag "codemirror" %>
+<%= javascript_include_tag "codemirror/modes/sparql" %>
 
 <script>
-  $('document').ready(function() { 
+$('document').ready(function() {    
     var endpoint = '<%= j @sparql_query.endpoint %>';
     var query = '<%= j @sparql_query.query.squish.html_safe %>';
 
+    console.log(endpoint);
+    console.log(query);
     submitquery(endpoint, query); 
 
     $("textarea").each(function() {
@@ -101,7 +114,7 @@
         lineWrapping: true
       });
     });
-  });
+});
 </script>
 
 

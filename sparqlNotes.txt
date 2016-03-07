@@ -194,3 +194,27 @@ WHERE {
    ?g1 geo:asWKT ?wktf . 
      BIND(geof:boundary(?wktf) AS ?wkt) .
 }
+
+
+----------------------------------------------------------------------------
+
+# list roman antiquities 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX spatial: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
+PREFIX gaz: <http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/>
+
+SELECT ?uri ?label ?easting ?northing ?one ?twenty ?map 
+WHERE {
+  ?uri 
+    #filter on type
+    gaz:featureType gaz:RomanAntiquity;
+
+    #bind everything we want to return
+    rdfs:label ?label;
+    spatial:easting ?easting;
+    spatial:northing ?northing;
+    spatial:oneKMGridReference ?one;
+    spatial:twentyKMGridReference ?twenty;
+    gaz:mapReference ?map.    
+}
+LIMIT 10

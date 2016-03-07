@@ -95,8 +95,6 @@ function parseFeaturesIntoArray(queryResult) {
     };   
     var parser = new OpenLayers.Format.WKT(options);
 
-    //console.log(queryResult);
-
     for (i=0; i < queryResult['results']['bindings'].length; ++i) {
         for (var key in queryResult['results']['bindings'][i]) {
             if(queryResult['results']['bindings'][i][key]['datatype'] == "http://www.opengis.net/ont/geosparql#wktLiteral") {
@@ -109,7 +107,7 @@ function parseFeaturesIntoArray(queryResult) {
                     features.push(feat);        
                 }
             }
-       }
+        }
     }
 
     return features;
@@ -120,7 +118,14 @@ var bounds = new OpenLayers.Bounds();
 function findNewBounds(features) {
 
     for (i=0; i<features.length; ++i) {
-        bounds.extend(features[i].geometry.getBounds()); 
+        // if(features[i].geometry == undefined) {
+        //     for (j=0; j<features[i].length; j++) {
+        //         bounds.extend(features[i][j].geometry.getBounds());
+        //     }
+        
+        // } else {
+            bounds.extend(features[i].geometry.getBounds()); 
+        //}
     }
 }
 
@@ -291,6 +296,8 @@ function drawVectorsForBinaryRelationshipQuery(resultMsg, binaryFillColor) {
 
 function submitquery(endpoint, query)
 {
+    console.log(endpoint);
+    console.log(query);
     var request = $.ajax({
         type: "GET",
         url: endpoint, //"http://geoquery.cs.jmu.edu:8081/parliament/sparql",
@@ -300,10 +307,36 @@ function submitquery(endpoint, query)
                 "output": "json"
             }
     });
-    
+
     request.done(function( msg ) {
+        // specific style for binary relationship query results 
+        var style = new OpenLayers.StyleMap({
+            "default":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+                fillColor: "blue",
+                strokeColor:"black",
+                graphicName:"circle",
+                rotation:0,
+                pointRadius:10
+            }, OpenLayers.Feature.Vector.style["default"])),
+            "select":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+                fillColor:"yellow",
+                strokeColor:"black",
+                graphicName:"circle",
+                rotation:0,
+                pointRadius:10
+            }, OpenLayers.Feature.Vector.style["select"])),
+            "highlight":new OpenLayers.Style(OpenLayers.Util.applyDefaults({
+                fillColor:"yellow",
+                strokeColor:"black",
+                graphicName:"circle",
+                rotation:0,
+                pointRadius:10
+            }, OpenLayers.Feature.Vector.style["highlight"]))
+        });
+    
         var features = parseFeaturesIntoArray(msg);
-        drawVectors(features, null);
+        
+        drawVectors(features, style);
         updateTable(msg, "tableWrap");
     });
     
@@ -312,55 +345,3 @@ function submitquery(endpoint, query)
         alert(errorThrown + ": " + jqXHR.responseText);
     });
 }
-
-// custom code for pagination for index.html.erb
-// borrowed from here: http://stackoverflow.com/questions/20896076/how-to-use-simplepagination-jquery
-// mind the slight change below, personal idea of best practices
-var customPagination = function(items, numItems, perPage, selector) {
-    // consider adding an id to your table,
-    // just incase a second table ever enters the picture..?
-
-    // only show the first 2 (or "first per_page") items initially
-    items.slice(perPage).hide();
-
-    // now setup your pagination
-    // you need that .pagination-page div before/after your table
-    $(selector).pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        onPageClick: function(pageNumber) { // this is where the magic happens
-            // someone changed page, lets hide/show trs appropriately
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-
-            items.hide() // first hide everything, then show for the new page
-                 .slice(showFrom, showTo).show();
-        }
-    });
-
-    // EDIT: extra stuff to cover url fragments (i.e. #page-3)
-    // https://github.com/bilalakil/bin/tree/master/simplepagination/page-fragment
-    // is more thoroughly commented (to explain the regular expression)
-
-    // we'll create a function to check the url fragment and change page
-    // we're storing this function in a variable so we can reuse it
-    var checkFragment = function() {
-        // if there's no hash, make sure we go to page 1
-        var hash = window.location.hash || "#page-1";
-
-        // we'll use regex to check the hash string
-        hash = hash.match(/^#page-(\d+)$/);
-
-        if(hash)
-            // the selectPage function is described in the documentation
-            // we've captured the page number in a regex group: (\d+)
-            $("#pagination").pagination("selectPage", parseInt(hash[1]));
-    };
-
-    // we'll call this function whenever the back/forward is pressed
-    $(window).bind("popstate", checkFragment);
-
-    // and we'll also call it to check right now!
-    checkFragment();
-
-};
