@@ -3,11 +3,17 @@ body, html {
 }
 
 body {
-  background-color: #fff;
+  /*background-color: #fff;*/
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff5e6;
 }
 
 p, ol, ul, td {
@@ -72,25 +78,14 @@ div {
   }
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-  background-color: #fff5e6;
-}
-
 .well {
   background-color: #3366cc;
   color: white;
 }
 
-/*Button on the map*/
-/*.olControlButton1ItemActive {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 18px;
-  height: 18px;
-}*/
+.modal {
+  color: black;
+}
 
 .menuGrouping {
   padding: .5em;

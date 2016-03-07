@@ -96,7 +96,7 @@
   }
 
   $(document).ready(function() {
-    $.when(initializeSelectPicker()).done(/*getFeatureTypes('#featureTypes1')*/);
+    $.when(initializeSelectPicker()).done(getFeatureTypes('#featureTypes1'));
 
     // add glyphicon to map
     $('.firstItemInactive').html('<button class="btn btn-default"><span class="glyphicon glyphicon-fullscreen"></span></button>');
