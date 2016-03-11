@@ -95,11 +95,29 @@
     return true;
   }
 
+  function addSparqlEndpointOptionsToSelectPicker(selector) {
+    $(selector).append("<option>http://geoquery.cs.jmu.edu:8081/parliament/sparql</option>");
+    $(selector).selectpicker('refresh');
+  }
+
+  function initializeSelectPickerAndAddSparqlEndpointOptions(selector1, selector2) {
+    initializeSelectPicker();
+    addSparqlEndpointOptionsToSelectPicker(selector1);
+    addSparqlEndpointOptionsToSelectPicker(selector2);
+  }
+
   $(document).ready(function() {
-    $.when(initializeSelectPicker()).done(getFeatureTypes('#featureTypes1'));
+    $.when(initializeSelectPickerAndAddSparqlEndpointOptions("#sparqlEndpoint1", "#sparqlEndpoint2"))
+
+    .done(getFeatureTypes('#featureTypes1'));
 
     // add glyphicon to map
     $('.firstItemInactive').html('<button class="btn btn-default"><span class="glyphicon glyphicon-fullscreen"></span></button>');
+  });
+
+  var selectedSparqlEndpoint1;
+  $("#sparqlEndpoint1").change(function () {
+    selectedSparqlEndpoint1 = $('#sparqlEndpoint1').children(':selected').text();
   });
 
   // get the types of all of the features in the dataset
@@ -112,6 +130,7 @@
   $("#featureTypes1").change(function () {
     selectedFeatureType1 = $('#featureTypes1').children(':selected').text();
     getFeatureRelationships('#featureRelationships1', selectedFeatureType1);
+
     $('.hideUntilFeatureTypeSelected').show();
     $('#featureRelationships1').show();
     $('#searchBar1').show();
@@ -156,6 +175,11 @@
 
   // beginning feature 2 //////////////////////////////
   // do all of the same stuff for the second feature
+
+  var selectedSparqlEndpoint2;
+  $("#sparqlEndpoint2").change(function () {
+    selectedSparqlEndpoint2 = $('#sparqlEndpoint2').children(':selected').text();
+  });
 
   var selectedFeatureType2 = "";
 

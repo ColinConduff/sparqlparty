@@ -6,6 +6,10 @@ This app was originally developed by David Mattli.
 
 == TODO
 
+Implement: connect select sparql endpoint menus up to home.queries functions so that users can query from different sparql endpoints/datasets
+
+Check whether user has specified different sparql endpoints, and do a federated query if necessary.
+
 Refactor update tables function.  Does not parse all of the data in json response messages. 
 
 Allow users to select the sparql endpoint that is used.  If the feature sets use different sparql endpoints, the spatial and binary relationship queries may need to use a federated query to query two separate sparql endpoints at the same time.
