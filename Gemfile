@@ -38,6 +38,5 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'execjs'
-gem 'therubyracer'
 
 gem 'codemirror-rails', '~> 5.6'
