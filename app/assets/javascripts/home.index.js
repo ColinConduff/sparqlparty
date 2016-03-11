@@ -48,13 +48,15 @@
     $('.buffer2').hide();
     bufferTextFieldHidden2 = true;
   });
-
+  
+  $('.step1').hide();
   $('.step2').hide();
   $('.step3').hide();
   $('.step4').hide();
   $('.step5').hide();
 
   // hide dropdown/select menus until data is queried
+  
   $('#featureRelationships1').hide();
   $('#searchBar1').hide();
   $('.featureSearch1').hide();
@@ -96,6 +98,8 @@
   }
 
   function addSparqlEndpointOptionsToSelectPicker(selector) {
+    // if there is only one option, on change does not recognize clicking the first option
+    $(selector).append("<option>Select a Sparql Endpoint</option>");
     $(selector).append("<option>http://geoquery.cs.jmu.edu:8081/parliament/sparql</option>");
     $(selector).selectpicker('refresh');
   }
@@ -107,9 +111,7 @@
   }
 
   $(document).ready(function() {
-    $.when(initializeSelectPickerAndAddSparqlEndpointOptions("#sparqlEndpoint1", "#sparqlEndpoint2"))
-
-    .done(getFeatureTypes('#featureTypes1'));
+    initializeSelectPickerAndAddSparqlEndpointOptions("#sparqlEndpoint1", "#sparqlEndpoint2")
 
     // add glyphicon to map
     $('.firstItemInactive').html('<button class="btn btn-default"><span class="glyphicon glyphicon-fullscreen"></span></button>');
@@ -118,10 +120,10 @@
   var selectedSparqlEndpoint1;
   $("#sparqlEndpoint1").change(function () {
     selectedSparqlEndpoint1 = $('#sparqlEndpoint1').children(':selected').text();
+    getFeatureTypes('#featureTypes1', selectedSparqlEndpoint1);
+    $('.step1').show();
+    $('#featureTypes1').show();
   });
-
-  // get the types of all of the features in the dataset
-  //getFeatureTypes('.featureTypes1');
 
   var selectedFeatureType1 = "";
 
@@ -129,7 +131,7 @@
   // to that feature type
   $("#featureTypes1").change(function () {
     selectedFeatureType1 = $('#featureTypes1').children(':selected').text();
-    getFeatureRelationships('#featureRelationships1', selectedFeatureType1);
+    getFeatureRelationships('#featureRelationships1', selectedFeatureType1, selectedSparqlEndpoint1);
 
     $('.hideUntilFeatureTypeSelected').show();
     $('#featureRelationships1').show();
@@ -150,13 +152,11 @@
     if($('#boundaryRadio1').is(':checked')) { withBoundary = true; }
     if($('#bufferRadio1').is(':checked')) { bufferValue = $('.buffer1').val(); }
     
-    getFeatureAndLabel('#featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '#featuresForSpatial1', '#featuresForBinary1', withBoundary, bufferValue, "red");
+    getFeatureAndLabel('#featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '#featuresForSpatial1', '#featuresForBinary1', withBoundary, bufferValue, "red", selectedSparqlEndpoint1);
     $('#featureResults1').show();
     $('.step3').show();
 
     $('.menuGrouping2').show();
-    $('.featureTypes2').show();
-    getFeatureTypes('#featureTypes2');
   });
 
   // find one feature's attribute data and fill a table with that data
@@ -169,7 +169,7 @@
     var selectedLabel = $('#featureResults1').children(':selected').text();
     var attributeTableTarget = '.featureAttributesList1';
     var attributeModalTitle = '.attributeModalTitle1';
-    getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle);
+    getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle, selectedSparqlEndpoint1);
     $('.displayAttributesBtn1').show();
   });
 
@@ -179,13 +179,16 @@
   var selectedSparqlEndpoint2;
   $("#sparqlEndpoint2").change(function () {
     selectedSparqlEndpoint2 = $('#sparqlEndpoint2').children(':selected').text();
+    $('.featureTypes2').show();
+    getFeatureTypes('#featureTypes2', selectedSparqlEndpoint2);
   });
 
   var selectedFeatureType2 = "";
 
   $("#featureTypes2").change(function () {
     selectedFeatureType2 = $('#featureTypes2').children(':selected').text();
-    getFeatureRelationships('#featureRelationships2', selectedFeatureType2);
+    getFeatureRelationships('#featureRelationships2', selectedFeatureType2, selectedSparqlEndpoint2);
+    
     $('#featureRelationships2').show();
     $('#searchBar2').show();
     $('.toggleFeatureOptions2').show();
@@ -201,7 +204,7 @@
     if($('#boundaryRadio2').is(':checked')) { withBoundary = true; }
     if($('#bufferRadio2').is(':checked')) { bufferValue = $('.buffer2').val(); }
 
-    getFeatureAndLabel('#featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '#featuresForSpatial2', '#featuresForBinary2', withBoundary, bufferValue, "blue");
+    getFeatureAndLabel('#featureResults2', selectedFeatureType2, selectedFeatureRel, searchTerm, '#featuresForSpatial2', '#featuresForBinary2', withBoundary, bufferValue, "blue", selectedSparqlEndpoint2);
     $('#featureResults2').show();
     $('.step5').show();
 
@@ -223,7 +226,7 @@
     var selectedLabel = $('#featureResults2').children(':selected').text();
     var attributeTableTarget = '.featureAttributesList2';
     var attributeModalTitle = '.attributeModalTitle2';
-    getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle);
+    getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle, selectedSparqlEndpoint2);
     $('.displayAttributesBtn2').show();
   });
 

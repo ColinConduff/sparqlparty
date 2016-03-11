@@ -1,7 +1,7 @@
 
-function baseQueryRequest(query, ifSuccessfulDoThis)
+function baseQueryRequest(endpoint, query, ifSuccessfulDoThis)
 {
-    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    //var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
 
     var request = $.ajax({
         type: "GET",
@@ -58,7 +58,7 @@ function updateTable(resultMsg, tableDivId) {
     container.append(tbl);
 }
 
-function getFeatureTypes(selector)
+function getFeatureTypes(selector, sparqlEndpoint)
 {
     var query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?type WHERE { ?feature rdf:type ?type . }";
     
@@ -74,11 +74,11 @@ function getFeatureTypes(selector)
         $(selector).selectpicker('refresh');
     };
 
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    baseQueryRequest(sparqlEndpoint, query, willDoThisUponSuccessfulQuery);
     
 }
 
-function getFeatureRelationships(selector, selectedFeatureType)
+function getFeatureRelationships(selector, selectedFeatureType, sparqlEndpoint)
 {
     var query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?rel WHERE { ?feature rdf:type <" + selectedFeatureType + "> ; ?rel ?obj . }";
     
@@ -94,10 +94,10 @@ function getFeatureRelationships(selector, selectedFeatureType)
         $(selector).selectpicker('refresh');
     };
     
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    baseQueryRequest(sparqlEndpoint, query, willDoThisUponSuccessfulQuery);
 }
 
-function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial, selectorForBinary, withBoundary, buffer, featureFillColor)
+function getFeatureAndLabel(selector, feature, relationship, searchTerm, selectorForSpatial, selectorForBinary, withBoundary, buffer, featureFillColor, sparqlEndpoint)
 {
     var query = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?feature ?label WHERE { ?feature rdf:type <' + feature + '> . ?feature rdfs:label ?label . ?feature <' + relationship + '> ?obj . FILTER( regex(str(?obj), "' + searchTerm + '", "i" ) ) . }';
 
@@ -115,48 +115,48 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
           $(selectorForSpatial).append("<option featureSpatialID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           $(selectorForBinary).append("<option featureBinaryID="+ arrayOfObjects[i].feature.value +">" + arrayOfObjects[i].label.value + "</option>");
           
-          getFeatureWKTData(arrayOfObjects[i].feature.value, withBoundary, buffer, featureFillColor);
+          getFeatureWKTData(arrayOfObjects[i].feature.value, withBoundary, buffer, featureFillColor, sparqlEndpoint);
         }
         $(selector).selectpicker('refresh');
         $(selectorForSpatial).selectpicker('refresh');
         $(selectorForBinary).selectpicker('refresh');
     };
     
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    baseQueryRequest(sparqlEndpoint, query, willDoThisUponSuccessfulQuery);
 }
 
-function sendQueryAndCallDrawVectors(query, selectedFeature, featureFillColor) 
+function sendQueryAndCallDrawVectors(query, selectedFeature, featureFillColor, sparqlEndpoint) 
 {
     var willDoThisUponSuccessfulQuery = function(msg) {
         drawVectorsForFeatures(msg, selectedFeature, featureFillColor);
     };
     
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    baseQueryRequest(sparqlEndpoint, query, willDoThisUponSuccessfulQuery);
 }
 
-function getFeatureWKTData(selectedFeature, withBoundary, buffer, featureFillColor)
+function getFeatureWKTData(selectedFeature, withBoundary, buffer, featureFillColor, sparqlEndpoint)
 {
     if(withBoundary)
     {
         var queryWithBoundary = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf . BIND(geof:boundary(?wktf) AS ?wkt) . }';
     
-        sendQueryAndCallDrawVectors(queryWithBoundary, selectedFeature, featureFillColor);
+        sendQueryAndCallDrawVectors(queryWithBoundary, selectedFeature, featureFillColor, sparqlEndpoint);
     }
     else if (buffer != null)
     {
         var queryWithBuffer = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX geof: <http://www.opengis.net/def/function/geosparql/> PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g1 . ?g1 geo:asWKT ?wktf . BIND(geof:buffer(?wktf, ' + buffer + ', units:metre) AS ?wkt) . }';
 
-        sendQueryAndCallDrawVectors(queryWithBuffer, selectedFeature, featureFillColor);
+        sendQueryAndCallDrawVectors(queryWithBuffer, selectedFeature, featureFillColor, sparqlEndpoint);
     }
     else 
     {
         var query = 'PREFIX geo: <http://www.opengis.net/ont/geosparql#> SELECT ?wkt WHERE { <' + selectedFeature + '> geo:hasGeometry ?g . ?g geo:asWKT ?wkt . }';
     
-        sendQueryAndCallDrawVectors(query, selectedFeature, featureFillColor);
+        sendQueryAndCallDrawVectors(query, selectedFeature, featureFillColor, sparqlEndpoint);
     }
 }
 
-function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle)
+function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarget, attributeModalTitle, sparqlEndpoint)
 {
     var query = 'SELECT ?rel ?obj WHERE { <' + selectedFeature + '> ?rel ?obj . }'
     
@@ -178,7 +178,7 @@ function getFeatureAttributes(selectedFeature, selectedLabel, attributeTableTarg
         $(attributeModalTitle).append('<h4 class="modal-title">' + selectedLabel + '</h4>');
     };
     
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    baseQueryRequest(sparqlEndpoint, query, willDoThisUponSuccessfulQuery);
 }
 
 // spatial relationship functionality 
