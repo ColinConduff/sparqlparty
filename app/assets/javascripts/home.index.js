@@ -116,6 +116,7 @@
 
     // add glyphicon to map
     $('.firstItemInactive').html('<button class="btn btn-default"><span class="glyphicon glyphicon-fullscreen"></span></button>');
+    //addTabs('#tabList', '#tabPanel', 'some stuff');
   });
 
   var selectedSparqlEndpoint1;
@@ -288,12 +289,12 @@
 
   $('.reverseSpatialOperands').click(function () {
     if(spatialOperandsReversed) {
-      $("#featuresForSpatial2").detach().appendTo('.spatialOperand2');
-      $("#featuresForSpatial1").detach().appendTo('.spatialOperand1');
+      $(".divSurroundingFeatureSetForSpatial2").detach().appendTo('.spatialOperand2');
+      $(".divSurroundingFeatureSetForSpatial1").detach().appendTo('.spatialOperand1');
       spatialOperandsReversed = false;
     } else {
-      $("#featuresForSpatial2").detach().appendTo('.spatialOperand1');
-      $("#featuresForSpatial1").detach().appendTo('.spatialOperand2');
+      $(".divSurroundingFeatureSetForSpatial2").detach().appendTo('.spatialOperand1');
+      $(".divSurroundingFeatureSetForSpatial1").detach().appendTo('.spatialOperand2');
       spatialOperandsReversed = true;
     }
   });
@@ -302,9 +303,30 @@
 
     var feature1 = $('#featuresForBinary1').children(':selected').attr('featureBinaryID');
     var feature2 = $('#featuresForBinary2').children(':selected').attr('featureBinaryID');
+
+    if(spatialOperandsReversed) {
+      feature2 = $('#featuresForBinary1').children(':selected').attr('featureBinaryID');
+      feature1 = $('#featuresForBinary2').children(':selected').attr('featureBinaryID');
+    }
+
     var binaryOperation = $('#availableOperationsForBinary').children(':selected').text();
 
     getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, binaryOperation, "green");
 
     $('.binaryResultsModalBtn').show();
   });
+
+  // attempted to add tabs dynamically
+  // function addTabs(tabListSelector, tabPanelSelector, tabName ) {
+  //   $(tabListSelector).append('<li role="presentation"><a href="#'+tabName+'" aria-controls="'+tabName+'" role="tab" data-toggle="tab">'+tabName+'</a></li>');
+  //   $(tabPanelSelector).append('<div role="tabpanel" class="tab-pane" id="'+tabName+'">');
+  //   $(tabPanelSelector).append('Some content');
+  //   $(tabPanelSelector).append('</div>');
+
+  //   $(tabPanelSelector).tab('show');
+  // }
+
+  // $("#dataTabs").on('click', '.tablink,#tabList a', function (e) {
+  //   e.preventDefault();
+  //   $(this).tab('show');
+  // });

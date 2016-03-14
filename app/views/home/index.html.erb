@@ -208,7 +208,9 @@
               <h5>Spatial Relationship Analysis</h5>
               <div class="step5"> 
                 <div class="spatialOperand1">
-                  <select class="selectpicker" id="featuresForSpatial1"></select>
+                  <div class="divSurroundingFeatureSetForSpatial1">
+                    <select class="selectpicker" id="featuresForSpatial1"></select>
+                  </div>
                 </div>
                 <select class="selectpicker" id="availableOperationsForSpatial">
                   <option>sfWithin</option>
@@ -228,7 +230,9 @@
                   <option>ehContains</option>
                 </select>
                 <div class="spatialOperand2">
-                  <select class="selectpicker" id="featuresForSpatial2"></select>
+                  <div class="divSurroundingFeatureSetForSpatial2">
+                    <select class="selectpicker" id="featuresForSpatial2"></select>
+                  </div>
                 </div>
               </div>
 
@@ -328,6 +332,18 @@
     
 
     <div class="col-lg-6 col-xs-12 mapOuterDiv">
+      
+      <!-- plan to add tabs here
+      <div id="dataTabs">
+        <ul class="nav nav-tabs" role="tablist" id="tabList">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Map</a></li>
+        </ul>
+        <div class="tab-content" id="tabPanels">
+          <div role="tabpanel" class="tab-pane active" id="mapTab">map</div>
+        </div>
+      </div>
+      -->
+
       <div class='bigmap' id='map'></div>
     </div>
   </div>
