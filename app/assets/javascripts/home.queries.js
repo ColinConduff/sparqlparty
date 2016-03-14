@@ -107,7 +107,9 @@ function getFeatureAndLabel(selector, feature, relationship, searchTerm, selecto
         $(selectorForBinary).empty();
         var arrayOfObjects = msg.results.bindings;
 
+        $(selector).append("<option data-featureid=undefined>Select a Feature</option>");
         $(selectorForSpatial).append("<option featureSpatialID=all>All Features</option>");
+        $(selectorForBinary).append("<option featureBinaryID=undefined>Select a Feature</option>");
 
         for(var i = 0; i < arrayOfObjects.length; i++)
         {
@@ -191,7 +193,8 @@ function getSpatialRelationshipResultsOfManyToOne(feature1Type, feature1Relation
         drawVectorsForSpatialRelationshipQuery(msg, spatialLayerFillColor);
     }
 
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    baseQueryRequest(endpoint, query, willDoThisUponSuccessfulQuery);
 }
 
 function getSpatialRelationshipResultsOf2Features(feature1, feature2, operation, spatialLayerFillColor)
@@ -202,7 +205,8 @@ function getSpatialRelationshipResultsOf2Features(feature1, feature2, operation,
         drawVectorsForSpatialRelationshipQuery(msg, spatialLayerFillColor);
     }
 
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    baseQueryRequest(endpoint, query, willDoThisUponSuccessfulQuery);
 }
 
 function getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relationship, feature1SearchTerm, feature2Type, feature2Relationship, feature2SearchTerm, operation, spatialLayerFillColor)
@@ -213,7 +217,8 @@ function getSpatialRelationshipResultsOfManyToMany(feature1Type, feature1Relatio
         drawVectorsForSpatialRelationshipQuery(msg, spatialLayerFillColor);
     }
 
-    baseQueryRequest(query, willDoThisUponSuccessfulQuery);
+    var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+    baseQueryRequest(endpoint, query, willDoThisUponSuccessfulQuery);
 }
 
 // binary spatial functionality 
@@ -228,7 +233,8 @@ function getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, ope
             updateTable(msg, 'binarySpatialResultsTable');
         }
 
-        baseQueryRequest(distanceQuery, willDoThisUponSuccessfulQuery);
+        var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+        baseQueryRequest(endpoint, distanceQuery, willDoThisUponSuccessfulQuery);
     }
     else
     {
@@ -239,6 +245,7 @@ function getBinarySpatialDataOfTwoFeaturesAndDrawVectors(feature1, feature2, ope
             updateTable(msg, 'binarySpatialResultsTable');
         }
 
-        baseQueryRequest(nonDistanceOperationQuery, willDoThisUponSuccessfulQuery);
+        var endpoint = "http://geoquery.cs.jmu.edu:8081/parliament/sparql";
+        baseQueryRequest(endpoint, nonDistanceOperationQuery, willDoThisUponSuccessfulQuery);
     }
 }

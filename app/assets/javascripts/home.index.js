@@ -52,6 +52,7 @@
   $('.step1').hide();
   $('.step2').hide();
   $('.step3').hide();
+  $('.step3half').hide();
   $('.step4').hide();
   $('.step5').hide();
 
@@ -154,6 +155,7 @@
     
     getFeatureAndLabel('#featureResults1', selectedFeatureType1, selectedFeatureRel, searchTerm, '#featuresForSpatial1', '#featuresForBinary1', withBoundary, bufferValue, "red", selectedSparqlEndpoint1);
     $('#featureResults1').show();
+    
     $('.step3').show();
 
     $('.menuGrouping2').show();
@@ -179,7 +181,7 @@
   var selectedSparqlEndpoint2;
   $("#sparqlEndpoint2").change(function () {
     selectedSparqlEndpoint2 = $('#sparqlEndpoint2').children(':selected').text();
-    $('.featureTypes2').show();
+    $('.step3half').show();
     getFeatureTypes('#featureTypes2', selectedSparqlEndpoint2);
   });
 
