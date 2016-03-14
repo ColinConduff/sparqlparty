@@ -94,7 +94,7 @@
   $('#availableOperationsForBinary').hide();
 
   function initializeSelectPicker() {
-    $('.selectpicker').selectpicker({width: '100%'});
+    $('.selectpicker').selectpicker({width: '100%', liveSearch: true});
     return true;
   }
 
@@ -284,7 +284,6 @@
     $('.spatialResultsModalBtn').show();
   });
 
-  // reverse function is broken
   var spatialOperandsReversed = false;
 
   $('.reverseSpatialOperands').click(function () {
