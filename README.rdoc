@@ -1,5 +1,7 @@
 == USGS Sparql Party: A SPARQL query visualization application
 
+=== Note: This version is no longer being actively developed.  Please go to the latest version at https://github.com/ColinConduff/GeoSparqlViz3
+
 This web application allows users to analyze and visualize geospatial data.  
 
 The application is available at http://usgs-ybother.srv.mst.edu/geosparql
